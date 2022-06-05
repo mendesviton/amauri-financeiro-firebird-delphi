@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <ProjectSortOrder AutoSort="0" SortType="0">
+	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="Classes_controler"/>
     <File Path="Classes_controler\Classes_Controler"/>
     <File Path="Classes_controler\Classes_Controler\uContas_controler.pas"/>
@@ -41,8 +41,8 @@
     <File Path="util\uUtilAmauri.pas"/>
     <File Path="Amauri_financeiro_Icon2.ico"/>
   </ProjectSortOrder>
-  <Transactions>
-    <Transaction>2022/06/05 14:29:06.535,D:\Dev\Amauri_financeiro DELPHI\Form_cadastro\cadastros\uCad_padrao.pas=</Transaction>
-    <Transaction>2022/06/05 14:30:05.011,=D:\Dev\Amauri_financeiro DELPHI\Form_cadastro\cadastros\uCad_padrao.pas</Transaction>
+	<Transactions>
+    <Transaction>2022/06/05 14:29:06.000.535,D:\Dev\Amauri_financeiro DELPHI\Form_cadastro\cadastros\uCad_padrao.pas=</Transaction>
+    <Transaction>2022/06/05 14:30:05.000.011,=D:\Dev\Amauri_financeiro DELPHI\Form_cadastro\cadastros\uCad_padrao.pas</Transaction>
   </Transactions>
 </BorlandProject>
