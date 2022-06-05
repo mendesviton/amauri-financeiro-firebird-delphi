@@ -1,0 +1,38 @@
+{  Programador         Data         Descrição
+   Vitor Daniel     13/05/2022      Constantes global.
+}
+unit uConsts;
+
+interface
+
+const
+  {UTILITÁRIOS}
+  C_DATABASEPATH = 'BASE\AMAURIFIN.FDB';          //Diretório do arquivo (banco de dados)
+
+  {TABELA DE USUÁRIOS}
+  C_TABLENAME_USUARIO = 'TFIN_TUSUARIO';
+  C_KEY_TABLE_USUARIO = 'BDCODUSU';
+
+  {TABELA DE FORMAS DE PAGAMENTO}
+  C_TABLENAME_TFIN_FORMAPGTO ='TFIN_FORMAPGTO';
+  C_KEY_TABLE_FORMAPGTO = 'BDCODFORMAPGTO';
+
+  {TABELA DE CONTAS}
+  C_TABLENAME_TFIN_TCONTAS = 'TFIN_TCONTAS';
+  C_KEY_TABLE_CONTAS ='BDCODCONTA';
+
+  {PROCEDURE INSERIR LOG}
+  C_SP_INSERIR_LOG = 'SP_INSERIR_LOG';     //sql que insere na tabela TLOG
+
+
+  {MENSAGENS DE ERRO}
+  C_MSG_SQL_EXCEPTION = 'Houve uma exceção ao executar o comando sql mensagem de erro: ';
+
+  {TIPO-AÇÃO LOG}
+  C_EDICAO_INSERÇÃO   = '1';
+  C_EXCLUSAO = '2';
+
+
+implementation
+
+end.

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Classes_controler"/>
+    <File Path="Classes_controler\Classes_Controler"/>
+    <File Path="Classes_controler\Classes_Controler\uContas_controler.pas"/>
+    <File Path="Classes_controler\Classes_Controler\uFormapgto_controler.pas"/>
+    <File Path="Classes_controler\Classes_Controler\uUsuario_controler.pas"/>
+    <File Path="Classes_controler\Classes_DAO"/>
+    <File Path="Classes_controler\Classes_DAO\uContasDAO.pas"/>
+    <File Path="Classes_controler\Classes_DAO\uFormapgto_DAO.pas"/>
+    <File Path="Classes_controler\Classes_DAO\uUsuario_DAO.pas"/>
+    <File Path="Form_cadastro"/>
+    <File Path="Form_cadastro\cadastros"/>
+    <File Path="Form_cadastro\cadastros\uCad_contas.pas"/>
+    <File Path="Form_cadastro\cadastros\uCad_contas.dfm"/>
+    <File Path="Form_cadastro\cadastros\uCad_formapgto.pas"/>
+    <File Path="Form_cadastro\cadastros\uCad_formapgto.dfm"/>
+    <File Path="Form_cadastro\cadastros\uCad_usuario.pas"/>
+    <File Path="Form_cadastro\cadastros\uCad_usuario.dfm"/>
+    <File Path="Form_cadastro\cadastros\uCad_padrao.pas"/>
+    <File Path="Form_cadastro\cadastros\uCad_padrao.dfm"/>
+    <File Path="Form_cadastro\consultas"/>
+    <File Path="Form_cadastro\consultas\uCon_padrao.pas"/>
+    <File Path="Form_cadastro\consultas\uCon_padrao.dfm"/>
+    <File Path="Form_cadastro\consultas\uCon_usuario.pas"/>
+    <File Path="Form_cadastro\consultas\uCon_usuario.dfm"/>
+    <File Path="Form_cadastro\relatorio"/>
+    <File Path="Form_cadastro\relatorio\uRel_Padrao.pas"/>
+    <File Path="Form_cadastro\relatorio\uRel_Padrao.dfm"/>
+    <File Path="Form_cadastro\relatorio\uRel_usuarios.pas"/>
+    <File Path="Form_cadastro\relatorio\uRel_usuarios.dfm"/>
+    <File Path="Form_cadastro\uInicioProcessos.pas"/>
+    <File Path="Form_cadastro\uPrincipalAmauri.pas"/>
+    <File Path="model"/>
+    <File Path="model\uConexaoBanco.pas"/>
+    <File Path="model\uControleSQL.pas"/>
+    <File Path="util"/>
+    <File Path="util\uConsts.pas"/>
+    <File Path="util\uLog.pas"/>
+    <File Path="util\uUtilAmauri.pas"/>
+    <File Path="Amauri_financeiro_Icon2.ico"/>
+  </ProjectSortOrder>
+  <Transactions>
+    <Transaction>2022/06/05 14:29:06.535,D:\Dev\Amauri_financeiro DELPHI\Form_cadastro\cadastros\uCad_padrao.pas=</Transaction>
+    <Transaction>2022/06/05 14:30:05.011,=D:\Dev\Amauri_financeiro DELPHI\Form_cadastro\cadastros\uCad_padrao.pas</Transaction>
+  </Transactions>
+</BorlandProject>

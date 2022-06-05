@@ -1,0 +1,48 @@
+unit uProfessorDAO;
+
+interface
+  uses
+    uControleSQL,Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uCad_padrao, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.ExtCtrls,Vcl.Mask, Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+   System.Classes, Vcl.Graphics,uUtil_escola;
+type
+  TProfessorDAO = class
+    private
+      FUtilSQL:TUtilSQL;
+      FSQL    :TExecSQL;
+      FDataNascimento: string;
+      FEmail: string;
+      FInsertState: boolean;
+      FCodigo: integer;
+      FCPF: string;
+      FDisciplina: integer;
+      FSexo: integer;
+      FNome: string;
+      procedure pCriaObj;
+      procedure pDestroiObj;
+      procedure SetCodigo(const Value: integer);
+      procedure SetCPF(const Value: string);
+      procedure SetDataNascimento(const Value: string);
+      procedure SetEmail(const Value: string);
+      procedure SetInsertState(const Value: boolean);
+      procedure SetNome(const Value: string);
+      procedure SetDisciplina(const Value: integer);
+      procedure SetSexo(const Value: integer);
+
+    public
+      procedure pInsereProfessor;
+      procedure pDeletaProfessor;
+
+      function fExisteProfessor(BDCODPROFESSOR:STRING):boolean;
+      property Codigo:integer read FCodigo write SetCodigo;
+      property Nome  :string read FNome write SetNome;
+      property Email :string read FEmail write SetEmail;
+      property CPF   :string read FCPF write SetCPF;
+      property Disciplina :integer read FDisciplina write SetDisciplina;
+      property Sexo  :integer read FSexo write SetSexo;
+      property DataNascimento :string read FDataNascimento write SetDataNascimento;
+      property InsertState:boolean  read FInsertState write SetInsertState;
+      function getCodigoNomeDisciplina:string;
+  end;
+
+implementa

@@ -1,0 +1,35 @@
+unit uCon_padrao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,uControleSQL, Data.DB, Datasnap.Provider,
+  Datasnap.DBClient, Vcl.Grids, Vcl.DBGrids, Vcl.Buttons, Vcl.ExtCtrls;
+
+type
+  TfrCon_padrao = class(TForm)
+    DBGrid1: TDBGrid;
+    ClientDataSet1: TClientDataSet;
+    DataSource1: TDataSource;
+    DataSetProvider1: TDataSetProvider;
+    pnBarra: TPanel;
+    SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+  private
+    globalSQL:TExecSQL;
+
+
+  public
+    { Public declarations }
+  end;
+
+var
+  frCon_padrao: TfrCon_padrao;
+
+implementation
+
+{$R *.dfm}
+
+end.

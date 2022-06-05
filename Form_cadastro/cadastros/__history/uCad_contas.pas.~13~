@@ -1,0 +1,32 @@
+unit uCad_contas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uCad_padrao, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.ExtCtrls;
+
+type
+  TfrCad_padrao1 = class(TfrCad_padrao)
+    lbNome: TLabel;
+    lbCodigo: TLabel;
+    edDescricao: TEdit;
+    ckPadrao: TCheckBox;
+    edCodigo: TEdit;
+    Label1: TLabel;
+    Edit1: TEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frCad_padrao1: TfrCad_padrao1;
+
+implementation
+
+{$R *.dfm}
+
+end.

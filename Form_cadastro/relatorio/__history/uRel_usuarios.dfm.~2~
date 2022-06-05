@@ -1,0 +1,78 @@
+inherited fr_RelPadrao2: Tfr_RelPadrao2
+  Caption = 'fr_RelPadrao2'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited frxReport1: TfrxReport
+    ReportOptions.CreateDate = 44679.968829838000000000
+    ReportOptions.LastChange = 44681.605332060200000000
+    Datasets = <
+      item
+        DataSet = frxDBDataset1
+        DataSetName = 'frxDBDataset1'
+      end>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
+      PaperSize = 9
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+      object MasterData1: TfrxMasterData
+        FillType = ftBrush
+        Height = 22.677180000000000000
+        Top = 64.252010000000000000
+        Width = 718.110700000000000000
+        DataSet = frxDBDataset1
+        DataSetName = 'frxDBDataset1'
+        RowCount = 0
+        object frxDBDataset1BDCODUSU: TfrxMemoView
+          Left = 7.559060000000000000
+          Top = 3.779530000000000000
+          Width = 79.370130000000000000
+          Height = 18.897650000000000000
+          DataField = 'BDCODUSU'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Memo.UTF8W = (
+            '[frxDBDataset1."BDCODUSU"]')
+        end
+        object frxDBDataset1BDNOME: TfrxMemoView
+          Left = 98.267780000000000000
+          Top = 3.779530000000000000
+          Width = 400.630180000000000000
+          Height = 18.897650000000000000
+          DataField = 'BDNOME'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Memo.UTF8W = (
+            '[frxDBDataset1."BDNOME"]')
+        end
+        object frxDBDataset1BDLOGR: TfrxMemoView
+          Left = 506.457020000000000000
+          Top = 3.779530000000000000
+          Width = 158.740260000000000000
+          Height = 18.897650000000000000
+          DataField = 'BDLOGR'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Memo.UTF8W = (
+            '[frxDBDataset1."BDLOGR"]')
+        end
+      end
+      object GroupHeader1: TfrxGroupHeader
+        FillType = ftBrush
+        Height = 22.677180000000000000
+        Top = 18.897650000000000000
+        Width = 718.110700000000000000
+        Condition = 'frxDBDataset1."BDCODUSU"'
+      end
+    end
+  end
+end

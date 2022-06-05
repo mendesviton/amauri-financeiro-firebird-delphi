@@ -1,0 +1,54 @@
+unit uCon_padrao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,uControleSQL, Data.DB, Datasnap.Provider,
+  Datasnap.DBClient, Vcl.Grids, Vcl.DBGrids, Vcl.Buttons, Vcl.ExtCtrls,
+  Vcl.StdCtrls;
+
+type
+  TfrCon_padrao = class(TForm)
+    DBGrid1: TDBGrid;
+    cliDS1: TClientDataSet;
+    DS1: TDataSource;
+    DSPRO1: TDataSetProvider;
+    pnBarra: TPanel;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+    edPesquisa: TEdit;
+    lbPesquisar: TLabel;
+    SpeedButton1: TSpeedButton;
+    pnFundo: TPanel;
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure pnFundoCanResize(Sender: TObject; var NewWidth,
+      NewHeight: Integer; var Resize: Boolean);
+  private
+    globalSQL:TExecSQL;
+
+
+  public
+    { Public declarations }
+  end;
+
+var
+  frCon_padrao: TfrCon_padrao;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrCon_padrao.pnFundoCanResize(Sender: TObject; var NewWidth,
+  NewHeight: Integer; var Resize: Boolean);
+begin
+  pnFundo.Left :=  Round(NewWidth/2) - Round(pnFundo.Width/2)-7;
+  pnFundo.Top  :=  Round(NewHeight/2) - Round(pnFundo.Height/2)-18;
+end;
+
+procedure TfrCon_padrao.SpeedButton1Click(Sender: TObject);
+begin
+  edPesquisa.Clear;
+end;
+
+end.

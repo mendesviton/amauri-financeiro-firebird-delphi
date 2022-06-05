@@ -1,0 +1,67 @@
+{  Programador         Data         Descrição
+   Vitor Daniel     14/05/2022      Classe de validação de alunos.
+}
+unit uValidaAluno;
+
+interface
+
+uses
+   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uCad_padrao, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.ExtCtrls,Vcl.Mask,uAlunoDAO,System.SysUtils,Vcl.Graphics,uUtil_escola;
+
+type
+ TValidaAluno = class
+private
+    fUtil     :TUtil;
+    fDAOAluno:TAlunoDAO;
+    FedEmail: TEdit;
+    FedCodigo: TEdit;
+    FcbSexo: TComboBox;
+    FmkDataNascimento: TMaskEdit;
+    FmkCPF: TMaskEdit;
+    FedNome: TEdit;
+    FcbSerie: TComboBox;
+    FpnCodigo: TPanel;
+    FpnRodape: TPanel;
+    procedure LimpaExcetoCodigo;
+    procedure SetcbSerie(const Value: TComboBox);
+    procedure SetcbSexo(const Value: TComboBox);
+    procedure SetedCodigo(const Value: TEdit);
+    procedure SetedEmail(const Value: TEdit);
+    procedure SetedNome(const Value: TEdit);
+    procedure SetmkCPF(const Value: TMaskEdit);
+    procedure SetmkDataNascimento(const Value: TMaskEdit);
+    procedure pCriaObj;
+    procedure pDestroiObj;
+    procedure pCarregaAluno;
+    procedure pInserindoAluno;
+    procedure SetpnCodigo(const Value: TPanel);
+    procedure SetpnRodape(const Value: TPanel);
+    procedure pConsistencia;
+    procedure pInsere;
+    procedure pEdita;
+
+
+
+public
+    // valida os campos da tela;
+    function pValidaCodigo:boolean;
+    function pValidaNome:boolean;
+    function pValidaDocumento:boolean;
+    function pValidaDataNasc:boolean;
+    function pValidaEmail:boolean;
+
+    // insere/edita registro
+    procedure InsereEdita;
+
+
+    // deleta o aluno
+    procedure DeletaAluno;
+
+
+
+
+
+    // componentes da tela;
+    property edCodigo:TEdit read FedCodigo write SetedCodigo;
+    property edNome:TEd

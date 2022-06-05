@@ -1,0 +1,46 @@
+unit uInicioProcessor;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TfrInicioProcessos = class(TForm)
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frInicioProcessos: TfrInicioProcessos;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrInicioProcessos.FormCreate(Sender: TObject);
+var
+wCont:integer;
+ArquivoINI    : String;
+Configuration : TIniFile;
+begin
+ ArquivoINI := ExtractFilePath(Application.ExeName) + 'config.ini';
+ Configuration := TIniFile.Create(ArquivoINI);
+ Configuration.WriteString('Dados','Servidor',ExtractFilePath(Application.ExeName) + 'base\SYNBD.FDB');
+ FSQL:=TExecSQL.Create;
+ FSQL.CommandText.SQL.Clear;
+ FSQL.CommandText.SQL.Add('select bdcaminhoimagem from TB_SYN_CONDOMINIO where bdcodigo = 1');
+ FSQL.CommandText.Open;
+ if FSQL.CommandText.FieldByName('BDCAMINHOIMAGEM').AsString <> ExtractFilePath(Application.ExeName)+'persiste\imagecod1.png' then
+    begin
+     FSQL.SQL('update or insert into TB_SYN_CONDOMINIO (BDCODIGO,BDCAMINHOIMAGEM) values (1,'+quotedstr(ExtractFilePath(Application.ExeName)+'persiste\imagecod1.png')+')  matching(bdcodigo)');
+     FSQL.SQL('update or insert into TB_SYN_CONDOMINIO (BDCODIGO,BDCAMINHOIMAGEM) values (2,'+quotedstr(ExtractFilePath(Application.ExeName)+'persiste\imagecod2.png')+')  matching(bdcodigo)');
+     FSQL.SQL('update or insert into TB_SYN_CONDOMINIO (BDCODIGO,BDCAMINHOIMAGEM) values (3,'+quotedstr(ExtractFilePath(Application.ExeName)+'persiste\imagecod3.png')+')  matching(bdcodigo)');
+     FSQL.SQL('update or insert into TB_SYN_CONDOMINIO (BDCODIGO,BDCAMINHOIMAGEM) values (4,'+quotedstr(ExtractFilePath(Application.ExeName)+'persiste\imagecod4.png')+')  matching(bdcodigo)');
+     FSQL.SQL('update or insert into TB_SYN_MORADORES  (BDCODIGO,BDCAMINHOIMAGEM) values (1,'+quotedstr(ExtractFilePath(Application.ExeName)+'persiste\vitao.png')+')      matching(bdcodigo)');
+end;
+end.

@@ -1,0 +1,130 @@
+inherited frCad_contas: TfrCad_contas
+  Caption = 'fr'
+  ClientHeight = 253
+  ClientWidth = 432
+  ExplicitWidth = 448
+  ExplicitHeight = 292
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnFundo: TPanel
+    Top = 47
+    Width = 432
+    Height = 188
+    ExplicitTop = 47
+    ExplicitWidth = 432
+    ExplicitHeight = 188
+    inherited pnComponentes: TPanel
+      Top = 8
+      Width = 417
+      Height = 169
+      ExplicitTop = 8
+      ExplicitWidth = 417
+      ExplicitHeight = 169
+      object lbCodigo: TLabel
+        Left = 58
+        Top = 42
+        Width = 49
+        Height = 14
+        Caption = 'C'#243'digo:'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lbDescricao: TLabel
+        Left = 37
+        Top = 94
+        Width = 70
+        Height = 14
+        Caption = 'Descri'#231#227'o:'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lbNome: TLabel
+        Left = 72
+        Top = 68
+        Width = 35
+        Height = 14
+        Caption = 'Nome:'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+      end
+      object ckPadrao: TCheckBox
+        Left = 108
+        Top = 119
+        Width = 237
+        Height = 17
+        Caption = 'Forma de pagamento padr'#227'o'
+        Checked = True
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+        State = cbChecked
+        TabOrder = 0
+      end
+      object edCodigo: TEdit
+        Left = 108
+        Top = 39
+        Width = 31
+        Height = 22
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 1
+      end
+      object edDescricao: TEdit
+        Left = 108
+        Top = 91
+        Width = 273
+        Height = 22
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 2
+      end
+      object edNome: TEdit
+        Left = 109
+        Top = 65
+        Width = 273
+        Height = 22
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 3
+      end
+    end
+  end
+  inherited pnBarra: TPanel
+    Width = 432
+    Align = alTop
+    inherited spLimpaCampos: TSpeedButton
+      Left = 382
+    end
+  end
+  inherited pnUsuario: TPanel
+    Top = 236
+    Width = 432
+  end
+end

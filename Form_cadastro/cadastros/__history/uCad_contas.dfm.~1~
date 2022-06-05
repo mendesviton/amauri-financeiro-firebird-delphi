@@ -1,0 +1,23 @@
+inherited frCad_contas: TfrCad_contas
+  Caption = 'Cadastro de contas'
+  ClientHeight = 248
+  ClientWidth = 430
+  ExplicitWidth = 446
+  ExplicitHeight = 287
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnFundo: TPanel
+    inherited pnComponentes: TPanel
+      Width = 417
+      Height = 169
+      ExplicitWidth = 417
+      ExplicitHeight = 169
+    end
+  end
+  inherited pnUsuario: TPanel
+    Top = 231
+    Width = 430
+    ExplicitTop = 529
+    ExplicitWidth = 513
+  end
+end

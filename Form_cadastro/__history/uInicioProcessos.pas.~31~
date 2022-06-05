@@ -1,0 +1,58 @@
+{  Solicitação      Programador        Data         Descrição
+    w00001          Vitor Daniel    31/03/2022      Criação das telas de processos/cadastros/lançamentos/consulta.
+}
+unit uInicioProcessos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, IniFiles,uConexaoBanco,uControleSQL,
+  Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Menus, Vcl.ToolWin,
+  Vcl.ComCtrls,Unit1;
+
+type
+  TfrInicioProcessos = class(TForm)
+    Image1: TImage;
+    MainMenu1: TMainMenu;
+    Cadastro1: TMenuItem;
+    Usuarios1: TMenuItem;
+    Relatrios1: TMenuItem;
+    Consulta1: TMenuItem;
+    Dadoscadastrais1: TMenuItem;
+    Usurios1: TMenuItem;
+    Usurios2: TMenuItem;
+    asdasd1: TMenuItem;
+    procedure FormResize(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure asdasd1Click(Sender: TObject);
+  private
+    FSQL:TExecSQL;
+  public
+    { Public declarations }
+  end;
+
+var
+  frInicioProcessos: TfrInicioProcessos;
+    { Métodos de controle de tela e componentes }
+implementation
+
+{$R *.dfm}
+
+procedure TfrInicioProcessos.asdasd1Click(Sender: TObject);
+begin
+  TForm1.Create(self);
+end;
+
+procedure TfrInicioProcessos.Button1Click(Sender: TObject);
+begin
+// showmessage('teste de herança')
+end;
+
+procedure TfrInicioProcessos.FormResize(Sender: TObject);
+begin
+  Image1.Width := Screen.Width;
+  Image1.Height := Screen.Height
+end;
+
+end.

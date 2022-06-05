@@ -1,0 +1,39 @@
+unit uInicioProcessor;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, IniFiles,uConexaoBanco,uControleSQL;
+
+type
+  TfrInicioProcessos = class(TForm)
+    procedure FormCreate(Sender: TObject);
+  private
+    FSQL:TExecSQL;
+  public
+    { Public declarations }
+  end;
+
+var
+  frInicioProcessos: TfrInicioProcessos;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrInicioProcessos.FormCreate(Sender: TObject);
+var
+wCont:integer;
+ArquivoINI    : String;
+Configuration : TIniFile;
+begin
+ ArquivoINI := ExtractFilePath(Application.ExeName) + 'config.ini';
+ Configuration := TIniFile.Create(ArquivoINI);
+ Configuration.WriteString('Dados','Servidor',ExtractFilePath(Application.ExeName) + 'base\SYNBD.FDB');
+ FSQL:=TExecSQL.Create;
+ FSQL.CommandText.SQL.Clear;
+ FSQL.CommandText.SQL.Add('select bdcaminhoimagem from TB_SYN_CONDOMINIO where bdcodigo = 1');
+ FSQL.CommandText.Open;
+end;
+end.

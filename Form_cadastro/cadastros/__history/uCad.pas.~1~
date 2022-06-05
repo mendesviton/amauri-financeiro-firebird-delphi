@@ -1,0 +1,24 @@
+unit uCad;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uCad_padrao, Vcl.Buttons, Vcl.ExtCtrls;
+
+type
+  TfrCad_padrao1 = class(TfrCad_padrao)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frCad_padrao1: TfrCad_padrao1;
+
+implementation
+
+{$R *.dfm}
+
+end.

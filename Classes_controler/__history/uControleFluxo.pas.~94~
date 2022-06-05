@@ -1,0 +1,444 @@
+unit uControleFluxo;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uCad_padrao, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.ExtCtrls, Vcl.ComCtrls,Vcl.Mask,uControleSQL,DB, Vcl.Imaging.jpeg,uUtilAmauri;
+
+type
+  TControleUsuarioSQL = class
+    private
+      SQLGlobal:TExecSQL;
+    public
+      class function pSelectAllConsulta(prCodUsu:String = ''):string;
+      procedure  pExcluiUsuario(BDCODUSU:string);
+      procedure  pInsereUsuario(BDCODUSU,BDNOME,BDCPF,BDLOGR,BDRUA,BDNUMERO,BDCIDADE,BDEMAIL,BDUF:String;BDFOTOUSER:TFileStream;BDSITUACAO:boolean);
+      function   fExisteUsuario(BDCODUSU:string):boolean;
+      function   getNomeUsuario(BDCODUSU:string):string;
+      function   getEmailUsuario(BDCODUSU:string):string;
+      function   getCPF(BDCODUSU:string):string;
+      function   getLogradouro(BDCODUSU:string):string;
+      function   getNomeLocal(BDCODUSU:string):string;
+      function   getCidade(BDCODUSU:string):string;
+      function   getNumero(BDCODUSU:string):string;
+      function   getCodUF(BDCODUSU:string):integer;
+      function   getNomeEstadoUsuario(BDCODUSU:string):String;
+      function   getFotoUsuario(BDCODUSU:string):TJPEGImage;
+      function   getSituacaoUsuario(BDCODUSU:string):boolean;
+      destructor Destroy; override;
+
+
+
+  end;
+  TControleFormaPagamentoSQL = class
+    private
+     SQLGlobal:TExecSQL;
+     function   fExistePadraoConfigurado:string;
+    public
+     function   getParametroPadrao(BDCOD:string):boolean;
+     function   getDescricao(BDCOD:string):string;
+     procedure  pInsereFormaPGTO(BDCOD,BDESCRICAO:string;BDPADRAO:boolean);
+     procedure  pExluirFormaPGTO(BDCOD:string);
+
+
+  end;
+
+implementation
+
+{
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ | #1 class                              TControleUsuario                                             |
+ |                                                                                                    |
+ |            this class has the function of communicating with access to user data,                  |
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+}
+
+destructor TControleUsuarioSQL.Destroy;
+begin
+  SQLGlobal.Destroy;
+  inherited;
+end;
+
+function TControleUsuarioSQL.fExisteUsuario(BDCODUSU: string): boolean;
+var
+ wSQL:string;
+begin
+  if not Assigned(SQLGlobal) then
+     SQLGlobal:=TExecSQL.Create;
+  wSQL := EmptyStr;
+  wSQL := 'select * from tfin_tusuario usu where usu.bdcodusu = '+trim(BDCODUSU);
+
+       SQLGlobal.CommandText.SQL.Clear;
+       SQLGlobal.CommandText.SQL.Add(wSQL);
+       SQLGlobal.CommandText.Open;
+
+       if SQLGlobal.CommandText.IsEmpty then
+            result:=false    //não existe usuário
+            else
+            result:=true;    //existe usuário
+
+
+
+end;
+
+function TControleUsuarioSQL.getCidade(BDCODUSU: string): string;
+var
+wSQL:String;
+begin
+   if not Assigned(SQLGlobal) then
+     SQLGlobal:=TExecSQL.Create;
+  wSQL := EmptyStr;
+  wSQL := 'select * from tfin_tusuario usu where usu.bdcodusu = '+trim(BDCODUSU);
+  SQLGlobal.CommandText.SQL.Clear;
+  SQLGlobal.CommandText.SQL.Add(wSQL);
+  SQLGlobal.CommandText.Open;
+  result := SQLGlobal.CommandText.FieldByName('BDCIDADE').AsString
+end;
+
+function TControleUsuarioSQL.getCodUF(BDCODUSU: string): integer;
+var
+wSQL:String;
+begin
+   if not Assigned(SQLGlobal) then
+     SQLGlobal:=TExecSQL.Create;
+  wSQL := EmptyStr;
+  wSQL := 'select * from tfin_tusuario usu where usu.bdcodusu = '+trim(BDCODUSU);
+   SQLGlobal.CommandText.SQL.Clear;
+  SQLGlobal.CommandText.SQL.Add(wSQL);
+  SQLGlobal.CommandText.Open;
+  result := SQLGlobal.CommandText.FieldByName('BDUF').AsInteger
+end;
+
+function TControleUsuarioSQL.getCPF(BDCODUSU: string): string;
+var
+wSQL:String;
+begin
+   if not Assigned(SQLGlobal) then
+     SQLGlobal:=TExecSQL.Create;
+  wSQL := EmptyStr;
+  wSQL := 'select * from tfin_tusuario usu where usu.bdcodusu = '+trim(BDCODUSU);
+   SQLGlobal.CommandText.SQL.Clear;
+  SQLGlobal.CommandText.SQL.Add(wSQL);
+  SQLGlobal.CommandText.Open;
+  result := SQLGlobal.CommandText.FieldByName('BDCPF').AsString
+end;
+
+function TControleUsuarioSQL.getEmailUsuario(BDCODUSU: string): string;
+var
+wSQL:String;
+begin
+   if not Assigned(SQLGlobal) then
+     SQLGlobal:=TExecSQL.Create;
+  wSQL := EmptyStr;
+  wSQL := 'select * from tfin_tusuario usu where usu.bdcodusu = '+trim(BDCODUSU);
+  SQLGlobal.CommandText.SQL.Clear;
+  SQLGlobal.CommandText.SQL.Add(wSQL);
+  SQLGlobal.CommandText.Open;
+  result := SQLGlobal.CommandText.FieldByName('BDEMAIL').AsString
+end;
+
+function TControleUsuarioSQL.getFotoUsuario(BDCODUSU: string): TJPEGImage;
+var
+  imagem: TJPEGImage;
+  foto: TStream;
+  wSQL:String;
+begin
+    if not Assigned(SQLGlobal) then
+     SQLGlobal:=TExecSQL.Create;
+  wSQL := EmptyStr;
+  wSQL := 'select * from tfin_tusuario usu where usu.bdcodusu = '+trim(BDCODUSU);
+  SQLGlobal.CommandText.SQL.Clear;
+  SQLGlobal.CommandText.SQL.Add(wSQL);
+  SQLGlobal.CommandText.Open;
+  if not (SQLGlobal.CommandText.FieldByName('BDFOTOUSER').IsNull)  then
+     begin
+        foto:= SQLGlobal.CommandText.CreateBlobStream(SQLGlobal.CommandText.FieldByName('BDFOTOUSER'),bmRead);
+        imagem := TJPEGImage.Create;
+        imagem.LoadFromStream(foto);
+        Result:=imagem;
+     end
+     else
+     Result:= nil;
+
+end;
+
+function TControleUsuarioSQL.getLogradouro(BDCODUSU: string): string;
+var
+wSQL:String;
+begin
+   if not Assigned(SQLGlobal) then
+     SQLGlobal:=TExecSQL.Create;
+  wSQL := EmptyStr;
+  wSQL := 'select * from tfin_tusuario usu where usu.bdcodusu = '+trim(BDCODUSU);
+  SQLGlobal.CommandText.SQL.Clear;
+  SQLGlobal.CommandText.SQL.Add(wSQL);
+  SQLGlobal.CommandText.Open;
+  result := SQLGlobal.CommandText.FieldByName('BDLOGR').AsString
+end;
+
+function TControleUsuarioSQL.getNomeEstadoUsuario(BDCODUSU: string): string;
+var
+wSQL:String;
+begin
+   if not Assigned(SQLGlobal) then
+     SQLGlobal:=TExecSQL.Create;
+  wSQL := EmptyStr;
+  wSQL := wSQL +' select * from tfin_tusuario usu ';
+  wSQL := wSQL +' left outer join tuf uf on (uf.bdcodigo = usu.bduf)';
+  wSQL := wSQL +' where usu.bdcodusu = '+trim(BDCODUSU);
+  SQLGlobal.CommandText.SQL.Clear;
+  SQLGlobal.CommandText.SQL.Add(wSQL);
+  SQLGlobal.CommandText.Open;
+  result := SQLGlobal.CommandText.FieldByName('BDNOMEUF').AsString;
+end;
+
+function TControleUsuarioSQL.getNomeLocal(BDCODUSU: string): string;
+var
+wSQL:String;
+begin
+   if not Assigned(SQLGlobal) then
+     SQLGlobal:=TExecSQL.Create;
+  wSQL := EmptyStr;
+  wSQL := 'select * from tfin_tusuario usu where usu.bdcodusu = '+trim(BDCODUSU);
+  SQLGlobal.CommandText.SQL.Clear;
+  SQLGlobal.CommandText.SQL.Add(wSQL);
+  SQLGlobal.CommandText.Open;
+  result := SQLGlobal.CommandText.FieldByName('BDRUA').AsString
+end;
+
+function TControleUsuarioSQL.getNomeUsuario(BDCODUSU: string): string;
+var
+wSQL:String;
+begin
+   if not Assigned(SQLGlobal) then
+     SQLGlobal:=TExecSQL.Create;
+  wSQL := EmptyStr;
+  wSQL := 'select * from tfin_tusuario usu where usu.bdcodusu = '+trim(BDCODUSU);
+  SQLGlobal.CommandText.SQL.Clear;
+  SQLGlobal.CommandText.SQL.Add(wSQL);
+  SQLGlobal.CommandText.Open;
+  result := SQLGlobal.CommandText.FieldByName('BDNOME').AsString
+end;
+
+function TControleUsuarioSQL.getNumero(BDCODUSU: string): string;
+var
+wSQL:String;
+begin
+   if not Assigned(SQLGlobal) then
+     SQLGlobal:=TExecSQL.Create;
+  wSQL := EmptyStr;
+  wSQL := 'select * from tfin_tusuario usu where usu.bdcodusu = '+trim(BDCODUSU);
+  SQLGlobal.CommandText.SQL.Clear;
+  SQLGlobal.CommandText.SQL.Add(wSQL);
+  SQLGlobal.CommandText.Open;
+  result := SQLGlobal.CommandText.FieldByName('BDNUMERO').AsString
+end;
+
+function TControleUsuarioSQL.getSituacaoUsuario(BDCODUSU: string): boolean;
+var
+wSQL:string;
+begin
+    if not Assigned(SQLGlobal) then
+     SQLGlobal:=TExecSQL.Create;
+  wSQL := EmptyStr;
+  wSQL := 'select * from tfin_tusuario usu where usu.bdcodusu = '+trim(BDCODUSU);
+  SQLGlobal.CommandText.SQL.Clear;
+  SQLGlobal.CommandText.SQL.Add(wSQL);
+  SQLGlobal.CommandText.Open;
+  if SQLGlobal.CommandText.FieldByName('BDSITUACAO').AsString = '1' then
+     result:=true
+     else
+     result:=false;
+end;
+
+procedure TControleUsuarioSQL.pExcluiUsuario(BDCODUSU: string);
+var
+  wSQL:String;
+begin
+   if not Assigned(SQLGlobal) then
+     SQLGlobal:=TExecSQL.Create;
+
+     SQLGlobal.CommandText.SQL.Clear;
+     wSQL := wSQL + 'delete from tfin_tusuario where BDCODUSU = :BDCODUSU';
+      SQLGlobal.CommandText.CommandText:=wSQL;
+      SQLGlobal.CommandText.Params[0].Name :='BDCODUSU';
+      SQLGlobal.CommandText.Params[0].AsInteger := StrToInt(BDCODUSU);
+      SQLGlobal.CommandText.ExecSQL;
+
+
+end;
+
+procedure TControleUsuarioSQL.pInsereUsuario(BDCODUSU, BDNOME, BDCPF, BDLOGR,
+  BDRUA, BDNUMERO, BDCIDADE, BDEMAIL, BDUF: String;BDFOTOUSER:TFileStream;BDSITUACAO:boolean);
+var
+  wSQL:String;
+begin
+  if not Assigned(SQLGlobal) then
+     SQLGlobal:=TExecSQL.Create;
+
+     SQLGlobal.CommandText.SQL.Clear;
+
+     wSQL := wSQL + 'update or insert into tfin_tusuario (BDCODUSU,BDNOME,BDCPF,BDLOGR,BDRUA,BDNUMERO,BDCIDADE,BDEMAIL,BDUF,BDDATAINSERCAO,BDSITUACAO';
+     if not (BDFOTOUSER = nil) then
+     wSQL := wSQL + ',BDFOTOUSER)'
+     else
+     wSQL := wSQL + ')';
+     wSQL := wSQL + ' values (:BDCODUSU,:BDNOME,:BDCPF,:BDLOGR,:BDRUA,:BDNUMERO,:BDCIDADE,:BDEMAIL,:BDUF,:BDDATAINSERCAO,:BDSITUACAO';
+     if not (BDFOTOUSER = nil) then
+     wSQL := wSQL +  ',:BDFOTOUSER)'
+     else
+     wSQL := wSQL + ')';
+     SQLGlobal.CommandText.CommandText:=wSQL;
+     SQLGlobal.CommandText.Params[0].Name :='BDCODUSU';
+     SQLGlobal.CommandText.Params[0].AsInteger := StrToInt(BDCODUSU);
+     SQLGlobal.CommandText.Params[1].Name :='BDNOME';
+     SQLGlobal.CommandText.Params[1].AsString := BDNOME;
+     SQLGlobal.CommandText.Params[2].Name :='BDCPF';
+     SQLGlobal.CommandText.Params[2].AsString := BDCPF;
+     SQLGlobal.CommandText.Params[3].Name :='BDLOGR';
+     SQLGlobal.CommandText.Params[3].AsString := BDLOGR;
+     SQLGlobal.CommandText.Params[4].Name :='BDRUA';
+     SQLGlobal.CommandText.Params[4].AsString := BDRUA;
+     SQLGlobal.CommandText.Params[5].Name :='BDNUMERO';
+     SQLGlobal.CommandText.Params[5].AsInteger := StrToInt(BDNUMERO);
+     SQLGlobal.CommandText.Params[6].Name :='BDCIDADE';
+     SQLGlobal.CommandText.Params[6].AsString := BDCIDADE;
+     SQLGlobal.CommandText.Params[7].Name :='BDEMAIL';
+     SQLGlobal.CommandText.Params[7].AsString:= BDEMAIL;
+     SQLGlobal.CommandText.Params[8].Name :='BDUF';
+     SQLGlobal.CommandText.Params[8].AsInteger:= StrToInt(BDUF);
+     SQLGlobal.CommandText.Params[9].Name :='BDDATAINSERCAO';
+     SQLGlobal.CommandText.Params[9].AsString:= TUtil.FConverteDataAAAAMMDD(datetostr(date));
+     SQLGlobal.CommandText.Params[10].Name :='BDSITUACAO';
+     if BDSITUACAO then
+        SQLGlobal.CommandText.Params[10].AsString:= '1'
+        else
+        SQLGlobal.CommandText.Params[10].AsString:= '0';
+
+     if not (BDFOTOUSER = nil) then
+        begin
+          SQLGlobal.CommandText.Params[11].Name := 'BDFOTOUSER';
+          SQLGlobal.CommandText.Params[11].LoadFromStream(BDFOTOUSER,ftGraphic);
+        end;
+     SQLGlobal.CommandText.ExecSQL;
+end;
+
+class function TControleUsuarioSQL.pSelectAllConsulta(prCodUsu: String = ''): string;
+var
+ wSQL:String;
+begin
+ wSQL := ' select vw.*,1 as BDCHECK from VW_CAD_USUARIO vw ';
+ if not (prCodUsu = EmptyStr) then
+    wSQL := wSQL + ' where vw.bdcodusu ='+ Trim(prCodUsu);
+ result:=wSQL;
+end;
+
+{
+
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ | #2 class                              TControleFormaPagamentoSQL                                   |
+ |                                                                                                    |
+ |            this class has the function of communicating with access to payment methods data,       |
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+}
+
+function TControleFormaPagamentoSQL.fExistePadraoConfigurado: string;
+var
+ I:integer;
+ wSQL:string;
+ wCodFormaPadraoAtual:integer;
+ SQLGlobalAlt:TExecSQL;
+begin
+ SQLGlobalAlt:=TExecSQL.Create;
+ try
+
+
+  result:='''TRUE''';
+  wSQL := 'select * from TFIN_FORMAPGTO pgt where pgt.bdpadrao = '+QuotedStr('TRUE');
+  SQLGlobalAlt.CommandText.SQL.Clear;
+  SQLGlobalAlt.CommandText.SQL.Add(wSQL);
+  SQLGlobalAlt.CommandText.Open;
+
+  if not SQLGlobalAlt.CommandText.IsEmpty then //já existe uma forma de pagamento padrão definida
+         begin
+            wCodFormaPadraoAtual:= SQLGlobalAlt.CommandText.FieldByName('BDCODFORMAPGTO').AsInteger;
+            SQLGlobalAlt.CommandText.Close;
+
+
+            if MessageDlg('Já existe uma forma de pagamento padrão definida '+#13+' Deseja continuar?',mtConfirmation,[mbYes,mbNo],1) = mrYes then
+               begin
+                 wSQL:=' update  TFIN_FORMAPGTO set BDPADRAO = ''FALSE''';
+                 SQLGlobalAlt.CommandText.SQL.Clear;
+                 SQLGlobalAlt.CommandText.CommandText:=wSQL;
+                 SQLGlobalAlt.CommandText.ExecSQL;
+                 result:='TRUE';
+               end
+               else
+               result:='FALSE';
+         end;
+         result:='TRUE';
+ finally
+
+   SQLGlobalAlt.Free;
+ end;
+
+
+end;
+
+function TControleFormaPagamentoSQL.getDescricao(BDCOD: string): string;
+var
+  wSQL:String;
+begin
+   if not Assigned(SQLGlobal) then
+     SQLGlobal:=TExecSQL.Create;
+  wSQL := EmptyStr;
+  wSQL := 'select * from TFIN_FORMAPGTO usu where usu.BDCODFORMAPGTO = '+trim(BDCOD);
+  SQLGlobal.CommandText.SQL.Clear;
+  SQLGlobal.CommandText.SQL.Add(wSQL);
+  SQLGlobal.CommandText.Open;
+  result := SQLGlobal.CommandText.FieldByName('BDEMAIL').AsString
+
+end;
+
+function TControleFormaPagamentoSQL.getParametroPadrao(BDCOD: string): boolean;
+begin
+
+end;
+
+procedure TControleFormaPagamentoSQL.pExluirFormaPGTO(BDCOD: string);
+begin
+
+end;
+
+procedure TControleFormaPagamentoSQL.pInsereFormaPGTO(BDCOD, BDESCRICAO: string;
+  BDPADRAO: boolean);
+var
+  wSQL:string;
+begin
+  if not Assigned(SQLGlobal) then
+     SQLGlobal:=TExecSQL.Create;
+
+     SQLGlobal.CommandText.SQL.Clear;
+
+     wSQL := ' update or insert into TFIN_FORMAPGTO (BDPADRAO,BDDESCRICAO,BDCODFORMAPGTO) ';
+     wSQL := wSQL + ' values (:BDPADRAO,:BDDESCRICAO,:BDCODFORMAPGTO)';
+     SQLGlobal.CommandText.CommandText:=wSQL;
+     SQLGlobal.CommandText.Params[0].Name :='BDPADRAO';
+     if BDPADRAO then
+        SQLGlobal.CommandText.Params[0].AsString := fExistePadraoConfigurado  //vitor - esse método confere se ja existe forma padrão cadastrada
+        else
+        SQLGlobal.CommandText.Params[0].AsString := QuotedStr('FALSE');
+
+     SQLGlobal.CommandText.Params[1].Name :='BDDESCRICAO';
+     SQLGlobal.CommandText.Params[1].AsString := BDESCRICAO;
+     SQLGlobal.CommandText.Params[2].Name :='BDCODFORMAPGTO';
+     SQLGlobal.CommandText.Params[2].AsString := BDCOD;
+     SQLGlobal.CommandText.ExecSQL;
+
+end;
+
+end.

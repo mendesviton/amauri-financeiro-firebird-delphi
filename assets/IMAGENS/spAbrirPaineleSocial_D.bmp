@@ -1,0 +1,59 @@
+Util.Create;
+end;
+
+procedure TValidaAluno.pDestroiObj;
+begin
+     if  Assigned(fDAOAluno) then
+     FreeAndNil(fDAOAluno);
+     if  Assigned(fUtil) then
+     FreeAndNil(fUtil)
+end;
+
+procedure TValidaAluno.pEdita;
+begin
+       fDAOAluno.Serie      :=cbSerie.ItemIndex;
+       fDAOAluno.Sexo       :=cbSexo.ItemIndex;
+       fDAOAluno.Codigo     :=strtoint(trim(edCodigo.Text));
+       fDAOAluno.Nome       :=trim(edNome.Text);
+       fDAOAluno.Email      :=trim(edEmail.Text);
+       fDAOAluno.CPF        :=trim(mkCPF.Text);
+       fDAOAluno.DataNascimento := trim(mkDataNascimento.Text);
+       fDAOAluno.pInsereAluno;
+
+end;
+
+procedure TValidaAluno.pInsere;
+begin
+       fDAOAluno.Serie      :=cbSerie.ItemIndex;
+       fDAOAluno.Sexo       :=cbSexo.ItemIndex;
+       fDAOAluno.Codigo     :=strtoint(trim(edCodigo.Text));
+       fDAOAluno.Nome       :=trim(edNome.Text);
+       fDAOAluno.Email      :=trim(edEmail.Text);
+       fDAOAluno.CPF        :=trim(mkCPF.Text);
+       fDAOAluno.DataNascimento := trim(mkDataNascimento.Text);
+       fDAOAluno.pInsereAluno;
+end;
+
+procedure TValidaAluno.pInserindoAluno;
+begin
+  fDAOAluno.Codigo:=strtoint(trim(edCodigo.Text));
+  LimpaExcetoCodigo;
+  pnRodape.Caption:= 'Inserindo um aluno';
+  pnRodape.Font.Color := clBackground;
+  pnCodigo.Caption := EmptyStr;
+  edNome.SetFocus;
+end;
+
+function TValidaAluno.pValidaCodigo: boolean;
+begin
+   pCriaObj;
+
+   if (not fUtil.Numerico(edCodigo.Text) and (TUtilValida.pCampoPreenchido(edCodigo.Text)))  then
+       begin
+         MessageDlg('Código preenchido incorretamente.',mtError,[mbOK],1);
+         edCodigo.SetFocus;
+       end;
+       if fDAOAluno.fExisteAluno(edCodigo.Text) then
+          pCarregaAluno
+          else
+          pIn

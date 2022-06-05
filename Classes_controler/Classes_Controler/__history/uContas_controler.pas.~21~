@@ -1,0 +1,143 @@
+{ Solicitação           Data              Descrição
+                      16/04/2022          Criação das classes de processos de contas.
+}
+unit uContas_controler;
+
+interface
+  uses
+
+   Windows, Messages, SysUtils, Classes,  Controls, Forms, Dialogs,
+   Variants, Contnrs,  DBXFirebird, SqlExpr,  StrUtils, inifiles,Vcl.StdCtrls,
+   uConexaoBanco,Vcl.Mask,uConsts,uUtilAmauri,uFormapgto_DAO,uContasDAO,Vcl.ExtCtrls,Vcl.Graphics,Vcl.Imaging.jpeg;
+type
+  TContasControler = class
+    private
+        FedDescricao: TEdit;
+        FedCodigo: TEdit;
+        FpnEdicao: TPanel;
+        FckPadrao: TCheckBox;
+        FedTipo: tedit;
+        FUtil:TUtil;
+        FDAOContas:TContasDAO;
+        procedure SetckPadrao(const Value: TCheckBox);
+        procedure SetedCodigo(const Value: TEdit);
+        procedure SetedDescricao(const Value: TEdit);
+        procedure SetpnEdicao(const Value: TPanel);
+        procedure SetedTipo(const Value: tedit);
+        procedure pCriaObj;
+        procedure pDestroiObj;
+
+    public
+        function  IniciaProcesso:boolean;
+        Function  pValidaCodigo :boolean;
+        Function  pValidaDescricao   :boolean;
+        property edTipo:tedit read FedTipo write SetedTipo;
+        property edDescricao: TEdit read FedDescricao write SetedDescricao;
+        property edCodigo: TEdit read FedCodigo write SetedCodigo;
+        property ckPadrao: TCheckBox read FckPadrao write SetckPadrao;
+        property pnEdicao: TPanel read FpnEdicao write SetpnEdicao;
+    published
+  end;
+
+implementation
+
+{ TContasControler }
+
+function TContasControler.IniciaProcesso: boolean;
+begin
+
+end;
+
+procedure TContasControler.pCriaObj;
+begin
+    if not Assigned(FDAOContas) then
+        FDAOContas:=TContasDAO.Create;
+
+     if not Assigned(FUtil) then
+        FUtil:=TUtil.Create;
+
+end;
+
+procedure TContasControler.pDestroiObj;
+begin
+
+end;
+
+function TContasControler.pValidaCodigo: boolean;
+begin
+  pCriaObj;
+
+  Result:=false;
+  if (not FUtil.IsNumeric(edCodigo.Text)) and (TUtilValida.pCampoPreenchido(edCodigo.Text))  then
+         begin
+                  MessageDlg('Código preenchido incorretamente',mtError,[mbOK],1);
+//                  edCodigo.Clear;
+                  edCodigo.SetFocus;
+         end
+         else
+         begin
+//                InsercaoEdição;
+                Result:=true;  //validao
+         end;
+
+end;
+
+function TContasControler.pValidaDescricao: boolean;
+  var
+ I:integer;
+begin
+
+  pCriaObj;
+
+
+  Result:=false;
+   if not TUtilValida.pCampoPreenchido(edDescricao.Text) then
+      begin
+          MessageDlg('O preenchimento da descrição é obrigatório',mtError,[mbOK],1);
+          //edNome.SetFocus
+          edDescricao.SetFocus;
+      end
+      else
+      begin
+        for I := 0 to length(edDescricao.Text) do
+            begin
+              if (edDescricao.Text[I] in  ['0'..'9']) then
+                 begin
+                   edDescricao.SetFocus;
+                   MessageDlg('A descrição  foi preenchido incorretamente ',mtError,[mbOK],1);
+                   result:=false;
+                   break
+                 end
+                 else
+                 result:=true;
+            end;
+
+      end;
+end;
+
+procedure TContasControler.SetckPadrao(const Value: TCheckBox);
+begin
+  FckPadrao := Value;
+end;
+
+procedure TContasControler.SetedCodigo(const Value: TEdit);
+begin
+  FedCodigo := Value;
+end;
+
+procedure TContasControler.SetedDescricao(const Value: TEdit);
+begin
+  FedDescricao := Value;
+end;
+
+procedure TContasControler.SetedTipo(const Value: tedit);
+begin
+  FedTipo := Value;
+end;
+
+procedure TContasControler.SetpnEdicao(const Value: TPanel);
+begin
+  FpnEdicao := Value;
+end;
+
+end.

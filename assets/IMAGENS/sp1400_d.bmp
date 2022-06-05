@@ -1,0 +1,47 @@
+{ Solicitação           Data              Descrição
+  w1                 16/04/2022          Criação das telas padrões do sistema (Cadastro).
+}
+unit uCad_padrao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons,Vcl.Mask,uConsts,Vcl.StdCtrls,uLog,uControleSQL;
+
+type
+  TfrCad_padrao = class(TForm)
+    sbConsulta: TSpeedButton;
+    sbGravarRegistro: TSpeedButton;
+    sbExcluirRegistro: TSpeedButton;
+    pnBarra: TPanel;
+    pnFundo: TPanel;
+    pnComponentes: TPanel;
+    pnUsuario: TPanel;
+    spLimpaCampos: TSpeedButton;
+    procedure FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer;
+      var Resize: Boolean);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormCreate(Sender: TObject);
+    procedure sbGravarRegistroClick(Sender: TObject);
+    procedure sbExcluirRegistroClick(Sender: TObject);
+    procedure sbConsultaClick(Sender: TObject);
+    procedure spLimpaCamposClick(Sender: TObject);
+  private
+    FComponentlist:TStringList;
+    FFSubiu: boolean;
+    FLog:TLOG;
+    FFCODIGO: Integer;
+    // controle das setar do teclado nos edits
+    procedure pControleKey(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure onEnterEdits(Sender: TObject);
+    procedure pCriaControlesTecla;virtual;
+    procedure SetFSubiu(const Value: boolean);
+    procedure pLimpaCampo;
+    procedure SetFCODIGO(const Value: Integer);
+
+  public
+    property FSubiu : boolean read FFSubiu write SetFSubiu;
+    property FCODIGO :Integer read FFCODIGO write SetFCODIGO;
+  

@@ -1,0 +1,36 @@
+inherited frCad_padrao1: TfrCad_padrao1
+  Caption = 'frCad_padrao1'
+  ClientHeight = 253
+  ClientWidth = 432
+  ExplicitWidth = 448
+  ExplicitHeight = 292
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnFundo: TPanel
+    Top = 47
+    Width = 432
+    Height = 188
+    ExplicitTop = 47
+    ExplicitWidth = 432
+    ExplicitHeight = 188
+    inherited pnComponentes: TPanel
+      Top = 8
+      Width = 417
+      Height = 169
+      ExplicitTop = 8
+      ExplicitWidth = 417
+      ExplicitHeight = 169
+    end
+  end
+  inherited pnBarra: TPanel
+    Width = 432
+    Align = alTop
+    inherited spLimpaCampos: TSpeedButton
+      Left = 382
+    end
+  end
+  inherited pnUsuario: TPanel
+    Top = 236
+    Width = 432
+  end
+end
