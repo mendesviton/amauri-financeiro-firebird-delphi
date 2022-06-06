@@ -27,6 +27,9 @@ type
   protected
      procedure setFilePath;override;
      procedure setSQL;override;
+
+    procedure pCriaObj;override;
+    procedure pDestroiObj;override;
   end;
 
 var
@@ -75,6 +78,18 @@ begin
 
 end;
 
+
+procedure TfrRel_usuario.pCriaObj;
+begin
+  inherited;
+  ShowMessage('procedure pCriaObj está vazia');
+end;
+
+procedure TfrRel_usuario.pDestroiObj;
+begin
+  inherited;
+  ShowMessage('procedure pDestroi está vazia');
+end;
 
 procedure TfrRel_usuario.setFilePath;
 begin

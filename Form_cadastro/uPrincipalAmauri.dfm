@@ -1,7 +1,8 @@
 inherited frAmauriPrincipal: TfrAmauriPrincipal
   ClientHeight = 823
   ClientWidth = 1346
-  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  OnShortCut = FormShortCut
   ExplicitWidth = 1362
   ExplicitHeight = 882
   PixelsPerInch = 96

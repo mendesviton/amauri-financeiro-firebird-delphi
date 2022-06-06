@@ -10,7 +10,7 @@ uses
 
    Windows, Messages, SysUtils, Classes,  Controls, Forms, Dialogs,
    Variants, Contnrs,  DBXFirebird, SqlExpr,  StrUtils, inifiles,Vcl.StdCtrls,
-   uConexaoBanco,Vcl.Mask,uConsts,uUtilAmauri,uUsuario_DAO,Vcl.ExtCtrls,Vcl.Graphics,Vcl.Imaging.jpeg;
+   uConexaoBanco,Vcl.Mask,uConsts,uUtilAmauri,uUsuario_DAO,Vcl.ExtCtrls,Vcl.Graphics,Vcl.Imaging.jpeg,uLog;
 
 
    type
@@ -34,11 +34,13 @@ uses
         FlbCPF: TLabel;
         FlbNomeCarteira: tlabel;
         FUtil:TUtil;
+        FLOG:TLOG;
         FUsuarioSQL:TUsuarioDAO;
         FpnEdicao: TPanel;
         FImageFoto: timage;
         FFotoUsuario: TFileStream;
         FckSituacao: TCheckBox;
+        FNomeForm:String;
         procedure SetcbLogr(const Value: TComboBox);
         procedure Setcbuf(const Value: TComboBox);
         procedure SetedCidade(const Value: TEdit);
@@ -62,7 +64,10 @@ uses
         function pValidados:boolean;
         procedure SetFotoUsuario(const Value: TFileStream);
         procedure SetckSituacao(const Value: TCheckBox);
+        procedure pCriaObj;
+        procedure pDestroiObj;
       public
+        constructor Create(AOwner: TComponent);
         Function  IniciaProcesso:boolean;
         Function  DeleteUser:boolean;
         Function  pValidaCodigo :boolean;
@@ -103,14 +108,22 @@ uses
 implementation
 
 
+
+
 { TProcessosUsuario }
+
+constructor TUsuarioControler.Create(AOwner: TComponent);
+begin
+//  inherited;
+  FNomeForm:=(tform(AOwner).Name);
+  pCriaObj;
+end;
 
 function TUsuarioControler.DeleteUser: boolean;
 var
 wNameuser:string;
 begin
- if not Assigned(FUsuarioSQL) then
-        FUsuarioSQL:= TUsuarioDAO.Create;
+
 
 if trim(edCodigo.Text) <> EmptyStr then
   begin
@@ -120,15 +133,20 @@ if trim(edCodigo.Text) <> EmptyStr then
         FUsuarioSQL.pExcluiUsuario(trim(edCodigo.Text));
         InsercaoEdição;
         if TUtilSQL.pExiste_registro(C_KEY_TABLE_USUARIO,C_TABLENAME_USUARIO,trim(edCodigo.Text)) then
-            MessageDlg('Não foi possível realizar a exclusão',mtInformation,[mbOK],1)
+            begin
+              MessageDlg(C_ERRO_EXCLUSAO,mtInformation,[mbOK],1);
+              FLOG.AddLog(edCodigo.Text,TUtilSQL.getCodTela(FNomeForm),C_EXCLUSAO,datetostr(date),C_ERRO_EXCLUSAO);
+            end
             else
-            MessageDlg('Usuário '+edCodigo.Text + ' - '+wNameuser+ ' foi excluído com sucesso! ',mtConfirmation,[mbOK],1);
+            begin
+              MessageDlg('Usuário '+edCodigo.Text + ' - '+wNameuser+ ' foi excluído com sucesso! ',mtConfirmation,[mbOK],1);
+              FLOG.AddLog(edCodigo.Text,TUtilSQL.getCodTela(FNomeForm),C_EXCLUSAO,datetostr(date),C_SUCESSO_EXCLUSAO);
+            end
       end
       else
            begin
             MessageDlg('Carregue um usuário existente para a exclusão',mtConfirmation,[mbOK],1);
             edCodigo.SetFocus;
-
            end
 
   end
@@ -141,8 +159,7 @@ end;
 destructor TUsuarioControler.Destroy;
 begin
   inherited;
-  if Assigned(FUsuarioSQL)  then
-     FUsuarioSQL.Destroy;
+  pDestroiObj;
 end;
 
 function TUsuarioControler.IniciaProcesso: boolean;
@@ -163,16 +180,21 @@ var
 
   end;
 begin
-   if not Assigned(FUsuarioSQL) then
-      FUsuarioSQL:=TUsuarioDAO.Create;
+
 
    if pValidados then
    begin
 
      if TUtilSQL.pExiste_registro(C_KEY_TABLE_USUARIO,C_TABLENAME_USUARIO,trim(edCodigo.Text))then
-        wMsg:= 'Usuário '+edCodigo.Text+' - '+FUsuarioSQL.getNomeUsuario(edCodigo.Text)+' editado com sucesso!'
+        begin
+          wMsg:= 'Usuário '+edCodigo.Text+' - '+FUsuarioSQL.getNomeUsuario(edCodigo.Text)+' editado com sucesso!';
+          FLOG.AddLog(edCodigo.Text,TUtilSQL.getCodTela(FNomeForm),C_EDICAO,datetostr(date),C_SUCESSO_EDICAO);
+        end
         else
-        wMsg:= 'Usuário '+edCodigo.Text+' - '+trim(edNome.Text)+' inserido com sucesso!';
+        begin
+          wMsg:= 'Usuário '+edCodigo.Text+' - '+trim(edNome.Text)+' inserido com sucesso!';
+          FLOG.AddLog(edCodigo.Text,TUtilSQL.getCodTela(FNomeForm),C_INSERCAO,datetostr(date),C_SUCESSO_INSERCAO);
+        end;
 
 
           FUsuarioSQL.pInsereUsuario(DevolveZeroCodigo,trim(edNome.Text),trim(mkCPF.Text),trim(cbLogr.Text),trim(edNomeLocal.Text),trim(edNumero.Text),
@@ -261,6 +283,31 @@ begin
 
 end;
 
+procedure TUsuarioControler.pCriaObj;
+begin
+   if not Assigned(FUtil) then
+     FUtil:=TUtil.Create;
+
+   if not Assigned(FUsuarioSQL) then
+        FUsuarioSQL:= TUsuarioDAO.Create;
+
+   if not Assigned(FLOG) then
+        FLOG:= TLOG.Create;
+
+end;
+
+procedure TUsuarioControler.pDestroiObj;
+begin
+  if Assigned(FUsuarioSQL)  then
+     FreeAndNil(FUsuarioSQL);
+
+  if Assigned(FUtil) then
+     FreeAndNil(FUtil);
+
+  if Assigned(Flog) then
+     FreeAndNil(Flog);
+end;
+
 function TUsuarioControler.pValidaCidade:boolean;
 var
 I:integer;
@@ -299,8 +346,7 @@ end;
 
 function TUsuarioControler.pValidaCodigo:boolean;
 begin
-if not Assigned(FUtil) then
-     FUtil:=TUtil.Create;
+
 
   Result:=false;
   if (not FUtil.IsNumeric(edCodigo.Text)) and (TUtilValida.pCampoPreenchido(edCodigo.Text))  then
@@ -348,7 +394,7 @@ end;
 
 function TUsuarioControler.pValidaLogradouro:boolean;
 begin
-
+  //nothing to validate
 end;
 
 function TUsuarioControler.pValidaNome:boolean;
@@ -406,8 +452,7 @@ end;
 
 function TUsuarioControler.pValidaUF:boolean;
 begin
-  Result:=false;
-  Result:=true;
+  //nada a validar
 end;
 
 procedure TUsuarioControler.SetcbLogr(const Value: TComboBox);

@@ -1,5 +1,6 @@
-{ Solicitação           Data              Descrição
-  w1                 16/04/2022          Criação das telas padrões do sistema (Cadastro).
+{ Solicitação    Programador       Data              Descrição
+  w1             Vitor D.        16/04/2022          Criação das telas padrões do sistema (Cadastro).
+  w15            Vitor D.        05/06/2022          Inserir as telas nas tabelas dinamicamente
 }
 unit uCad_padrao;
 
@@ -58,7 +59,7 @@ type
     procedure pCriaObj;virtual;abstract;
     procedure pDestroiObj;virtual;abstract;
 
-    //confere se a tela ja esta adicionada a  tabela de telas. - vitor
+    //w15 - Vitor -  05/06/2022 confere se a tela ja esta adicionada a  tabela de telas. - vitor
     procedure pAdicionaTelaSistema;
   end;
 
@@ -141,15 +142,16 @@ begin
    Futil:=TUtilSQL.Create;
    FSQL:=TExecSQL.Create;
 
-   if (Futil.getCodTela(TForm(self).caption) = EmptyStr)  then
+   if (Futil.getCodTela(TForm(self).Name) = EmptyStr)  then
       begin
 
 
 
          FSQL.CommandText.SQL.Clear;
 
-         wSQL := 'insert into TSIS_TELAS (BDNOMETELA,BDNOMEFORM) ';
+          wSQL := 'update or insert into TSIS_TELAS (BDNOMETELA,BDNOMEFORM) ';
          wSQL := wSQL + ' values (:BDNOMETELA,:BDNOMEFORM)';
+         wSQL := wSQL + ' matching (BDNOMETELA)';
          FSQL.CommandText.CommandText:=wSQL;
          FSQL.CommandText.Params[0].Name :='BDNOMETELA';
          FSQL.CommandText.Params[0].AsString :=TForm(Self).Caption ;
@@ -158,9 +160,6 @@ begin
          FSQL.CommandText.ExecSQL;
 
       end;
-
-
-
  finally
    FreeAndNil(FSQL);
    FreeAndNil(Futil);
@@ -379,7 +378,10 @@ begin
   pGravarRegistro;
  except
        on E: Exception do
-         FLOG.AddLog(inttostr(FCODIGO),FUtil.getCodTela(TForm(self).caption),C_EDICAO_INSERÇÃO,datetostr(date),C_MSG_SQL_EXCEPTION + E.Message);
+         begin
+           MessageDlg('Houve um problema ao executar o processo de inclusão/edição, por favor consulte o Log',mtInformation,[mbOK],1);
+           FLOG.AddLog(inttostr(FCODIGO),FUtil.getCodTela(TForm(self).name),C_INSERCAO,datetostr(date),C_MSG_SQL_EXCEPTION + E.Message);
+         end;
  end;
 
   FreeAndNil(FLOG);
@@ -396,8 +398,13 @@ begin
  try
   pExcluirRegistro;
  except
+
        on E: Exception do
-         FLOG.AddLog(inttostr(FCODIGO),FUtil.getCodTela(TForm(self).caption),C_EXCLUSAO,datetostr(date),C_MSG_SQL_EXCEPTION + E.Message);
+        begin
+          MessageDlg('Houve um problema ao executar o processo de exclusão, por favor consulte o Log',mtInformation,[mbOK],1);
+          FLOG.AddLog(inttostr(FCODIGO),FUtil.getCodTela(TForm(self).name),C_EXCLUSAO,datetostr(date),C_MSG_SQL_EXCEPTION + E.Message);
+        end;
+
  end;
  FreeAndNil(FLOG);
  FreeAndNil(FUtil);

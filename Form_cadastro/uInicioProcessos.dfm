@@ -12,10 +12,12 @@ object frInicioProcessos: TfrInicioProcessos
   Font.Name = 'Tahoma'
   Font.Style = []
   FormStyle = fsMDIForm
+  KeyPreview = True
   Menu = MainMenu1
   OldCreateOrder = False
   Position = poDesigned
   WindowState = wsMaximized
+  OnCreate = FormCreate
   OnResize = FormResize
   PixelsPerInch = 96
   TextHeight = 13

@@ -35,7 +35,7 @@ type
   TUtilSQL = class
     private
     public
-      class function getCodTela(prNometela:string):string;
+      class function getCodTela(prNomeForm:string):string;
       class function pExiste_registro(prCampochave,prTabela,prValor:String):boolean;
 
   end;
@@ -265,19 +265,19 @@ end;
 
 { TUtilSQL }
 
-class function TUtilSQL.getCodTela(prNometela: string): string;
+class function TUtilSQL.getCodTela(prNomeForm: string): string;
 var
   sqlGlobal:TExecSQL;
   wSQL:string;
   begin
   Result:=EmptyStr;
 
-  if (prNometela = EmptyStr) then
+  if (prNomeForm = EmptyStr) then
       Exit;
 
   try
       sqlGlobal:=TExecSQL.Create;
-      wSQL:= 'SELECT * FROM TSIS_TELAS WHERE UPPER(BDNOMETELA) LIKE UPPER('+QuotedStr('%'+prNometela+'%')+')';
+      wSQL:= 'SELECT * FROM TSIS_TELAS WHERE UPPER(BDNOMEFORM) LIKE UPPER('+QuotedStr('%'+prNomeForm+'%')+')';
       sqlGlobal.CommandText.SQL.Clear;
       sqlGlobal.CommandText.SQL.Add(wSQL);
       sqlGlobal.CommandText.Open;

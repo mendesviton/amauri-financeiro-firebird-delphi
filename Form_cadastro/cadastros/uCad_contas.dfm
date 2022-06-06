@@ -9,8 +9,6 @@ inherited frCad_contas: TfrCad_contas
   inherited pnFundo: TPanel
     Width = 432
     Height = 187
-    ExplicitLeft = 0
-    ExplicitTop = 0
     ExplicitWidth = 432
     ExplicitHeight = 187
     inherited pnComponentes: TPanel

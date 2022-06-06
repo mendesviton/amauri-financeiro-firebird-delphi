@@ -17,11 +17,11 @@ type
     procedure Usuarios1Click(Sender: TObject);
     procedure Usurios2Click(Sender: TObject);
     procedure Usurios1Click(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
     procedure sadsadasd1Click(Sender: TObject);
     procedure Formasdepagamentos1Click(Sender: TObject);
-    procedure asdasd1Click(Sender: TObject);
     procedure Contas1Click(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+    procedure FormShortCut(var Msg: TWMKey; var Handled: Boolean);
   private
 
 
@@ -36,12 +36,6 @@ implementation
 
 {$R *.dfm}
 
-procedure TfrAmauriPrincipal.asdasd1Click(Sender: TObject);
-begin
-  inherited;
-
-end;
-
 procedure TfrAmauriPrincipal.Contas1Click(Sender: TObject);
 begin
   inherited;
@@ -54,12 +48,19 @@ begin
   TfrCad_formapgto.Create(self);
 end;
 
-procedure TfrAmauriPrincipal.FormCreate(Sender: TObject);
+procedure TfrAmauriPrincipal.FormKeyPress(Sender: TObject; var Key: Char);
 begin
   inherited;
-  
+   if Key = #27 then Application.Terminate;
+end;
 
-
+procedure TfrAmauriPrincipal.FormShortCut(var Msg: TWMKey;
+  var Handled: Boolean);
+begin
+  inherited;
+//  if Msg.CharCode = VK_ESCAPE then
+//      if MessageDlg('Deseja realmente sair do sistema? ',mtConfirmation,[mbYes,mbNo],1) = mrYes then
+//         Application.Terminate;
 end;
 
 procedure TfrAmauriPrincipal.sadsadasd1Click(Sender: TObject);

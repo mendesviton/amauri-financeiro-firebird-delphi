@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uCon_padrao, Data.DB, Datasnap.Provider,
   Datasnap.DBClient, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids,uControleSQL,
-  Vcl.Buttons,uUsuario_DAO,uRel_usuarios, Vcl.Menus;
+  Vcl.Buttons,uUsuario_DAO,uRel_usuarios, Vcl.Menus,uLog;
 
 type
   TfrCon_usuario = class(TfrCon_padrao)
@@ -22,10 +22,17 @@ type
     procedure spImprimirClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
+    FLOG:TLOG;
+    DAOUsuario:TUsuarioDAO;
     globalSQL:TExecSQL;
   public
     FSelecionado:TStringList;
     procedure setListaObj(const prLista:TStringList);override;
+  protected
+    procedure pCriaObj;override;
+    procedure pDestroiObj;override;
+
+    procedure pExcluirRegistro;override;
   end;
 
 var
@@ -33,7 +40,7 @@ var
 
 implementation
   uses
-    uCad_usuario, test;
+    uCad_usuario,uUtilAmauri,uConsts;
 
 {$R *.dfm}
 
@@ -105,20 +112,17 @@ end;
 procedure TfrCon_usuario.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   inherited;
-  if Assigned(globalSQL) then
-     globalSQL.Destroy;
-
-
+  pDestroiObj;
 end;
 
 procedure TfrCon_usuario.FormCreate(Sender: TObject);
 begin
   inherited;
+  pCriaObj;
   FSelecionado:=TStringList.Create;
   DBGrid1.Columns[0].Title.Caption := '';
   DBGrid1.Columns[0].Width := 40;
-  if not Assigned(globalSQL) then
-     globalSQL:=TExecSQL.Create;
+
 
      DSPRO1.DataSet:= globalSQL.CommandText;
      cliDS1.Close;
@@ -126,6 +130,57 @@ begin
      cliDS1.Open;
 
 
+end;
+
+procedure TfrCon_usuario.pCriaObj;
+begin
+  inherited;
+  if not Assigned(globalSQL) then
+     globalSQL:=TExecSQL.Create;
+
+  if not Assigned(DAOUsuario) then
+     DAOUsuario:=TUsuarioDAO.Create;
+
+  if not Assigned(FLOG) then
+     FLOG:=TLOG.Create;
+
+end;
+
+procedure TfrCon_usuario.pDestroiObj;
+begin
+  inherited;
+  if Assigned(globalSQL) then
+     FreeAndNil(globalSQL);
+
+  if Assigned(DAOUsuario) then
+     FreeAndNil(DAOUsuario);
+
+  if Assigned(flog) then
+     FreeAndNil(flog);
+end;
+
+procedure TfrCon_usuario.pExcluirRegistro;
+var
+I:integer;
+begin
+  inherited;
+  try
+  if FSelecionado.Count = 0 then
+     MessageDlg('Selecione os usuários para a exclusão! ',mtWarning,[mbOK],1)
+     else
+     begin
+        for I := 0 to (FSelecionado.Count-1) do
+        begin
+          DAOUsuario.pExcluiUsuario(FSelecionado[I]);
+          FLOG.AddLog(FSelecionado[I],TUtilSQL.getCodTela(self.Name),C_EXCLUSAO,datetostr(date),C_SUCESSO_EXCLUSAO);
+        end;
+     end;
+  finally
+     MessageDlg('Exclusão realizada com sucesso',mtConfirmation,[mbOK],1);
+     cliDS1.Close;
+     cliDS1.CommandText :=TUsuarioDAO.pSelectAllConsulta;
+     cliDS1.Open;
+  end;
 end;
 
 procedure TfrCon_usuario.setListaObj(const prLista: TStringList);

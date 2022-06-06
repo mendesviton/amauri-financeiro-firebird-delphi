@@ -1,9 +1,8 @@
 inherited frCon_usuario: TfrCon_usuario
-  Caption = 'Relat'#243'rio de usu'#225'rios'
+  Caption = 'Consulta de usu'#225'rios'
   ClientWidth = 1111
   OnClose = FormClose
   ExplicitWidth = 1127
-  ExplicitHeight = 751
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnBarra: TPanel

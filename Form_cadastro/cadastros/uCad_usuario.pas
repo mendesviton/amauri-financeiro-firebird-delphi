@@ -304,9 +304,9 @@ end;
 procedure TfrCad_usuario.pCriaObj;
 begin
   inherited;
+  if not Assigned(FValida) then //   criado com TComponent de parametro pois é necessário abstrair informações a título de log.
+     FValida:=TUsuarioControler.create(self);
 
-  if not Assigned(FValida) then
-     FValida:=TUsuarioControler.Create;
   if not Assigned(FValida) then
      SQLglobal := TExecSQL.Create;
 

@@ -1,5 +1,5 @@
 inherited frRel_usuario: TfrRel_usuario
-  Caption = 'frRel_usuario'
+  Caption = 'Relat'#243'rio de usu'#225'rios'
   ClientHeight = 435
   ClientWidth = 369
   ExplicitWidth = 385

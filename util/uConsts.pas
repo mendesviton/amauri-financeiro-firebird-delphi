@@ -1,5 +1,5 @@
 {  Programador         Data         Descrição
-   Vitor Daniel     13/05/2022      Constantes global.
+   Vitor Daniel     13/05/2022      Constantes globais.
 }
 unit uConsts;
 
@@ -29,9 +29,15 @@ const
   C_MSG_SQL_EXCEPTION = 'Houve uma exceção ao executar o comando sql mensagem de erro: ';
 
   {TIPO-AÇÃO LOG}
-  C_EDICAO_INSERÇÃO   = '1';
-  C_EXCLUSAO = '2';
+  C_INSERCAO = '1';
+  C_EDICAO   = '2';
+  C_EXCLUSAO = '3';
 
+  {MENSAGENS}
+  C_ERRO_EXCLUSAO    = 'Não foi possível realizar a exclusão';
+  C_SUCESSO_EXCLUSAO = 'Exclusão realizada com sucesso';
+  C_SUCESSO_INSERCAO = 'Inserção realizada com sucesso';
+  C_SUCESSO_EDICAO   = 'Edição realizada com sucesso';
 
 implementation
 

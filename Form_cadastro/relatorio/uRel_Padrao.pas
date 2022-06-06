@@ -1,3 +1,7 @@
+{ Solicitação    Programador       Data              Descrição
+  w1             Vitor D.        16/04/2022          Criação das telas padrões do sistema (Relatório).
+  w15            Vitor D.        05/06/2022          Inserir as telas nas tabelas dinamicamente
+}
 unit uRel_Padrao;
 
 interface
@@ -39,12 +43,22 @@ type
   protected
     procedure setFilePath;virtual;abstract;
     procedure setSQL;virtual;abstract;
+
+     //garante a criação e a liberação dos objetos nas telas filhas. - vitor
+    procedure pCriaObj;virtual;abstract;
+    procedure pDestroiObj;virtual;abstract;
+
+    //w15 - Vitor -  05/06/2022 confere se a tela ja esta adicionada a  tabela de telas. - vitor
+    procedure pAdicionaTelaSistema;
   end;
 
 var
   fr_RelPadrao1: Tfr_RelPadrao1;
 
 implementation
+
+uses
+  uUtilAmauri;
 
 {
     Manual implementação de relatórios
@@ -83,15 +97,19 @@ procedure Tfr_RelPadrao1.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   if  Assigned(DAOfac) then
       DAOfac.Destroy;
+
+  pDestroiObj;
 end;
 
 procedure Tfr_RelPadrao1.FormCreate(Sender: TObject);
 begin
+  pAdicionaTelaSistema;
   if not Assigned(DAOfac) then
          DAOfac:=TExecSQL.Create;
   frxDBDataset1.DataSet:=DAOfac.CommandText;
   setFilePath;
   setSQL;
+  pCriaObj;
 end;
 
 function Tfr_RelPadrao1.getFilePath: string;
@@ -114,6 +132,40 @@ begin
     end
     else
     result:=FSQL;
+end;
+
+procedure Tfr_RelPadrao1.pAdicionaTelaSistema;
+var
+  wSQL :string;
+  FSQL :TExecSQL;
+  Futil:TUtilSQL;
+begin
+ try
+   Futil:=TUtilSQL.Create;
+   FSQL:=TExecSQL.Create;
+
+   if (Futil.getCodTela(TForm(self).Name) = EmptyStr)  then
+      begin
+
+
+
+         FSQL.CommandText.SQL.Clear;
+
+          wSQL := 'update or insert into TSIS_TELAS (BDNOMETELA,BDNOMEFORM) ';
+         wSQL := wSQL + ' values (:BDNOMETELA,:BDNOMEFORM)';
+         wSQL := wSQL + ' matching (BDNOMETELA)';
+         FSQL.CommandText.CommandText:=wSQL;
+         FSQL.CommandText.Params[0].Name :='BDNOMETELA';
+         FSQL.CommandText.Params[0].AsString :=TForm(Self).Caption ;
+         FSQL.CommandText.Params[1].Name :='BDNOMEFORM';
+         FSQL.CommandText.Params[1].AsString := TForm(self).Name;
+         FSQL.CommandText.ExecSQL;
+
+      end;
+ finally
+   FreeAndNil(FSQL);
+   FreeAndNil(Futil);
+ end;
 end;
 
 procedure Tfr_RelPadrao1.pConfiguraDataset;
