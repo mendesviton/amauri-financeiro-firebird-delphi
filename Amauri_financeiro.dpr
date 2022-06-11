@@ -3,6 +3,7 @@ program Amauri_financeiro;
 {$R *.dres}
 
 uses
+  FastMM4,
   Vcl.Forms,
   uConexaoBanco in 'model\uConexaoBanco.pas',
   uControleSQL in 'model\uControleSQL.pas',

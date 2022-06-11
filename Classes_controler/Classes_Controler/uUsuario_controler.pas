@@ -33,6 +33,7 @@ uses
         FlbEmail: TLabel;
         FlbCPF: TLabel;
         FlbNomeCarteira: tlabel;
+        FUtilSQL:TUtilSQL;
         FUtil:TUtil;
         FLOG:TLOG;
         FUsuarioSQL:TUsuarioDAO;
@@ -79,6 +80,7 @@ uses
         Function  pValidaNomeLocal:boolean;
         Function  pValidaNumero :boolean;
         Function  pValidaCidade :boolean;
+        procedure pExcluirVariosUsuarios(prListaUsuario:TStringList);
         destructor Destroy; override;
         property edCodigo:TEdit read FedCodigo write SetedCodigo;
         property edNome  :TEdit read FedNome write SetedNome;
@@ -286,13 +288,16 @@ end;
 procedure TUsuarioControler.pCriaObj;
 begin
    if not Assigned(FUtil) then
-     FUtil:=TUtil.Create;
+          FUtil:=TUtil.Create;
 
    if not Assigned(FUsuarioSQL) then
-        FUsuarioSQL:= TUsuarioDAO.Create;
+          FUsuarioSQL:= TUsuarioDAO.Create;
 
    if not Assigned(FLOG) then
-        FLOG:= TLOG.Create;
+          FLOG:= TLOG.Create;
+
+   if not Assigned(FUtilSQL) then
+          FUtilSQL:=TUtilSQL.Create;
 
 end;
 
@@ -306,6 +311,22 @@ begin
 
   if Assigned(Flog) then
      FreeAndNil(Flog);
+
+  if Assigned(FUtilSQL) then
+     FreeAndNil(FUtilSQL);
+
+end;
+
+procedure TUsuarioControler.pExcluirVariosUsuarios(prListaUsuario: TStringList);
+var
+I:integer;
+begin
+ for I := 0 to (prListaUsuario.Count-1) do
+        begin
+          FUsuarioSQL.pExcluiUsuario(prListaUsuario[I]);
+          FLOG.AddLog(prListaUsuario[I],FUtilSQL.getCodTela(C_FRCON_USUARIO),C_EXCLUSAO,datetostr(date),C_SUCESSO_EXCLUSAO);
+          MessageDlg('Exclusão realizada com sucesso',mtConfirmation,[mbOK],1);
+        end;
 end;
 
 function TUsuarioControler.pValidaCidade:boolean;

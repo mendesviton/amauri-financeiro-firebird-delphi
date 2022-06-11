@@ -110,6 +110,7 @@ begin
   setFilePath;
   setSQL;
   pCriaObj;
+  showmessage('inserir rotina de log Tfr_RelPadrao1.pConfiguraDataset')
 end;
 
 function Tfr_RelPadrao1.getFilePath: string;

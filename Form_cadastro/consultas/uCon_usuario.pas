@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uCon_padrao, Data.DB, Datasnap.Provider,
   Datasnap.DBClient, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids,uControleSQL,
-  Vcl.Buttons,uUsuario_DAO,uRel_usuarios, Vcl.Menus,uLog;
+  Vcl.Buttons,uUsuario_DAO,uRel_usuarios, Vcl.Menus,uLog,uUsuario_controler;
 
 type
   TfrCon_usuario = class(TfrCon_padrao)
@@ -25,6 +25,7 @@ type
     FLOG:TLOG;
     DAOUsuario:TUsuarioDAO;
     globalSQL:TExecSQL;
+    FUsuarioControl:TUsuarioControler;
   public
     FSelecionado:TStringList;
     procedure setListaObj(const prLista:TStringList);override;
@@ -116,12 +117,16 @@ begin
 end;
 
 procedure TfrCon_usuario.FormCreate(Sender: TObject);
+var
+  stl:TStringList;
 begin
   inherited;
   pCriaObj;
   FSelecionado:=TStringList.Create;
   DBGrid1.Columns[0].Title.Caption := '';
   DBGrid1.Columns[0].Width := 40;
+
+  stl:=TStringList.Create;
 
 
      DSPRO1.DataSet:= globalSQL.CommandText;
@@ -144,6 +149,9 @@ begin
   if not Assigned(FLOG) then
      FLOG:=TLOG.Create;
 
+  if not Assigned(FUsuarioControl) then
+      FUsuarioControl:=TUsuarioControler.Create(self);
+
 end;
 
 procedure TfrCon_usuario.pDestroiObj;
@@ -157,6 +165,9 @@ begin
 
   if Assigned(flog) then
      FreeAndNil(flog);
+
+  if Assigned(FUsuarioControl) then
+    FreeAndNil(FUsuarioControl);
 end;
 
 procedure TfrCon_usuario.pExcluirRegistro;
@@ -168,15 +179,10 @@ begin
   if FSelecionado.Count = 0 then
      MessageDlg('Selecione os usuários para a exclusão! ',mtWarning,[mbOK],1)
      else
-     begin
-        for I := 0 to (FSelecionado.Count-1) do
-        begin
-          DAOUsuario.pExcluiUsuario(FSelecionado[I]);
-          FLOG.AddLog(FSelecionado[I],TUtilSQL.getCodTela(self.Name),C_EXCLUSAO,datetostr(date),C_SUCESSO_EXCLUSAO);
-        end;
-     end;
+     FUsuarioControl.pExcluirVariosUsuarios(FSelecionado);
+//  except
+//    on E:
   finally
-     MessageDlg('Exclusão realizada com sucesso',mtConfirmation,[mbOK],1);
      cliDS1.Close;
      cliDS1.CommandText :=TUsuarioDAO.pSelectAllConsulta;
      cliDS1.Open;

@@ -25,6 +25,7 @@ uses
      property BDConnection : TSQLConnection   read GetConnection;
      procedure setpathDatabase;
 
+
    end;
 
 
@@ -84,14 +85,17 @@ begin
 
     except
       wLogErro:=' Erro ao Conectar o Banco de dados. Verifique as preferencias do sistema! '
-    end;
 
+    end;
+//
+//    FreeAndNil(Configuration);
     setpathDatabase;
 
 end;
 
 destructor TBDConnection.Destroy;
 begin
+//   FreeAndNil(FDBConnection);
    FDBConnection.Free;
   inherited;
 end;
@@ -108,8 +112,13 @@ wCont:integer;
 ArquivoINI    : String;
 Configuration : TIniFile;
 begin
- ArquivoINI := ExtractFilePath(Application.ExeName) + 'config.ini';
- Configuration := TIniFile.Create(ArquivoINI);
- Configuration.WriteString('Dados','Servidor',ExtractFilePath(Application.ExeName) + C_DATABASEPATH);
+  try
+    ArquivoINI := ExtractFilePath(Application.ExeName) + 'config.ini';
+    Configuration := TIniFile.Create(ArquivoINI);
+    Configuration.WriteString('Dados','Servidor',ExtractFilePath(Application.ExeName) + C_DATABASEPATH);
+  finally
+    FreeAndNil(Configuration);
+  end;
+
 end;
 end.

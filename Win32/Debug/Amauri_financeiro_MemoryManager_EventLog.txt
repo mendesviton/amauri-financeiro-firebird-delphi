@@ -1,0 +1,1349 @@
+
+--------------------------------2022/6/11 0:48:29--------------------------------
+A memory block has been leaked. The size is: 12
+
+This block was allocated by thread 0x3BC8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+50A2B3 [System.IniFiles.pas][System.IniFiles][Inifiles.TCustomIniFile.$bctr$qqrx20System.UnicodeString][164]
+40BE04 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][29842]
+7D4597 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.setpathDatabase$qqrv][113]
+7D41B2 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv][90]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+7F17DB [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pAdicionaTelaSistema$qqrv][143]
+7F1741 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][116]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+
+The block is currently used for an object of class: TIniFile
+
+The allocation number is: 58280
+
+Current memory dump of 256 bytes starting at pointer address 7FBA1BB0:
+90 8A 50 00 AC D8 E0 7F 00 00 00 00 93 10 2B 77 00 00 00 00 69 19 BA 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 72 BA 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00 C6 6C 7D 00 35 6E 7D 00
+32 80 7D 00 9C 2D 4C 00 C9 2F 4C 00 76 6F 40 00 BD AA 40 00 9E 32 4C 00 C8 3B 00 00 C8 3B 00 00
+65 8A 40 00 9D 92 40 00 25 6D 7D 00 E7 8B 40 00 93 6E 7D 00 E7 8B 40 00 F3 80 7D 00 5D D4 54 00
+9D 92 40 00 7D 63 55 00 5D D4 54 00 0C 00 00 00 C4 66 7D 00 3F 76 92 87 98 12 A5 00 80 80 80 80
+80 80 80 80 C0 89 6D 78 00 00 00 00 51 35 BA 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+BA FD 00 00 5A 6F 40 00 BB B2 42 00 F6 B2 42 00 11 21 55 00 B0 B6 54 00 23 6E 6E 76 29 73 6E 76
+23 6E 6E 76 29 73 6E 76 7F 5D 6E 76 F2 01 55 00 C8 3B 00 00 C8 3B 00 00 12 B3 42 00 1D 8B 54 00
+ê  ä  P  .  ¨  ÿ  ‡    .  .  .  .  ì  .  +  w  .  .  .  .  i  .  ∫    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  r  ∫  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .  ∆  l  }  .  5  n  }  .
+2  Ä  }  .  ú  -  L  .  …  /  L  .  v  o  @  .  Ω  ™  @  .  û  2  L  .  »  ;  .  .  »  ;  .  .
+e  ä  @  .  ù  í  @  .  %  m  }  .  Á  ã  @  .  ì  n  }  .  Á  ã  @  .  Û  Ä  }  .  ]  ‘  T  .
+ù  í  @  .  }  c  U  .  ]  ‘  T  .  .  .  .  .  ƒ  f  }  .  ?  v  í  á  ò  .  •  .  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  ¿  â  m  x  .  .  .  .  Q  5  ∫    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+∫  ˝  .  .  Z  o  @  .  ª  ≤  B  .  ˆ  ≤  B  .  .  !  U  .  ∞  ∂  T  .  #  n  n  v  )  s  n  v
+#  n  n  v  )  s  n  v    ]  n  v  Ú  .  U  .  »  ;  .  .  »  ;  .  .  .  ≥  B  .  .  ã  T  .
+
+--------------------------------2022/6/11 0:48:29--------------------------------
+A memory block has been leaked. The size is: 12
+
+This block was allocated by thread 0x3BC8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+50A2B3 [System.IniFiles.pas][System.IniFiles][Inifiles.TCustomIniFile.$bctr$qqrx20System.UnicodeString][164]
+40BE04 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][29842]
+7D4597 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.setpathDatabase$qqrv][113]
+7D41B2 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv][90]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+7F38FD [uUtilAmauri.pas][uUtilAmauri][TUtilSQL.getCodTela$qqr20System.UnicodeString][279]
+7F17F1 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pAdicionaTelaSistema$qqrv][145]
+7F1741 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][116]
+
+The block is currently used for an object of class: TIniFile
+
+The allocation number is: 64603
+
+Current memory dump of 256 bytes starting at pointer address 7FBA3408:
+90 8A 50 00 AC DA E0 7F 00 00 00 00 06 B7 0F 77 00 00 00 00 49 4B BA 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 17 E4 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00 52 EF 70 00 56 D4 6F 00
+EC D3 6F 00 B7 22 7A 00 81 62 79 00 D8 40 7D 00 80 3B 7D 00 FD 38 7F 00 C8 3B 00 00 C8 3B 00 00
+65 8A 40 00 9D 92 40 00 B5 EF 70 00 E7 8B 40 00 33 D5 6F 00 E7 8B 40 00 89 1A 7A 00 E7 8B 40 00
+2B 28 79 00 E7 8B 40 00 00 45 7D 00 0C 00 00 00 00 2A 6D 00 21 B1 7C 88 98 12 A5 00 80 80 80 80
+80 80 80 80 DE 4E 83 77 00 00 00 00 E9 22 BA 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+B7 FD 00 00 5A 6F 40 00 BB B2 42 00 F6 B2 42 00 11 21 55 00 B0 B6 54 00 23 6E 6E 76 29 73 6E 76
+23 6E 6E 76 29 73 6E 76 7F 5D 6E 76 F2 01 55 00 C8 3B 00 00 C8 3B 00 00 12 B3 42 00 1D 8B 54 00
+ê  ä  P  .  ¨  ⁄  ‡    .  .  .  .  .  ∑  .  w  .  .  .  .  I  K  ∫    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  ‰  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .  R  Ô  p  .  V  ‘  o  .
+Ï  ”  o  .  ∑  "  z  .  Å  b  y  .  ÿ  @  }  .  Ä  ;  }  .  ˝  8    .  »  ;  .  .  »  ;  .  .
+e  ä  @  .  ù  í  @  .  µ  Ô  p  .  Á  ã  @  .  3  ’  o  .  Á  ã  @  .  â  .  z  .  Á  ã  @  .
++  (  y  .  Á  ã  @  .  .  E  }  .  .  .  .  .  .  *  m  .  !  ±  |  à  ò  .  •  .  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  ﬁ  N  É  w  .  .  .  .  È  "  ∫    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+∑  ˝  .  .  Z  o  @  .  ª  ≤  B  .  ˆ  ≤  B  .  .  !  U  .  ∞  ∂  T  .  #  n  n  v  )  s  n  v
+#  n  n  v  )  s  n  v    ]  n  v  Ú  .  U  .  »  ;  .  .  »  ;  .  .  .  ≥  B  .  .  ã  T  .
+
+--------------------------------2022/6/11 0:48:29--------------------------------
+A memory block has been leaked. The size is: 116
+
+This block was allocated by thread 0x3BC8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+40AA03 [System.pas][System][@NewUnicodeString$qqri][24451]
+40BD9B [System.pas][System][@UStrSetLength$qqrr20System.UnicodeStringi][29748]
+40BDF2 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][29833]
+7D4588 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.setpathDatabase$qqrv][112]
+7D41B2 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv][90]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+7F17DB [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pAdicionaTelaSistema$qqrv][143]
+7F1741 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][116]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+642DD3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction$qqrv][3642]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 58279
+
+Current memory dump of 256 bytes starting at pointer address 7FE0D8A0:
+B0 04 02 00 01 00 00 00 2F 00 00 00 43 00 3A 00 5C 00 44 00 65 00 76 00 5C 00 41 00 6D 00 61 00
+75 00 72 00 69 00 5F 00 46 00 69 00 6E 00 61 00 6E 00 63 00 65 00 69 00 72 00 6F 00 5C 00 57 00
+69 00 6E 00 33 00 32 00 5C 00 44 00 65 00 62 00 75 00 67 00 5C 00 63 00 6F 00 6E 00 66 00 69 00
+67 00 2E 00 69 00 6E 00 69 00 00 00 10 A4 3D 77 80 80 80 80 80 80 80 80 00 00 00 00 21 D3 E0 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 AF BB 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+57 DD 51 00 8D C6 54 00 DA 89 54 00 F4 56 55 00 4F 80 7D 00 9C 2D 4C 00 C9 2F 4C 00 76 6F 40 00
+C8 3B 00 00 C8 3B 00 00 65 8A 40 00 9D 92 40 00 60 82 54 00 E7 8B 40 00 49 57 55 00 E8 80 7D 00
+5D D4 54 00 9D 92 40 00 7D 63 55 00 5D D4 54 00 9D 92 40 00 6C 00 00 00 20 BE 53 00 A5 5D 07 87
+∞  .  .  .  .  .  .  .  /  .  .  .  C  .  :  .  \  .  D  .  e  .  v  .  \  .  A  .  m  .  a  .
+u  .  r  .  i  .  _  .  F  .  i  .  n  .  a  .  n  .  c  .  e  .  i  .  r  .  o  .  \  .  W  .
+i  .  n  .  3  .  2  .  \  .  D  .  e  .  b  .  u  .  g  .  \  .  c  .  o  .  n  .  f  .  i  .
+g  .  .  .  i  .  n  .  i  .  .  .  .  §  =  w  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  !  ”  ‡  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ø  ª  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+W  ›  Q  .  ç  ∆  T  .  ⁄  â  T  .  Ù  V  U  .  O  Ä  }  .  ú  -  L  .  …  /  L  .  v  o  @  .
+»  ;  .  .  »  ;  .  .  e  ä  @  .  ù  í  @  .  `  Ç  T  .  Á  ã  @  .  I  W  U  .  Ë  Ä  }  .
+]  ‘  T  .  ù  í  @  .  }  c  U  .  ]  ‘  T  .  ù  í  @  .  l  .  .  .     æ  S  .  •  ]  .  á
+
+--------------------------------2022/6/11 0:48:29--------------------------------
+A memory block has been leaked. The size is: 116
+
+This block was allocated by thread 0x3BC8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+40AA03 [System.pas][System][@NewUnicodeString$qqri][24451]
+40BD9B [System.pas][System][@UStrSetLength$qqrr20System.UnicodeStringi][29748]
+40BDF2 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][29833]
+7D4588 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.setpathDatabase$qqrv][112]
+7D41B2 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv][90]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+7F38FD [uUtilAmauri.pas][uUtilAmauri][TUtilSQL.getCodTela$qqr20System.UnicodeString][279]
+7F17F1 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pAdicionaTelaSistema$qqrv][145]
+7F1741 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][116]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 64602
+
+Current memory dump of 256 bytes starting at pointer address 7FE0DAA0:
+B0 04 02 00 01 00 00 00 2F 00 00 00 43 00 3A 00 5C 00 44 00 65 00 76 00 5C 00 41 00 6D 00 61 00
+75 00 72 00 69 00 5F 00 46 00 69 00 6E 00 61 00 6E 00 63 00 65 00 69 00 72 00 6F 00 5C 00 57 00
+69 00 6E 00 33 00 32 00 5C 00 44 00 65 00 62 00 75 00 67 00 5C 00 63 00 6F 00 6E 00 66 00 69 00
+67 00 2E 00 69 00 6E 00 69 00 00 00 1D 7E 22 77 80 80 80 80 80 80 80 80 00 00 00 00 21 D9 E0 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 4A BB 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+57 DD 51 00 8D C6 54 00 DA 89 54 00 F4 56 55 00 4F 80 7D 00 9C 2D 4C 00 C9 2F 4C 00 76 6F 40 00
+C8 3B 00 00 C8 3B 00 00 65 8A 40 00 9D 92 40 00 60 82 54 00 E7 8B 40 00 49 57 55 00 E8 80 7D 00
+5D D4 54 00 9D 92 40 00 7D 63 55 00 5D D4 54 00 9D 92 40 00 6C 00 00 00 20 BE 53 00 40 5F 07 87
+∞  .  .  .  .  .  .  .  /  .  .  .  C  .  :  .  \  .  D  .  e  .  v  .  \  .  A  .  m  .  a  .
+u  .  r  .  i  .  _  .  F  .  i  .  n  .  a  .  n  .  c  .  e  .  i  .  r  .  o  .  \  .  W  .
+i  .  n  .  3  .  2  .  \  .  D  .  e  .  b  .  u  .  g  .  \  .  c  .  o  .  n  .  f  .  i  .
+g  .  .  .  i  .  n  .  i  .  .  .  .  ~  "  w  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  !  Ÿ  ‡  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  J  ª  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+W  ›  Q  .  ç  ∆  T  .  ⁄  â  T  .  Ù  V  U  .  O  Ä  }  .  ú  -  L  .  …  /  L  .  v  o  @  .
+»  ;  .  .  »  ;  .  .  e  ä  @  .  ù  í  @  .  `  Ç  T  .  Á  ã  @  .  I  W  U  .  Ë  Ä  }  .
+]  ‘  T  .  ù  í  @  .  }  c  U  .  ]  ‘  T  .  ù  í  @  .  l  .  .  .     æ  S  .  @  _  .  á
+
+--------------------------------2022/6/11 0:48:29--------------------------------
+This application has leaked memory. The small block leaks are (excluding expected leaks registered by pointer):
+
+5 - 12 bytes: TIniFile x 2
+101 - 116 bytes: UnicodeString x 2
+
+Note: Memory leak detail is logged to a text file in the same folder as this application. To disable this memory leak check, undefine "EnableMemoryLeakReporting".
+
+--------------------------------2022/6/11 0:50:36--------------------------------
+A memory block has been leaked. The size is: 12
+
+This block was allocated by thread 0xD34, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+50A2B3 [System.IniFiles.pas][System.IniFiles][Inifiles.TCustomIniFile.$bctr$qqrx20System.UnicodeString][164]
+40BE04 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][29842]
+7D4597 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.setpathDatabase$qqrv][113]
+7D41B2 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv][90]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+7F17DB [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pAdicionaTelaSistema$qqrv][143]
+7F1741 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][116]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+
+The block is currently used for an object of class: TIniFile
+
+The allocation number is: 58280
+
+Current memory dump of 256 bytes starting at pointer address 7FBA1BB0:
+90 8A 50 00 AC D8 E0 7F 00 00 00 00 BB 6D 2B 77 00 00 00 00 69 19 BA 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 72 BA 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00 C6 6C 7D 00 35 6E 7D 00
+32 80 7D 00 9C 2D 4C 00 C9 2F 4C 00 76 6F 40 00 BD AA 40 00 9E 32 4C 00 34 0D 00 00 34 0D 00 00
+65 8A 40 00 9D 92 40 00 25 6D 7D 00 E7 8B 40 00 93 6E 7D 00 E7 8B 40 00 F3 80 7D 00 5D D4 54 00
+9D 92 40 00 7D 63 55 00 5D D4 54 00 0C 00 00 00 C4 66 7D 00 17 19 92 87 98 12 A5 00 80 80 80 80
+80 80 80 80 E8 E6 6D 78 00 00 00 00 51 35 BA 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+B6 FD 00 00 5A 6F 40 00 BB B2 42 00 F6 B2 42 00 11 21 55 00 B0 B6 54 00 23 6E 6E 76 29 73 6E 76
+23 6E 6E 76 29 73 6E 76 7F 5D 6E 76 F2 01 55 00 34 0D 00 00 34 0D 00 00 12 B3 42 00 1D 8B 54 00
+ê  ä  P  .  ¨  ÿ  ‡    .  .  .  .  ª  m  +  w  .  .  .  .  i  .  ∫    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  r  ∫  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .  ∆  l  }  .  5  n  }  .
+2  Ä  }  .  ú  -  L  .  …  /  L  .  v  o  @  .  Ω  ™  @  .  û  2  L  .  4  .  .  .  4  .  .  .
+e  ä  @  .  ù  í  @  .  %  m  }  .  Á  ã  @  .  ì  n  }  .  Á  ã  @  .  Û  Ä  }  .  ]  ‘  T  .
+ù  í  @  .  }  c  U  .  ]  ‘  T  .  .  .  .  .  ƒ  f  }  .  .  .  í  á  ò  .  •  .  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ë  Ê  m  x  .  .  .  .  Q  5  ∫    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+∂  ˝  .  .  Z  o  @  .  ª  ≤  B  .  ˆ  ≤  B  .  .  !  U  .  ∞  ∂  T  .  #  n  n  v  )  s  n  v
+#  n  n  v  )  s  n  v    ]  n  v  Ú  .  U  .  4  .  .  .  4  .  .  .  .  ≥  B  .  .  ã  T  .
+
+--------------------------------2022/6/11 0:50:36--------------------------------
+A memory block has been leaked. The size is: 12
+
+This block was allocated by thread 0xD34, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+50A2B3 [System.IniFiles.pas][System.IniFiles][Inifiles.TCustomIniFile.$bctr$qqrx20System.UnicodeString][164]
+40BE04 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][29842]
+7D4597 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.setpathDatabase$qqrv][113]
+7D41B2 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv][90]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+7F38FD [uUtilAmauri.pas][uUtilAmauri][TUtilSQL.getCodTela$qqr20System.UnicodeString][279]
+7F17F1 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pAdicionaTelaSistema$qqrv][145]
+7F1741 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][116]
+
+The block is currently used for an object of class: TIniFile
+
+The allocation number is: 64603
+
+Current memory dump of 256 bytes starting at pointer address 7FBA3408:
+90 8A 50 00 AC DA E0 7F 00 00 00 00 2E 14 10 77 00 00 00 00 49 4B BA 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 17 E4 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00 52 EF 70 00 56 D4 6F 00
+EC D3 6F 00 B7 22 7A 00 81 62 79 00 D8 40 7D 00 80 3B 7D 00 FD 38 7F 00 34 0D 00 00 34 0D 00 00
+65 8A 40 00 9D 92 40 00 B5 EF 70 00 E7 8B 40 00 33 D5 6F 00 E7 8B 40 00 89 1A 7A 00 E7 8B 40 00
+2B 28 79 00 E7 8B 40 00 00 45 7D 00 0C 00 00 00 00 2A 6D 00 F9 53 7C 88 98 12 A5 00 80 80 80 80
+80 80 80 80 06 AC 83 77 00 00 00 00 E9 22 BA 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+B3 FD 00 00 5A 6F 40 00 BB B2 42 00 F6 B2 42 00 11 21 55 00 B0 B6 54 00 23 6E 6E 76 29 73 6E 76
+23 6E 6E 76 29 73 6E 76 7F 5D 6E 76 F2 01 55 00 34 0D 00 00 34 0D 00 00 12 B3 42 00 1D 8B 54 00
+ê  ä  P  .  ¨  ⁄  ‡    .  .  .  .  .  .  .  w  .  .  .  .  I  K  ∫    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  ‰  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .  R  Ô  p  .  V  ‘  o  .
+Ï  ”  o  .  ∑  "  z  .  Å  b  y  .  ÿ  @  }  .  Ä  ;  }  .  ˝  8    .  4  .  .  .  4  .  .  .
+e  ä  @  .  ù  í  @  .  µ  Ô  p  .  Á  ã  @  .  3  ’  o  .  Á  ã  @  .  â  .  z  .  Á  ã  @  .
++  (  y  .  Á  ã  @  .  .  E  }  .  .  .  .  .  .  *  m  .  ˘  S  |  à  ò  .  •  .  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  .  ¨  É  w  .  .  .  .  È  "  ∫    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+≥  ˝  .  .  Z  o  @  .  ª  ≤  B  .  ˆ  ≤  B  .  .  !  U  .  ∞  ∂  T  .  #  n  n  v  )  s  n  v
+#  n  n  v  )  s  n  v    ]  n  v  Ú  .  U  .  4  .  .  .  4  .  .  .  .  ≥  B  .  .  ã  T  .
+
+--------------------------------2022/6/11 0:50:36--------------------------------
+A memory block has been leaked. The size is: 116
+
+This block was allocated by thread 0xD34, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+40AA03 [System.pas][System][@NewUnicodeString$qqri][24451]
+40BD9B [System.pas][System][@UStrSetLength$qqrr20System.UnicodeStringi][29748]
+40BDF2 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][29833]
+7D4588 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.setpathDatabase$qqrv][112]
+7D41B2 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv][90]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+7F17DB [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pAdicionaTelaSistema$qqrv][143]
+7F1741 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][116]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+642DD3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction$qqrv][3642]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 58279
+
+Current memory dump of 256 bytes starting at pointer address 7FE0D8A0:
+B0 04 02 00 01 00 00 00 2F 00 00 00 43 00 3A 00 5C 00 44 00 65 00 76 00 5C 00 41 00 6D 00 61 00
+75 00 72 00 69 00 5F 00 46 00 69 00 6E 00 61 00 6E 00 63 00 65 00 69 00 72 00 6F 00 5C 00 57 00
+69 00 6E 00 33 00 32 00 5C 00 44 00 65 00 62 00 75 00 67 00 5C 00 63 00 6F 00 6E 00 66 00 69 00
+67 00 2E 00 69 00 6E 00 69 00 00 00 38 01 3E 77 80 80 80 80 80 80 80 80 00 00 00 00 21 D3 E0 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 AF BB 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+57 DD 51 00 8D C6 54 00 DA 89 54 00 F4 56 55 00 4F 80 7D 00 9C 2D 4C 00 C9 2F 4C 00 76 6F 40 00
+34 0D 00 00 34 0D 00 00 65 8A 40 00 9D 92 40 00 60 82 54 00 E7 8B 40 00 49 57 55 00 E8 80 7D 00
+5D D4 54 00 9D 92 40 00 7D 63 55 00 5D D4 54 00 9D 92 40 00 6C 00 00 00 20 BE 53 00 7D 00 07 87
+∞  .  .  .  .  .  .  .  /  .  .  .  C  .  :  .  \  .  D  .  e  .  v  .  \  .  A  .  m  .  a  .
+u  .  r  .  i  .  _  .  F  .  i  .  n  .  a  .  n  .  c  .  e  .  i  .  r  .  o  .  \  .  W  .
+i  .  n  .  3  .  2  .  \  .  D  .  e  .  b  .  u  .  g  .  \  .  c  .  o  .  n  .  f  .  i  .
+g  .  .  .  i  .  n  .  i  .  .  .  8  .  >  w  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  !  ”  ‡  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ø  ª  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+W  ›  Q  .  ç  ∆  T  .  ⁄  â  T  .  Ù  V  U  .  O  Ä  }  .  ú  -  L  .  …  /  L  .  v  o  @  .
+4  .  .  .  4  .  .  .  e  ä  @  .  ù  í  @  .  `  Ç  T  .  Á  ã  @  .  I  W  U  .  Ë  Ä  }  .
+]  ‘  T  .  ù  í  @  .  }  c  U  .  ]  ‘  T  .  ù  í  @  .  l  .  .  .     æ  S  .  }  .  .  á
+
+--------------------------------2022/6/11 0:50:36--------------------------------
+A memory block has been leaked. The size is: 116
+
+This block was allocated by thread 0xD34, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+40AA03 [System.pas][System][@NewUnicodeString$qqri][24451]
+40BD9B [System.pas][System][@UStrSetLength$qqrr20System.UnicodeStringi][29748]
+40BDF2 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][29833]
+7D4588 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.setpathDatabase$qqrv][112]
+7D41B2 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv][90]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+7F38FD [uUtilAmauri.pas][uUtilAmauri][TUtilSQL.getCodTela$qqr20System.UnicodeString][279]
+7F17F1 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pAdicionaTelaSistema$qqrv][145]
+7F1741 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][116]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 64602
+
+Current memory dump of 256 bytes starting at pointer address 7FE0DAA0:
+B0 04 02 00 01 00 00 00 2F 00 00 00 43 00 3A 00 5C 00 44 00 65 00 76 00 5C 00 41 00 6D 00 61 00
+75 00 72 00 69 00 5F 00 46 00 69 00 6E 00 61 00 6E 00 63 00 65 00 69 00 72 00 6F 00 5C 00 57 00
+69 00 6E 00 33 00 32 00 5C 00 44 00 65 00 62 00 75 00 67 00 5C 00 63 00 6F 00 6E 00 66 00 69 00
+67 00 2E 00 69 00 6E 00 69 00 00 00 45 DB 22 77 80 80 80 80 80 80 80 80 00 00 00 00 21 D9 E0 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 4A BB 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+57 DD 51 00 8D C6 54 00 DA 89 54 00 F4 56 55 00 4F 80 7D 00 9C 2D 4C 00 C9 2F 4C 00 76 6F 40 00
+34 0D 00 00 34 0D 00 00 65 8A 40 00 9D 92 40 00 60 82 54 00 E7 8B 40 00 49 57 55 00 E8 80 7D 00
+5D D4 54 00 9D 92 40 00 7D 63 55 00 5D D4 54 00 9D 92 40 00 6C 00 00 00 20 BE 53 00 18 02 07 87
+∞  .  .  .  .  .  .  .  /  .  .  .  C  .  :  .  \  .  D  .  e  .  v  .  \  .  A  .  m  .  a  .
+u  .  r  .  i  .  _  .  F  .  i  .  n  .  a  .  n  .  c  .  e  .  i  .  r  .  o  .  \  .  W  .
+i  .  n  .  3  .  2  .  \  .  D  .  e  .  b  .  u  .  g  .  \  .  c  .  o  .  n  .  f  .  i  .
+g  .  .  .  i  .  n  .  i  .  .  .  E  €  "  w  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  !  Ÿ  ‡  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  J  ª  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+W  ›  Q  .  ç  ∆  T  .  ⁄  â  T  .  Ù  V  U  .  O  Ä  }  .  ú  -  L  .  …  /  L  .  v  o  @  .
+4  .  .  .  4  .  .  .  e  ä  @  .  ù  í  @  .  `  Ç  T  .  Á  ã  @  .  I  W  U  .  Ë  Ä  }  .
+]  ‘  T  .  ù  í  @  .  }  c  U  .  ]  ‘  T  .  ù  í  @  .  l  .  .  .     æ  S  .  .  .  .  á
+
+--------------------------------2022/6/11 0:50:36--------------------------------
+This application has leaked memory. The small block leaks are (excluding expected leaks registered by pointer):
+
+5 - 12 bytes: TIniFile x 2
+101 - 116 bytes: UnicodeString x 2
+
+Note: Memory leak detail is logged to a text file in the same folder as this application. To disable this memory leak check, undefine "EnableMemoryLeakReporting".
+
+--------------------------------2022/6/11 0:50:54--------------------------------
+A memory block has been leaked. The size is: 12
+
+This block was allocated by thread 0x163C, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+50A2B3 [System.IniFiles.pas][System.IniFiles][Inifiles.TCustomIniFile.$bctr$qqrx20System.UnicodeString][164]
+40BE04 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][29842]
+7D4597 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.setpathDatabase$qqrv][113]
+7D41B2 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv][90]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+7F17DB [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pAdicionaTelaSistema$qqrv][143]
+7F1741 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][116]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+
+The block is currently used for an object of class: TIniFile
+
+The allocation number is: 58280
+
+Current memory dump of 256 bytes starting at pointer address 7FBA1BB0:
+90 8A 50 00 AC D8 E0 7F 00 00 00 00 AB 5B 2B 77 00 00 00 00 69 19 BA 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 72 BA 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00 C6 6C 7D 00 35 6E 7D 00
+32 80 7D 00 9C 2D 4C 00 C9 2F 4C 00 76 6F 40 00 BD AA 40 00 9E 32 4C 00 3C 16 00 00 3C 16 00 00
+65 8A 40 00 9D 92 40 00 25 6D 7D 00 E7 8B 40 00 93 6E 7D 00 E7 8B 40 00 F3 80 7D 00 5D D4 54 00
+9D 92 40 00 7D 63 55 00 5D D4 54 00 0C 00 00 00 C4 66 7D 00 27 2B 92 87 98 12 A5 00 80 80 80 80
+80 80 80 80 D8 D4 6D 78 00 00 00 00 51 35 BA 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+B6 FD 00 00 5A 6F 40 00 BB B2 42 00 F6 B2 42 00 11 21 55 00 B0 B6 54 00 23 6E 6E 76 29 73 6E 76
+23 6E 6E 76 29 73 6E 76 7F 5D 6E 76 F2 01 55 00 3C 16 00 00 3C 16 00 00 12 B3 42 00 1D 8B 54 00
+ê  ä  P  .  ¨  ÿ  ‡    .  .  .  .  ´  [  +  w  .  .  .  .  i  .  ∫    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  r  ∫  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .  ∆  l  }  .  5  n  }  .
+2  Ä  }  .  ú  -  L  .  …  /  L  .  v  o  @  .  Ω  ™  @  .  û  2  L  .  <  .  .  .  <  .  .  .
+e  ä  @  .  ù  í  @  .  %  m  }  .  Á  ã  @  .  ì  n  }  .  Á  ã  @  .  Û  Ä  }  .  ]  ‘  T  .
+ù  í  @  .  }  c  U  .  ]  ‘  T  .  .  .  .  .  ƒ  f  }  .  '  +  í  á  ò  .  •  .  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  ÿ  ‘  m  x  .  .  .  .  Q  5  ∫    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+∂  ˝  .  .  Z  o  @  .  ª  ≤  B  .  ˆ  ≤  B  .  .  !  U  .  ∞  ∂  T  .  #  n  n  v  )  s  n  v
+#  n  n  v  )  s  n  v    ]  n  v  Ú  .  U  .  <  .  .  .  <  .  .  .  .  ≥  B  .  .  ã  T  .
+
+--------------------------------2022/6/11 0:50:54--------------------------------
+A memory block has been leaked. The size is: 12
+
+This block was allocated by thread 0x163C, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+50A2B3 [System.IniFiles.pas][System.IniFiles][Inifiles.TCustomIniFile.$bctr$qqrx20System.UnicodeString][164]
+40BE04 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][29842]
+7D4597 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.setpathDatabase$qqrv][113]
+7D41B2 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv][90]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+7F38FD [uUtilAmauri.pas][uUtilAmauri][TUtilSQL.getCodTela$qqr20System.UnicodeString][279]
+7F17F1 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pAdicionaTelaSistema$qqrv][145]
+7F1741 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][116]
+
+The block is currently used for an object of class: TIniFile
+
+The allocation number is: 64603
+
+Current memory dump of 256 bytes starting at pointer address 7FBA3408:
+90 8A 50 00 AC DA E0 7F 00 00 00 00 1E 02 10 77 00 00 00 00 49 4B BA 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 17 E4 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00 52 EF 70 00 56 D4 6F 00
+EC D3 6F 00 B7 22 7A 00 81 62 79 00 D8 40 7D 00 80 3B 7D 00 FD 38 7F 00 3C 16 00 00 3C 16 00 00
+65 8A 40 00 9D 92 40 00 B5 EF 70 00 E7 8B 40 00 33 D5 6F 00 E7 8B 40 00 89 1A 7A 00 E7 8B 40 00
+2B 28 79 00 E7 8B 40 00 00 45 7D 00 0C 00 00 00 00 2A 6D 00 09 66 7C 88 98 12 A5 00 80 80 80 80
+80 80 80 80 F6 99 83 77 00 00 00 00 E9 22 BA 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+B3 FD 00 00 5A 6F 40 00 BB B2 42 00 F6 B2 42 00 11 21 55 00 B0 B6 54 00 23 6E 6E 76 29 73 6E 76
+23 6E 6E 76 29 73 6E 76 7F 5D 6E 76 F2 01 55 00 3C 16 00 00 3C 16 00 00 12 B3 42 00 1D 8B 54 00
+ê  ä  P  .  ¨  ⁄  ‡    .  .  .  .  .  .  .  w  .  .  .  .  I  K  ∫    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  ‰  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .  R  Ô  p  .  V  ‘  o  .
+Ï  ”  o  .  ∑  "  z  .  Å  b  y  .  ÿ  @  }  .  Ä  ;  }  .  ˝  8    .  <  .  .  .  <  .  .  .
+e  ä  @  .  ù  í  @  .  µ  Ô  p  .  Á  ã  @  .  3  ’  o  .  Á  ã  @  .  â  .  z  .  Á  ã  @  .
++  (  y  .  Á  ã  @  .  .  E  }  .  .  .  .  .  .  *  m  .  .  f  |  à  ò  .  •  .  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  ˆ  ô  É  w  .  .  .  .  È  "  ∫    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+≥  ˝  .  .  Z  o  @  .  ª  ≤  B  .  ˆ  ≤  B  .  .  !  U  .  ∞  ∂  T  .  #  n  n  v  )  s  n  v
+#  n  n  v  )  s  n  v    ]  n  v  Ú  .  U  .  <  .  .  .  <  .  .  .  .  ≥  B  .  .  ã  T  .
+
+--------------------------------2022/6/11 0:50:54--------------------------------
+A memory block has been leaked. The size is: 116
+
+This block was allocated by thread 0x163C, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+40AA03 [System.pas][System][@NewUnicodeString$qqri][24451]
+40BD9B [System.pas][System][@UStrSetLength$qqrr20System.UnicodeStringi][29748]
+40BDF2 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][29833]
+7D4588 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.setpathDatabase$qqrv][112]
+7D41B2 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv][90]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+7F17DB [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pAdicionaTelaSistema$qqrv][143]
+7F1741 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][116]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+642DD3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction$qqrv][3642]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 58279
+
+Current memory dump of 256 bytes starting at pointer address 7FE0D8A0:
+B0 04 02 00 01 00 00 00 2F 00 00 00 43 00 3A 00 5C 00 44 00 65 00 76 00 5C 00 41 00 6D 00 61 00
+75 00 72 00 69 00 5F 00 46 00 69 00 6E 00 61 00 6E 00 63 00 65 00 69 00 72 00 6F 00 5C 00 57 00
+69 00 6E 00 33 00 32 00 5C 00 44 00 65 00 62 00 75 00 67 00 5C 00 63 00 6F 00 6E 00 66 00 69 00
+67 00 2E 00 69 00 6E 00 69 00 00 00 28 EF 3D 77 80 80 80 80 80 80 80 80 00 00 00 00 21 D3 E0 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 AF BB 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+57 DD 51 00 8D C6 54 00 DA 89 54 00 F4 56 55 00 4F 80 7D 00 9C 2D 4C 00 C9 2F 4C 00 76 6F 40 00
+3C 16 00 00 3C 16 00 00 65 8A 40 00 9D 92 40 00 60 82 54 00 E7 8B 40 00 49 57 55 00 E8 80 7D 00
+5D D4 54 00 9D 92 40 00 7D 63 55 00 5D D4 54 00 9D 92 40 00 6C 00 00 00 20 BE 53 00 8D 12 07 87
+∞  .  .  .  .  .  .  .  /  .  .  .  C  .  :  .  \  .  D  .  e  .  v  .  \  .  A  .  m  .  a  .
+u  .  r  .  i  .  _  .  F  .  i  .  n  .  a  .  n  .  c  .  e  .  i  .  r  .  o  .  \  .  W  .
+i  .  n  .  3  .  2  .  \  .  D  .  e  .  b  .  u  .  g  .  \  .  c  .  o  .  n  .  f  .  i  .
+g  .  .  .  i  .  n  .  i  .  .  .  (  Ô  =  w  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  !  ”  ‡  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ø  ª  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+W  ›  Q  .  ç  ∆  T  .  ⁄  â  T  .  Ù  V  U  .  O  Ä  }  .  ú  -  L  .  …  /  L  .  v  o  @  .
+<  .  .  .  <  .  .  .  e  ä  @  .  ù  í  @  .  `  Ç  T  .  Á  ã  @  .  I  W  U  .  Ë  Ä  }  .
+]  ‘  T  .  ù  í  @  .  }  c  U  .  ]  ‘  T  .  ù  í  @  .  l  .  .  .     æ  S  .  ç  .  .  á
+
+--------------------------------2022/6/11 0:50:54--------------------------------
+A memory block has been leaked. The size is: 116
+
+This block was allocated by thread 0x163C, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+40AA03 [System.pas][System][@NewUnicodeString$qqri][24451]
+40BD9B [System.pas][System][@UStrSetLength$qqrr20System.UnicodeStringi][29748]
+40BDF2 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][29833]
+7D4588 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.setpathDatabase$qqrv][112]
+7D41B2 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv][90]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+7F38FD [uUtilAmauri.pas][uUtilAmauri][TUtilSQL.getCodTela$qqr20System.UnicodeString][279]
+7F17F1 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pAdicionaTelaSistema$qqrv][145]
+7F1741 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][116]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 64602
+
+Current memory dump of 256 bytes starting at pointer address 7FE0DAA0:
+B0 04 02 00 01 00 00 00 2F 00 00 00 43 00 3A 00 5C 00 44 00 65 00 76 00 5C 00 41 00 6D 00 61 00
+75 00 72 00 69 00 5F 00 46 00 69 00 6E 00 61 00 6E 00 63 00 65 00 69 00 72 00 6F 00 5C 00 57 00
+69 00 6E 00 33 00 32 00 5C 00 44 00 65 00 62 00 75 00 67 00 5C 00 63 00 6F 00 6E 00 66 00 69 00
+67 00 2E 00 69 00 6E 00 69 00 00 00 35 C9 22 77 80 80 80 80 80 80 80 80 00 00 00 00 21 D9 E0 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 4A BB 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+57 DD 51 00 8D C6 54 00 DA 89 54 00 F4 56 55 00 4F 80 7D 00 9C 2D 4C 00 C9 2F 4C 00 76 6F 40 00
+3C 16 00 00 3C 16 00 00 65 8A 40 00 9D 92 40 00 60 82 54 00 E7 8B 40 00 49 57 55 00 E8 80 7D 00
+5D D4 54 00 9D 92 40 00 7D 63 55 00 5D D4 54 00 9D 92 40 00 6C 00 00 00 20 BE 53 00 28 14 07 87
+∞  .  .  .  .  .  .  .  /  .  .  .  C  .  :  .  \  .  D  .  e  .  v  .  \  .  A  .  m  .  a  .
+u  .  r  .  i  .  _  .  F  .  i  .  n  .  a  .  n  .  c  .  e  .  i  .  r  .  o  .  \  .  W  .
+i  .  n  .  3  .  2  .  \  .  D  .  e  .  b  .  u  .  g  .  \  .  c  .  o  .  n  .  f  .  i  .
+g  .  .  .  i  .  n  .  i  .  .  .  5  …  "  w  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  !  Ÿ  ‡  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  J  ª  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+W  ›  Q  .  ç  ∆  T  .  ⁄  â  T  .  Ù  V  U  .  O  Ä  }  .  ú  -  L  .  …  /  L  .  v  o  @  .
+<  .  .  .  <  .  .  .  e  ä  @  .  ù  í  @  .  `  Ç  T  .  Á  ã  @  .  I  W  U  .  Ë  Ä  }  .
+]  ‘  T  .  ù  í  @  .  }  c  U  .  ]  ‘  T  .  ù  í  @  .  l  .  .  .     æ  S  .  (  .  .  á
+
+--------------------------------2022/6/11 0:50:54--------------------------------
+This application has leaked memory. The small block leaks are (excluding expected leaks registered by pointer):
+
+5 - 12 bytes: TIniFile x 2
+101 - 116 bytes: UnicodeString x 2
+
+Note: Memory leak detail is logged to a text file in the same folder as this application. To disable this memory leak check, undefine "EnableMemoryLeakReporting".
+
+--------------------------------2022/6/11 0:55:59--------------------------------
+A memory block has been leaked. The size is: 12
+
+This block was allocated by thread 0x39A4, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+50A2B3 [System.IniFiles.pas][System.IniFiles][Inifiles.TCustomIniFile.$bctr$qqrx20System.UnicodeString][164]
+40BE04 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][29842]
+7D4597 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.setpathDatabase$qqrv][113]
+7D41B2 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv][90]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+7F17DB [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pAdicionaTelaSistema$qqrv][143]
+7F1741 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][116]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+
+The block is currently used for an object of class: TIniFile
+
+The allocation number is: 58280
+
+Current memory dump of 256 bytes starting at pointer address 7FBA1BB0:
+90 8A 50 00 AC D8 E0 7F 00 00 00 00 DB 14 2B 77 00 00 00 00 99 1A BA 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 72 BA 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00 C6 6C 7D 00 35 6E 7D 00
+32 80 7D 00 9C 2D 4C 00 C9 2F 4C 00 76 6F 40 00 BD AA 40 00 9E 32 4C 00 A4 39 00 00 A4 39 00 00
+65 8A 40 00 9D 92 40 00 25 6D 7D 00 E7 8B 40 00 93 6E 7D 00 E7 8B 40 00 F3 80 7D 00 5D D4 54 00
+9D 92 40 00 7D 63 55 00 5D D4 54 00 0C 00 00 00 C4 66 7D 00 F7 71 92 87 98 12 A5 00 80 80 80 80
+80 80 80 80 08 8E 6D 78 00 00 00 00 51 35 BA 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+B7 FD 00 00 5A 6F 40 00 BB B2 42 00 F6 B2 42 00 11 21 55 00 B0 B6 54 00 23 6E 6E 76 29 73 6E 76
+23 6E 6E 76 29 73 6E 76 7F 5D 6E 76 F2 01 55 00 A4 39 00 00 A4 39 00 00 12 B3 42 00 1D 8B 54 00
+ê  ä  P  .  ¨  ÿ  ‡    .  .  .  .  €  .  +  w  .  .  .  .  ô  .  ∫    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  r  ∫  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .  ∆  l  }  .  5  n  }  .
+2  Ä  }  .  ú  -  L  .  …  /  L  .  v  o  @  .  Ω  ™  @  .  û  2  L  .  §  9  .  .  §  9  .  .
+e  ä  @  .  ù  í  @  .  %  m  }  .  Á  ã  @  .  ì  n  }  .  Á  ã  @  .  Û  Ä  }  .  ]  ‘  T  .
+ù  í  @  .  }  c  U  .  ]  ‘  T  .  .  .  .  .  ƒ  f  }  .  ˜  q  í  á  ò  .  •  .  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  .  é  m  x  .  .  .  .  Q  5  ∫    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+∑  ˝  .  .  Z  o  @  .  ª  ≤  B  .  ˆ  ≤  B  .  .  !  U  .  ∞  ∂  T  .  #  n  n  v  )  s  n  v
+#  n  n  v  )  s  n  v    ]  n  v  Ú  .  U  .  §  9  .  .  §  9  .  .  .  ≥  B  .  .  ã  T  .
+
+--------------------------------2022/6/11 0:55:59--------------------------------
+A memory block has been leaked. The size is: 12
+
+This block was allocated by thread 0x39A4, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+50A2B3 [System.IniFiles.pas][System.IniFiles][Inifiles.TCustomIniFile.$bctr$qqrx20System.UnicodeString][164]
+40BE04 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][29842]
+7D4597 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.setpathDatabase$qqrv][113]
+7D41B2 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv][90]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+7F38FD [uUtilAmauri.pas][uUtilAmauri][TUtilSQL.getCodTela$qqr20System.UnicodeString][279]
+7F17F1 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pAdicionaTelaSistema$qqrv][145]
+7F1741 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][116]
+
+The block is currently used for an object of class: TIniFile
+
+The allocation number is: 64603
+
+Current memory dump of 256 bytes starting at pointer address 7FBA3408:
+90 8A 50 00 AC DA E0 7F 00 00 00 00 4E BB 0F 77 00 00 00 00 49 4B BA 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 17 E4 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00 52 EF 70 00 56 D4 6F 00
+EC D3 6F 00 B7 22 7A 00 81 62 79 00 D8 40 7D 00 80 3B 7D 00 FD 38 7F 00 A4 39 00 00 A4 39 00 00
+65 8A 40 00 9D 92 40 00 B5 EF 70 00 E7 8B 40 00 33 D5 6F 00 E7 8B 40 00 89 1A 7A 00 E7 8B 40 00
+2B 28 79 00 E7 8B 40 00 00 45 7D 00 0C 00 00 00 00 2A 6D 00 D9 AC 7C 88 98 12 A5 00 80 80 80 80
+80 80 80 80 26 53 83 77 00 00 00 00 E9 35 BA 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+B4 FD 00 00 5A 6F 40 00 BB B2 42 00 F6 B2 42 00 11 21 55 00 B0 B6 54 00 23 6E 6E 76 29 73 6E 76
+23 6E 6E 76 29 73 6E 76 7F 5D 6E 76 F2 01 55 00 A4 39 00 00 A4 39 00 00 12 B3 42 00 1D 8B 54 00
+ê  ä  P  .  ¨  ⁄  ‡    .  .  .  .  N  ª  .  w  .  .  .  .  I  K  ∫    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  ‰  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .  R  Ô  p  .  V  ‘  o  .
+Ï  ”  o  .  ∑  "  z  .  Å  b  y  .  ÿ  @  }  .  Ä  ;  }  .  ˝  8    .  §  9  .  .  §  9  .  .
+e  ä  @  .  ù  í  @  .  µ  Ô  p  .  Á  ã  @  .  3  ’  o  .  Á  ã  @  .  â  .  z  .  Á  ã  @  .
++  (  y  .  Á  ã  @  .  .  E  }  .  .  .  .  .  .  *  m  .  Ÿ  ¨  |  à  ò  .  •  .  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  &  S  É  w  .  .  .  .  È  5  ∫    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+¥  ˝  .  .  Z  o  @  .  ª  ≤  B  .  ˆ  ≤  B  .  .  !  U  .  ∞  ∂  T  .  #  n  n  v  )  s  n  v
+#  n  n  v  )  s  n  v    ]  n  v  Ú  .  U  .  §  9  .  .  §  9  .  .  .  ≥  B  .  .  ã  T  .
+
+--------------------------------2022/6/11 0:55:59--------------------------------
+A memory block has been leaked. The size is: 116
+
+This block was allocated by thread 0x39A4, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+40AA03 [System.pas][System][@NewUnicodeString$qqri][24451]
+40BD9B [System.pas][System][@UStrSetLength$qqrr20System.UnicodeStringi][29748]
+40BDF2 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][29833]
+7D4588 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.setpathDatabase$qqrv][112]
+7D41B2 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv][90]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+7F17DB [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pAdicionaTelaSistema$qqrv][143]
+7F1741 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][116]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+642DD3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction$qqrv][3642]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 58279
+
+Current memory dump of 256 bytes starting at pointer address 7FE0D8A0:
+B0 04 02 00 01 00 00 00 2F 00 00 00 43 00 3A 00 5C 00 44 00 65 00 76 00 5C 00 41 00 6D 00 61 00
+75 00 72 00 69 00 5F 00 46 00 69 00 6E 00 61 00 6E 00 63 00 65 00 69 00 72 00 6F 00 5C 00 57 00
+69 00 6E 00 33 00 32 00 5C 00 44 00 65 00 62 00 75 00 67 00 5C 00 63 00 6F 00 6E 00 66 00 69 00
+67 00 2E 00 69 00 6E 00 69 00 00 00 58 A8 3D 77 80 80 80 80 80 80 80 80 00 00 00 00 21 D3 E0 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 AF BB 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+57 DD 51 00 8D C6 54 00 DA 89 54 00 F4 56 55 00 4F 80 7D 00 9C 2D 4C 00 C9 2F 4C 00 76 6F 40 00
+A4 39 00 00 A4 39 00 00 65 8A 40 00 9D 92 40 00 60 82 54 00 E7 8B 40 00 49 57 55 00 E8 80 7D 00
+5D D4 54 00 9D 92 40 00 7D 63 55 00 5D D4 54 00 9D 92 40 00 6C 00 00 00 20 BE 53 00 5D 59 07 87
+∞  .  .  .  .  .  .  .  /  .  .  .  C  .  :  .  \  .  D  .  e  .  v  .  \  .  A  .  m  .  a  .
+u  .  r  .  i  .  _  .  F  .  i  .  n  .  a  .  n  .  c  .  e  .  i  .  r  .  o  .  \  .  W  .
+i  .  n  .  3  .  2  .  \  .  D  .  e  .  b  .  u  .  g  .  \  .  c  .  o  .  n  .  f  .  i  .
+g  .  .  .  i  .  n  .  i  .  .  .  X  ®  =  w  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  !  ”  ‡  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ø  ª  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+W  ›  Q  .  ç  ∆  T  .  ⁄  â  T  .  Ù  V  U  .  O  Ä  }  .  ú  -  L  .  …  /  L  .  v  o  @  .
+§  9  .  .  §  9  .  .  e  ä  @  .  ù  í  @  .  `  Ç  T  .  Á  ã  @  .  I  W  U  .  Ë  Ä  }  .
+]  ‘  T  .  ù  í  @  .  }  c  U  .  ]  ‘  T  .  ù  í  @  .  l  .  .  .     æ  S  .  ]  Y  .  á
+
+--------------------------------2022/6/11 0:55:59--------------------------------
+A memory block has been leaked. The size is: 116
+
+This block was allocated by thread 0x39A4, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+40AA03 [System.pas][System][@NewUnicodeString$qqri][24451]
+40BD9B [System.pas][System][@UStrSetLength$qqrr20System.UnicodeStringi][29748]
+40BDF2 [System.pas][System][@UStrCat$qqrr20System.UnicodeStringx20System.UnicodeString][29833]
+7D4588 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.setpathDatabase$qqrv][112]
+7D41B2 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv][90]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+7F38FD [uUtilAmauri.pas][uUtilAmauri][TUtilSQL.getCodTela$qqr20System.UnicodeString][279]
+7F17F1 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pAdicionaTelaSistema$qqrv][145]
+7F1741 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][116]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 64602
+
+Current memory dump of 256 bytes starting at pointer address 7FE0DAA0:
+B0 04 02 00 01 00 00 00 2F 00 00 00 43 00 3A 00 5C 00 44 00 65 00 76 00 5C 00 41 00 6D 00 61 00
+75 00 72 00 69 00 5F 00 46 00 69 00 6E 00 61 00 6E 00 63 00 65 00 69 00 72 00 6F 00 5C 00 57 00
+69 00 6E 00 33 00 32 00 5C 00 44 00 65 00 62 00 75 00 67 00 5C 00 63 00 6F 00 6E 00 66 00 69 00
+67 00 2E 00 69 00 6E 00 69 00 00 00 65 82 22 77 80 80 80 80 80 80 80 80 00 00 00 00 21 D9 E0 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 4A BB 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+57 DD 51 00 8D C6 54 00 DA 89 54 00 F4 56 55 00 4F 80 7D 00 9C 2D 4C 00 C9 2F 4C 00 76 6F 40 00
+A4 39 00 00 A4 39 00 00 65 8A 40 00 9D 92 40 00 60 82 54 00 E7 8B 40 00 49 57 55 00 E8 80 7D 00
+5D D4 54 00 9D 92 40 00 7D 63 55 00 5D D4 54 00 9D 92 40 00 6C 00 00 00 20 BE 53 00 F8 5A 07 87
+∞  .  .  .  .  .  .  .  /  .  .  .  C  .  :  .  \  .  D  .  e  .  v  .  \  .  A  .  m  .  a  .
+u  .  r  .  i  .  _  .  F  .  i  .  n  .  a  .  n  .  c  .  e  .  i  .  r  .  o  .  \  .  W  .
+i  .  n  .  3  .  2  .  \  .  D  .  e  .  b  .  u  .  g  .  \  .  c  .  o  .  n  .  f  .  i  .
+g  .  .  .  i  .  n  .  i  .  .  .  e  Ç  "  w  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  !  Ÿ  ‡  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  J  ª  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+W  ›  Q  .  ç  ∆  T  .  ⁄  â  T  .  Ù  V  U  .  O  Ä  }  .  ú  -  L  .  …  /  L  .  v  o  @  .
+§  9  .  .  §  9  .  .  e  ä  @  .  ù  í  @  .  `  Ç  T  .  Á  ã  @  .  I  W  U  .  Ë  Ä  }  .
+]  ‘  T  .  ù  í  @  .  }  c  U  .  ]  ‘  T  .  ù  í  @  .  l  .  .  .     æ  S  .  ¯  Z  .  á
+
+--------------------------------2022/6/11 0:55:59--------------------------------
+This application has leaked memory. The small block leaks are (excluding expected leaks registered by pointer):
+
+5 - 12 bytes: TIniFile x 2
+101 - 116 bytes: UnicodeString x 2
+
+Note: Memory leak detail is logged to a text file in the same folder as this application. To disable this memory leak check, undefine "EnableMemoryLeakReporting".
+
+--------------------------------2022/6/11 0:58:45--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0x37F8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+408BB8 [System.pas][System][TObject.$bctr$qqrv][16242]
+9FBF5F [uCad_formapgto.pas][uCad_formapgto][TfrCad_formapgto.pCriaObj$qqrv][68]
+7F1742 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][114]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+642DD3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction$qqrv][3642]
+4092C0 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][17542]
+642D84 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.$bctr$qqrp25System.Classes.TComponent][3632]
+9FD517 [uPrincipalAmauri.pas][uPrincipalAmauri][TfrAmauriPrincipal.Formasdepagamentos1Click$qqrp14System.TObject][49]
+
+The block is currently used for an object of class: TFormaPGTOControler
+
+The allocation number is: 101211
+
+Current memory dump of 256 bytes starting at pointer address 7FB476B0:
+50 AD 9F 00 00 00 00 00 00 00 00 00 A0 52 E1 7F F0 5C E1 7F 10 56 E1 7F 30 4F E1 7F 00 00 00 00
+5F E4 76 F8 80 80 80 80 00 00 00 00 D1 69 B4 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+E8 84 01 00 C9 6F 40 00 99 D3 40 00 D2 D4 40 00 D7 7D 4B 00 58 7B 4B 00 25 79 4B 00 92 B4 55 00
+8D C6 54 00 DA 89 54 00 E8 56 55 00 6F 8F 56 00 F8 37 00 00 F8 37 00 00 76 6F 40 00 2C D6 40 00
+F5 D2 40 00 D7 7D 4B 00 65 79 4B 00 02 79 4B 00 E7 8B 40 00 E6 B4 55 00 E7 8B 40 00 5F 8B 54 00
+65 8A 40 00 18 00 00 00 00 00 00 00 F5 4C 16 86 98 12 A5 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 0A B3 E9 79 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 A1 79 B4 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 EB 84 01 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+P  ≠  ü  .  .  .  .  .  .  .  .  .  †  R  ·      \  ·    .  V  ·    0  O  ·    .  .  .  .
+_  ‰  v  ¯  Ä  Ä  Ä  Ä  .  .  .  .  —  i  ¥    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+Ë  Ñ  .  .  …  o  @  .  ô  ”  @  .  “  ‘  @  .  ◊  }  K  .  X  {  K  .  %  y  K  .  í  ¥  U  .
+ç  ∆  T  .  ⁄  â  T  .  Ë  V  U  .  o  è  V  .  ¯  7  .  .  ¯  7  .  .  v  o  @  .  ,  ÷  @  .
+ı  “  @  .  ◊  }  K  .  e  y  K  .  .  y  K  .  Á  ã  @  .  Ê  ¥  U  .  Á  ã  @  .  _  ã  T  .
+e  ä  @  .  .  .  .  .  .  .  .  .  ı  L  .  Ü  ò  .  •  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  ≥  È  y  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  °  y  ¥  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Î  Ñ  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+
+--------------------------------2022/6/11 0:58:45--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0x37F8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+7D3B6E [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv]
+9F63E0 [uRel_Padrao.pas][uRel_Padrao][Tfr_RelPadrao1.FormCreate$qqrp14System.TObject][108]
+9F6FEB [uRel_usuarios.pas][uRel_usuarios][TfrRel_usuario.FormCreate$qqrp14System.TObject][53]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+642DD3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction$qqrv][3642]
+4092C0 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][17542]
+642D84 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.$bctr$qqrp25System.Classes.TComponent][3632]
+9FD5B3 [uPrincipalAmauri.pas][uPrincipalAmauri][TfrAmauriPrincipal.Usurios1Click$qqrp14System.TObject][82]
+
+The block is currently used for an object of class: TExecSQL
+
+The allocation number is: 167429
+
+Current memory dump of 256 bytes starting at pointer address 7FB59360:
+E4 39 7D 00 60 CF B5 7F 10 FF E2 7F 00 00 00 00 95 96 97 76 80 80 80 80 00 00 00 00 A1 91 B5 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9C 07 01 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+9E 0E 4D 00 08 EF 40 00 D5 E9 4C 00 9D E1 56 00 EB B2 54 00 42 34 55 00 11 BC 56 00 24 D0 56 00
+F8 37 00 00 F8 37 00 00 65 8A 40 00 9D 92 40 00 01 0F 4D 00 E7 8B 40 00 72 D5 4C 00 6A 8B 54 00
+65 8A 40 00 9D 92 40 00 58 91 4B 00 D6 D4 54 00 00 BD 56 00 14 00 00 00 64 0E 4A 00 E7 3A 74 86
+98 12 A5 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 18 C5 8B 79 00 00 00 00 01 96 B5 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 EB 0A 01 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+B8 8B 40 00 52 92 40 00 84 B4 55 00 8D C6 54 00 DA 89 54 00 34 D2 54 00 AB 9E 55 00 D4 BB 56 00
+‰  9  }  .  `  œ  µ    .  ˇ  ‚    .  .  .  .  ï  ñ  ó  v  Ä  Ä  Ä  Ä  .  .  .  .  °  ë  µ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ú  .  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+û  .  M  .  .  Ô  @  .  ’  È  L  .  ù  ·  V  .  Î  ≤  T  .  B  4  U  .  .  º  V  .  $  –  V  .
+¯  7  .  .  ¯  7  .  .  e  ä  @  .  ù  í  @  .  .  .  M  .  Á  ã  @  .  r  ’  L  .  j  ã  T  .
+e  ä  @  .  ù  í  @  .  X  ë  K  .  ÷  ‘  T  .  .  Ω  V  .  .  .  .  .  d  .  J  .  Á  :  t  Ü
+ò  .  •  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  ≈  ã  y  .  .  .  .  .  ñ  µ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Î  .  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+∏  ã  @  .  R  í  @  .  Ñ  ¥  U  .  ç  ∆  T  .  ⁄  â  T  .  4  “  T  .  ´  û  U  .  ‘  ª  V  .
+
+--------------------------------2022/6/11 0:58:45--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0x37F8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+7D3B6E [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv]
+766E5C96 [SendMessageW]
+766E5C96 [SendMessageW]
+9F9A69 [uCad_usuario.pas][uCad_usuario][TfrCad_usuario.pCarregaComboUF$qqrv][284]
+9F9F5F [uCad_usuario.pas][uCad_usuario][TfrCad_usuario.pSetaComponentesTela$qqrv][379]
+7F174D [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][115]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+642DD3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction$qqrv][3642]
+
+The block is currently used for an object of class: TExecSQL
+
+The allocation number is: 76864
+
+Current memory dump of 256 bytes starting at pointer address 7FB5A4E0:
+E4 39 7D 00 20 AB B5 7F 30 FC E2 7F 00 00 00 00 C2 2F 52 8B 80 80 80 80 00 00 00 00 21 A8 B5 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 69 2A 01 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+01 08 7C 00 F6 0D 6B 00 B8 F0 7A 00 12 06 7C 00 F4 0E 7C 00 2C 20 7C 00 84 11 70 00 05 7E 7C 00
+F8 37 00 00 F8 37 00 00 65 8A 40 00 9D 92 40 00 B1 0E 6B 00 E7 8B 40 00 6B F0 7A 00 E7 8B 40 00
+5B FD 7B 00 76 6F 40 00 06 9E 7C 00 E7 8B 40 00 11 03 70 00 10 00 00 00 58 DE 6A 00 D9 42 78 88
+98 12 A5 00 80 80 80 80 80 80 80 80 80 80 80 80 26 BD 87 77 80 80 80 80 00 00 00 00 01 A5 B5 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 29 2A 01 00 5A 6F 40 00 03 AA 40 00 90 AE 40 00
+72 09 6B 00 8C 9E 7C 00 79 70 7C 00 F2 DC 6F 00 64 4C 70 00 4C 03 70 00 D5 15 70 00 20 13 70 00
+‰  9  }  .     ´  µ    0  ¸  ‚    .  .  .  .  ¬  /  R  ã  Ä  Ä  Ä  Ä  .  .  .  .  !  ®  µ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  i  *  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+.  .  |  .  ˆ  .  k  .  ∏    z  .  .  .  |  .  Ù  .  |  .  ,     |  .  Ñ  .  p  .  .  ~  |  .
+¯  7  .  .  ¯  7  .  .  e  ä  @  .  ù  í  @  .  ±  .  k  .  Á  ã  @  .  k    z  .  Á  ã  @  .
+[  ˝  {  .  v  o  @  .  .  û  |  .  Á  ã  @  .  .  .  p  .  .  .  .  .  X  ﬁ  j  .  Ÿ  B  x  à
+ò  .  •  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  &  Ω  á  w  Ä  Ä  Ä  Ä  .  .  .  .  .  •  µ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  )  *  .  .  Z  o  @  .  .  ™  @  .  ê  Æ  @  .
+r  .  k  .  å  û  |  .  y  p  |  .  Ú  ‹  o  .  d  L  p  .  L  .  p  .  ’  .  p  .     .  p  .
+
+--------------------------------2022/6/11 0:58:45--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0x37F8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+408BB8 [System.pas][System][TObject.$bctr$qqrv][16242]
+8010F3 [uUsuario_DAO.pas][uUsuario_DAO][TUsuarioDAO.pCriaObj$qqrv][239]
+7FFDC8 [uUsuario_DAO.pas][uUsuario_DAO][TUsuarioDAO.$bctr$qqrv][56]
+803BD3 [uUsuario_controler.pas][uUsuario_controler][TUsuarioControler.pCriaObj$qqrv][294]
+8026AC [uUsuario_controler.pas][uUsuario_controler][TUsuarioControler.$bctr$qqrp25System.Classes.TComponent][121]
+9F9C02 [uCad_usuario.pas][uCad_usuario][TfrCad_usuario.pCriaObj$qqrv][308]
+7F1742 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][114]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+
+The block is currently used for an object of class: TLOG
+
+The allocation number is: 76859
+
+Current memory dump of 256 bytes starting at pointer address 7FB5A6C0:
+9C 0A 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 A4 A5 84 76 80 80 80 80 00 00 00 00 A1 A5 B5 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 72 2B 01 00 5A 6F 40 00 03 AA 40 00 34 AC 40 00
+02 7F 70 00 99 34 70 00 8F 05 70 00 3D 04 70 00 11 B7 6F 00 0E B6 6F 00 C2 32 79 00 80 EF 67 00
+F8 37 00 00 F8 37 00 00 BD AA 40 00 65 C7 40 00 AD C6 40 00 5F 8C 40 00 5E 8A 40 00 9D 92 40 00
+36 28 79 00 E7 8B 40 00 BD DA 4C 00 96 0C 64 00 FB 89 42 00 10 00 00 00 B0 04 02 00 EF 60 2D 87
+98 12 A5 00 80 80 80 80 80 80 80 80 80 80 80 80 10 9F D2 78 80 80 80 80 00 00 00 00 E1 A6 B5 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 73 2B 01 00 5A 6F 40 00 03 AA 40 00 34 AC 40 00
+02 7F 70 00 B9 34 70 00 8F 05 70 00 3D 04 70 00 11 B7 6F 00 0E B6 6F 00 C2 32 79 00 80 EF 67 00
+ú  .    .  .  .  .  .  .  .  .  .  .  .  .  .  §  •  Ñ  v  Ä  Ä  Ä  Ä  .  .  .  .  °  •  µ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  r  +  .  .  Z  o  @  .  .  ™  @  .  4  ¨  @  .
+.    p  .  ô  4  p  .  è  .  p  .  =  .  p  .  .  ∑  o  .  .  ∂  o  .  ¬  2  y  .  Ä  Ô  g  .
+¯  7  .  .  ¯  7  .  .  Ω  ™  @  .  e  «  @  .  ≠  ∆  @  .  _  å  @  .  ^  ä  @  .  ù  í  @  .
+6  (  y  .  Á  ã  @  .  Ω  ⁄  L  .  ñ  .  d  .  ˚  â  B  .  .  .  .  .  ∞  .  .  .  Ô  `  -  á
+ò  .  •  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  ü  “  x  Ä  Ä  Ä  Ä  .  .  .  .  ·  ¶  µ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  s  +  .  .  Z  o  @  .  .  ™  @  .  4  ¨  @  .
+.    p  .  π  4  p  .  è  .  p  .  =  .  p  .  .  ∑  o  .  .  ∂  o  .  ¬  2  y  .  Ä  Ô  g  .
+
+--------------------------------2022/6/11 0:58:45--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0x37F8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+408BB8 [System.pas][System][TObject.$bctr$qqrv][16242]
+803BEE [uUsuario_controler.pas][uUsuario_controler][TUsuarioControler.pCriaObj$qqrv][297]
+8026AC [uUsuario_controler.pas][uUsuario_controler][TUsuarioControler.$bctr$qqrp25System.Classes.TComponent][121]
+9F9C02 [uCad_usuario.pas][uCad_usuario][TfrCad_usuario.pCriaObj$qqrv][308]
+7F1742 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][114]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+642DD3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction$qqrv][3642]
+4092C0 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][17542]
+
+The block is currently used for an object of class: TLOG
+
+The allocation number is: 76860
+
+Current memory dump of 256 bytes starting at pointer address 7FB5AA80:
+9C 0A 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 F0 EF DF 76 80 80 80 80 00 00 00 00 E0 90 B5 7F
+00 00 00 00 00 00 00 00 9C 8B 41 00 00 00 00 00 41 2C 01 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+2A 3F 7D 00 80 3B 7D 00 69 9A 9F 00 5F 9F 9F 00 4D 17 7F 00 B3 31 64 00 D3 2D 64 00 C0 92 40 00
+F8 37 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 7D E4 7B 84
+B8 3D 7D 00 00 00 00 00 E0 9E D5 7F 00 00 00 00 82 1B 84 7B 80 80 80 80 00 00 00 00 E1 AB B5 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 B5 44 01 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+23 25 69 00 B4 26 69 00 1F 6A 79 00 03 0F 7A 00 9A 3B 7D 00 69 9A 9F 00 5F 9F 9F 00 4D 17 7F 00
+ú  .    .  .  .  .  .  .  .  .  .  .  .  .  .    Ô  ﬂ  v  Ä  Ä  Ä  Ä  .  .  .  .  ‡  ê  µ  
+.  .  .  .  .  .  .  .  ú  ã  A  .  .  .  .  .  A  ,  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+*  ?  }  .  Ä  ;  }  .  i  ö  ü  .  _  ü  ü  .  M  .    .  ≥  1  d  .  ”  -  d  .  ¿  í  @  .
+¯  7  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }  ‰  {  Ñ
+∏  =  }  .  .  .  .  .  ‡  û  ’    .  .  .  .  Ç  .  Ñ  {  Ä  Ä  Ä  Ä  .  .  .  .  ·  ´  µ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  µ  D  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+#  %  i  .  ¥  &  i  .  .  j  y  .  .  .  z  .  ö  ;  }  .  i  ö  ü  .  _  ü  ü  .  M  .    .
+
+--------------------------------2022/6/11 0:58:45--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0x37F8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+7D3F2A [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+9F9A69 [uCad_usuario.pas][uCad_usuario][TfrCad_usuario.pCarregaComboUF$qqrv][284]
+9F9F5F [uCad_usuario.pas][uCad_usuario][TfrCad_usuario.pSetaComponentesTela$qqrv][379]
+7F174D [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][115]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+642DD3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction$qqrv][3642]
+4092C0 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][17542]
+
+The block is currently used for an object of class: TBDConnection
+
+The allocation number is: 76865
+
+Current memory dump of 256 bytes starting at pointer address 7FB5AB20:
+B8 3D 7D 00 00 00 00 00 E0 9E D5 7F 00 00 00 00 82 1B 84 7B 80 80 80 80 00 00 00 00 E1 AB B5 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 B5 44 01 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+23 25 69 00 B4 26 69 00 1F 6A 79 00 03 0F 7A 00 9A 3B 7D 00 69 9A 9F 00 5F 9F 9F 00 4D 17 7F 00
+F8 37 00 00 F8 37 00 00 65 8A 40 00 9D 92 40 00 58 91 4B 00 E7 8B 40 00 59 28 69 00 7A 6B 79 00
+71 0F 7A 00 E7 8B 40 00 BD DA 4C 00 96 0C 64 00 FB 89 42 00 10 00 00 00 BC 16 67 00 06 2F 7F 88
+98 12 A5 00 80 80 80 80 80 80 80 80 80 80 80 80 F9 D0 80 77 80 80 80 80 00 00 00 00 C1 AD B5 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 81 45 01 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+B8 8B 40 00 52 92 40 00 BE 1B 70 00 32 0E 70 00 6D 11 70 00 06 15 70 00 6B 10 7A 00 1C CC 79 00
+∏  =  }  .  .  .  .  .  ‡  û  ’    .  .  .  .  Ç  .  Ñ  {  Ä  Ä  Ä  Ä  .  .  .  .  ·  ´  µ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  µ  D  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+#  %  i  .  ¥  &  i  .  .  j  y  .  .  .  z  .  ö  ;  }  .  i  ö  ü  .  _  ü  ü  .  M  .    .
+¯  7  .  .  ¯  7  .  .  e  ä  @  .  ù  í  @  .  X  ë  K  .  Á  ã  @  .  Y  (  i  .  z  k  y  .
+q  .  z  .  Á  ã  @  .  Ω  ⁄  L  .  ñ  .  d  .  ˚  â  B  .  .  .  .  .  º  .  g  .  .  /    à
+ò  .  •  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  ˘  –  Ä  w  Ä  Ä  Ä  Ä  .  .  .  .  ¡  ≠  µ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Å  E  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+∏  ã  @  .  R  í  @  .  æ  .  p  .  2  .  p  .  m  .  p  .  .  .  p  .  k  .  z  .  .  Ã  y  .
+
+--------------------------------2022/6/11 0:58:45--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0x37F8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+7D3F2A [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+9F63E0 [uRel_Padrao.pas][uRel_Padrao][Tfr_RelPadrao1.FormCreate$qqrp14System.TObject][108]
+9F6FEB [uRel_usuarios.pas][uRel_usuarios][TfrRel_usuario.FormCreate$qqrp14System.TObject][53]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+642DD3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction$qqrv][3642]
+4092C0 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][17542]
+642D84 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.$bctr$qqrp25System.Classes.TComponent][3632]
+
+The block is currently used for an object of class: TBDConnection
+
+The allocation number is: 167430
+
+Current memory dump of 256 bytes starting at pointer address 7FB5CF60:
+B8 3D 7D 00 00 00 00 00 E0 A5 D5 7F 00 00 00 00 B4 7B C4 76 80 80 80 80 00 00 00 00 A1 CD B5 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 AB BE 01 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+B8 8B 40 00 25 79 4B 00 3B 80 54 00 21 E7 54 00 D5 E7 54 00 51 9C 54 00 92 56 55 00 BF 8E 40 00
+F8 37 00 00 F8 37 00 00 65 8A 40 00 9D 92 40 00 0D 79 4B 00 E7 8B 40 00 92 80 54 00 5C E7 54 00
+54 D4 54 00 9D 92 40 00 E8 1E 64 00 49 31 64 00 E7 8B 40 00 14 00 00 00 40 4A 49 00 FF 76 8C 86
+98 12 A5 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 00 89 73 79 00 00 00 00 C1 B7 B5 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 66 BF 01 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+B8 8B 40 00 E4 BF 40 00 B8 B7 99 00 BA 7C 41 00 08 EC 9A 00 9C 2D 4C 00 C9 2F 4C 00 76 6F 40 00
+∏  =  }  .  .  .  .  .  ‡  •  ’    .  .  .  .  ¥  {  ƒ  v  Ä  Ä  Ä  Ä  .  .  .  .  °  Õ  µ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ´  æ  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+∏  ã  @  .  %  y  K  .  ;  Ä  T  .  !  Á  T  .  ’  Á  T  .  Q  ú  T  .  í  V  U  .  ø  é  @  .
+¯  7  .  .  ¯  7  .  .  e  ä  @  .  ù  í  @  .  .  y  K  .  Á  ã  @  .  í  Ä  T  .  \  Á  T  .
+T  ‘  T  .  ù  í  @  .  Ë  .  d  .  I  1  d  .  Á  ã  @  .  .  .  .  .  @  J  I  .  ˇ  v  å  Ü
+ò  .  •  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  â  s  y  .  .  .  .  ¡  ∑  µ  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  f  ø  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+∏  ã  @  .  ‰  ø  @  .  ∏  ∑  ô  .  ∫  |  A  .  .  Ï  ö  .  ú  -  L  .  …  /  L  .  v  o  @  .
+
+--------------------------------2022/6/11 0:58:45--------------------------------
+A memory block has been leaked. The size is: 12
+
+This block was allocated by thread 0x37F8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+408BB8 [System.pas][System][TObject.$bctr$qqrv][16242]
+408A50 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+803BB8 [uUsuario_controler.pas][uUsuario_controler][TUsuarioControler.pCriaObj$qqrv][291]
+8026AC [uUsuario_controler.pas][uUsuario_controler][TUsuarioControler.$bctr$qqrp25System.Classes.TComponent][121]
+9F9C02 [uCad_usuario.pas][uCad_usuario][TfrCad_usuario.pCriaObj$qqrv][308]
+7F1742 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][114]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+
+The block is currently used for an object of class: TUtil
+
+The allocation number is: 70535
+
+Current memory dump of 256 bytes starting at pointer address 7FBA19E8:
+1C 27 7F 00 00 00 00 00 6F FF E4 78 80 80 80 80 00 00 00 00 A1 17 BA 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 0A A7 02 00 5A 6F 40 00 BB B2 42 00 F6 B2 42 00 11 21 55 00 B0 B6 54 00
+CF 47 4A 77 1B 3B 4A 77 F0 3A 4A 77 96 7D 40 77 F2 01 55 00 F2 01 55 00 F8 37 00 00 F8 37 00 00
+12 B3 42 00 1D 8B 54 00 76 6F 40 00 65 8A 40 00 9D 92 40 00 58 91 4B 00 D6 D4 54 00 7D 63 55 00
+5D D4 54 00 9D 92 40 00 E8 1E 64 00 06 00 00 00 06 00 00 00 5A 37 3E 62 98 12 A5 00 80 80 A5 C8
+C1 9D 80 80 80 80 80 80 00 00 00 00 59 58 BA 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0F A7 02 00 5A 6F 40 00 BB B2 42 00 F6 B2 42 00 11 21 55 00 B0 B6 54 00 CF 47 4A 77 1B 3B 4A 77
+F0 3A 4A 77 96 7D 40 77 F2 01 55 00 F2 01 55 00 F8 37 00 00 F8 37 00 00 12 B3 42 00 1D 8B 54 00
+.  '    .  .  .  .  .  o  ˇ  ‰  x  Ä  Ä  Ä  Ä  .  .  .  .  °  .  ∫    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  ß  .  .  Z  o  @  .  ª  ≤  B  .  ˆ  ≤  B  .  .  !  U  .  ∞  ∂  T  .
+œ  G  J  w  .  ;  J  w    :  J  w  ñ  }  @  w  Ú  .  U  .  Ú  .  U  .  ¯  7  .  .  ¯  7  .  .
+.  ≥  B  .  .  ã  T  .  v  o  @  .  e  ä  @  .  ù  í  @  .  X  ë  K  .  ÷  ‘  T  .  }  c  U  .
+]  ‘  T  .  ù  í  @  .  Ë  .  d  .  .  .  .  .  .  .  .  .  Z  7  >  b  ò  .  •  .  Ä  Ä  •  »
+¡  ù  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  Y  X  ∫    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  ß  .  .  Z  o  @  .  ª  ≤  B  .  ˆ  ≤  B  .  .  !  U  .  ∞  ∂  T  .  œ  G  J  w  .  ;  J  w
+  :  J  w  ñ  }  @  w  Ú  .  U  .  Ú  .  U  .  ¯  7  .  .  ¯  7  .  .  .  ≥  B  .  .  ã  T  .
+
+--------------------------------2022/6/11 0:58:45--------------------------------
+A memory block has been leaked. The size is: 12
+
+This block was allocated by thread 0x37F8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+408BB8 [System.pas][System][TObject.$bctr$qqrv][16242]
+803C09 [uUsuario_controler.pas][uUsuario_controler][TUsuarioControler.pCriaObj$qqrv][300]
+8026AC [uUsuario_controler.pas][uUsuario_controler][TUsuarioControler.$bctr$qqrp25System.Classes.TComponent][121]
+9F9C02 [uCad_usuario.pas][uCad_usuario][TfrCad_usuario.pCriaObj$qqrv][308]
+7F1742 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][114]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+642DD3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction$qqrv][3642]
+4092C0 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][17542]
+
+The block is currently used for an object of class: TUtilSQL
+
+The allocation number is: 76861
+
+Current memory dump of 256 bytes starting at pointer address 7FBA44A8:
+98 2B 7F 00 00 00 00 00 79 5D 8E 77 80 80 80 80 00 00 00 00 89 33 BA 7F 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 3C 43 01 00 5A 6F 40 00 47 8A 40 00 52 92 40 00 3F 07 6B 00 9D 0F 6B 00
+C9 F0 7A 00 78 06 7C 00 F4 0E 7C 00 2C 20 7C 00 84 11 70 00 05 7E 7C 00 F8 37 00 00 F8 37 00 00
+76 6F 40 00 65 8A 40 00 9D 92 40 00 8D 07 6B 00 E7 8B 40 00 26 32 6B 00 AD 2C 6B 00 E7 8B 40 00
+9B 0E 6B 00 E7 8B 40 00 6B F0 7A 00 0C 00 00 00 30 D8 6A 00 74 BE 44 88 98 12 A5 00 80 80 80 80
+80 80 80 80 8B 41 BB 77 00 00 00 00 41 3B BA 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+86 43 01 00 5A 6F 40 00 47 8A 40 00 52 92 40 00 3F 07 6B 00 9D 0F 6B 00 C9 F0 7A 00 AA 07 7C 00
+F4 0E 7C 00 2C 20 7C 00 84 11 70 00 05 7E 7C 00 F8 37 00 00 F8 37 00 00 76 6F 40 00 65 8A 40 00
+ò  +    .  .  .  .  .  y  ]  é  w  Ä  Ä  Ä  Ä  .  .  .  .  â  3  ∫    .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  <  C  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .  ?  .  k  .  ù  .  k  .
+…    z  .  x  .  |  .  Ù  .  |  .  ,     |  .  Ñ  .  p  .  .  ~  |  .  ¯  7  .  .  ¯  7  .  .
+v  o  @  .  e  ä  @  .  ù  í  @  .  ç  .  k  .  Á  ã  @  .  &  2  k  .  ≠  ,  k  .  Á  ã  @  .
+õ  .  k  .  Á  ã  @  .  k    z  .  .  .  .  .  0  ÿ  j  .  t  æ  D  à  ò  .  •  .  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  ã  A  ª  w  .  .  .  .  A  ;  ∫    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+Ü  C  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .  ?  .  k  .  ù  .  k  .  …    z  .  ™  .  |  .
+Ù  .  |  .  ,     |  .  Ñ  .  p  .  .  ~  |  .  ¯  7  .  .  ¯  7  .  .  v  o  @  .  e  ä  @  .
+
+--------------------------------2022/6/11 0:58:45--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0x37F8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+7D3B6E [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv]
+408A50 [System.pas][System][TObject.NewInstance$qqrv][16178]
+8010D8 [uUsuario_DAO.pas][uUsuario_DAO][TUsuarioDAO.pCriaObj$qqrv][236]
+7FFDC8 [uUsuario_DAO.pas][uUsuario_DAO][TUsuarioDAO.$bctr$qqrv][56]
+803BD3 [uUsuario_controler.pas][uUsuario_controler][TUsuarioControler.pCriaObj$qqrv][294]
+8026AC [uUsuario_controler.pas][uUsuario_controler][TUsuarioControler.$bctr$qqrp25System.Classes.TComponent][121]
+9F9C02 [uCad_usuario.pas][uCad_usuario][TfrCad_usuario.pCriaObj$qqrv][308]
+7F1742 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][114]
+
+The block is currently used for an object of class: TExecSQL
+
+The allocation number is: 70537
+
+Current memory dump of 256 bytes starting at pointer address 7FBD8430:
+E4 39 7D 00 50 A5 BD 7F 70 F6 E2 7F 00 00 00 00 07 7E 0A 78 80 80 80 80 00 00 00 00 31 A4 BD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 CD FE 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+B8 8B 40 00 25 79 4B 00 3B 80 54 00 21 E7 54 00 D5 E7 54 00 51 9C 54 00 92 56 55 00 BF 8E 40 00
+F8 37 00 00 F8 37 00 00 65 8A 40 00 9D 92 40 00 0D 79 4B 00 E7 8B 40 00 92 80 54 00 5C E7 54 00
+54 D4 54 00 9D 92 40 00 7D 63 55 00 5D D4 54 00 9D 92 40 00 14 00 00 00 40 4A 49 00 50 5A 75 86
+98 12 A5 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 AF A5 8A 79 00 00 00 00 11 A1 BD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 CF FD 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+B8 8B 40 00 52 92 40 00 84 B4 55 00 8D C6 54 00 DA 89 54 00 34 D2 54 00 17 1E 64 00 1E 2C 64 00
+‰  9  }  .  P  •  Ω    p  ˆ  ‚    .  .  .  .  .  ~  .  x  Ä  Ä  Ä  Ä  .  .  .  .  1  §  Ω  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Õ  ˛  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+∏  ã  @  .  %  y  K  .  ;  Ä  T  .  !  Á  T  .  ’  Á  T  .  Q  ú  T  .  í  V  U  .  ø  é  @  .
+¯  7  .  .  ¯  7  .  .  e  ä  @  .  ù  í  @  .  .  y  K  .  Á  ã  @  .  í  Ä  T  .  \  Á  T  .
+T  ‘  T  .  ù  í  @  .  }  c  U  .  ]  ‘  T  .  ù  í  @  .  .  .  .  .  @  J  I  .  P  Z  u  Ü
+ò  .  •  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ø  •  ä  y  .  .  .  .  .  °  Ω  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  œ  ˝  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+∏  ã  @  .  R  í  @  .  Ñ  ¥  U  .  ç  ∆  T  .  ⁄  â  T  .  4  “  T  .  .  .  d  .  .  ,  d  .
+
+--------------------------------2022/6/11 0:58:45--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0x37F8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+7D3F2A [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bctr$qqrv]
+7D3B80 [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][35]
+8010D8 [uUsuario_DAO.pas][uUsuario_DAO][TUsuarioDAO.pCriaObj$qqrv][236]
+7FFDC8 [uUsuario_DAO.pas][uUsuario_DAO][TUsuarioDAO.$bctr$qqrv][56]
+803BD3 [uUsuario_controler.pas][uUsuario_controler][TUsuarioControler.pCriaObj$qqrv][294]
+8026AC [uUsuario_controler.pas][uUsuario_controler][TUsuarioControler.$bctr$qqrp25System.Classes.TComponent][121]
+9F9C02 [uCad_usuario.pas][uCad_usuario][TfrCad_usuario.pCriaObj$qqrv][308]
+7F1742 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][114]
+
+The block is currently used for an object of class: TBDConnection
+
+The allocation number is: 70538
+
+Current memory dump of 256 bytes starting at pointer address 7FBDA550:
+B8 3D 7D 00 00 00 00 00 A0 A0 D5 7F 00 00 00 00 6A F0 3B 77 80 80 80 80 00 00 00 00 71 AA BD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 09 FF 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+B8 8B 40 00 52 92 40 00 84 B4 55 00 8D C6 54 00 DA 89 54 00 34 D2 54 00 20 63 55 00 7F EF 5C 00
+F8 37 00 00 F8 37 00 00 65 8A 40 00 9D 92 40 00 0D 79 4B 00 E7 8B 40 00 E6 B4 55 00 E7 8B 40 00
+5F 8B 54 00 65 8A 40 00 9D 92 40 00 58 91 4B 00 D6 D4 54 00 14 00 00 00 40 4A 49 00 CA A3 6A 86
+98 12 A5 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 35 5C 95 79 00 00 00 00 91 A3 BD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 C3 FE 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+B8 8B 40 00 52 92 40 00 84 B4 55 00 8D C6 54 00 DA 89 54 00 34 D2 54 00 20 63 55 00 7F EF 5C 00
+∏  =  }  .  .  .  .  .  †  †  ’    .  .  .  .  j    ;  w  Ä  Ä  Ä  Ä  .  .  .  .  q  ™  Ω  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ˇ  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+∏  ã  @  .  R  í  @  .  Ñ  ¥  U  .  ç  ∆  T  .  ⁄  â  T  .  4  “  T  .     c  U  .    Ô  \  .
+¯  7  .  .  ¯  7  .  .  e  ä  @  .  ù  í  @  .  .  y  K  .  Á  ã  @  .  Ê  ¥  U  .  Á  ã  @  .
+_  ã  T  .  e  ä  @  .  ù  í  @  .  X  ë  K  .  ÷  ‘  T  .  .  .  .  .  @  J  I  .     £  j  Ü
+ò  .  •  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  5  \  ï  y  .  .  .  .  ë  £  Ω  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  √  ˛  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+∏  ã  @  .  R  í  @  .  Ñ  ¥  U  .  ç  ∆  T  .  ⁄  â  T  .  4  “  T  .     c  U  .    Ô  \  .
+
+--------------------------------2022/6/11 0:58:45--------------------------------
+A memory block has been leaked. The size is: 20
+
+This block was allocated by thread 0x37F8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+7FFDBA [uUsuario_DAO.pas][uUsuario_DAO][TUsuarioDAO.$bctr$qqrv]
+408BC1 [System.pas][System][TObject.$bctr$qqrv][16243]
+803BD3 [uUsuario_controler.pas][uUsuario_controler][TUsuarioControler.pCriaObj$qqrv][294]
+8026AC [uUsuario_controler.pas][uUsuario_controler][TUsuarioControler.$bctr$qqrp25System.Classes.TComponent][121]
+9F9C02 [uCad_usuario.pas][uCad_usuario][TfrCad_usuario.pCriaObj$qqrv][308]
+7F1742 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][114]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+642DD3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction$qqrv][3642]
+
+The block is currently used for an object of class: TUsuarioDAO
+
+The allocation number is: 70536
+
+Current memory dump of 256 bytes starting at pointer address 7FBDAFF0:
+9C F7 7F 00 30 84 BD 7F C0 A6 B5 7F 00 00 00 00 97 37 E5 77 80 80 80 80 00 00 00 00 F1 B1 BD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2C 03 01 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+B8 8B 40 00 52 92 40 00 84 B4 55 00 8D C6 54 00 DA 89 54 00 E8 56 55 00 6F 8F 56 00 9C 2D 4C 00
+F8 37 00 00 F8 37 00 00 65 8A 40 00 9D 92 40 00 0D 79 4B 00 E7 8B 40 00 E6 B4 55 00 E7 8B 40 00
+5F 8B 54 00 65 8A 40 00 9D 92 40 00 60 82 54 00 54 57 55 00 14 00 00 00 40 4A 49 00 33 15 65 86
+98 12 A5 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 CC EA 9A 79 00 00 00 00 11 B0 BD 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 F3 02 01 00 5A 6F 40 00 BB B2 42 00 F6 B2 42 00
+35 B7 54 00 B0 B6 54 00 DE 98 56 00 B0 B6 54 00 9A A2 54 00 FC A2 54 00 C1 C2 54 00 B0 B6 54 00
+ú  ˜    .  0  Ñ  Ω    ¿  ¶  µ    .  .  .  .  ó  7  Â  w  Ä  Ä  Ä  Ä  .  .  .  .  Ò  ±  Ω  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ,  .  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+∏  ã  @  .  R  í  @  .  Ñ  ¥  U  .  ç  ∆  T  .  ⁄  â  T  .  Ë  V  U  .  o  è  V  .  ú  -  L  .
+¯  7  .  .  ¯  7  .  .  e  ä  @  .  ù  í  @  .  .  y  K  .  Á  ã  @  .  Ê  ¥  U  .  Á  ã  @  .
+_  ã  T  .  e  ä  @  .  ù  í  @  .  `  Ç  T  .  T  W  U  .  .  .  .  .  @  J  I  .  3  .  e  Ü
+ò  .  •  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ã  Í  ö  y  .  .  .  .  .  ∞  Ω  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Û  .  .  .  Z  o  @  .  ª  ≤  B  .  ˆ  ≤  B  .
+5  ∑  T  .  ∞  ∂  T  .  ﬁ  ò  V  .  ∞  ∂  T  .  ö  ¢  T  .  ¸  ¢  T  .  ¡  ¬  T  .  ∞  ∂  T  .
+
+--------------------------------2022/6/11 0:58:45--------------------------------
+A memory block has been leaked. The size is: 52
+
+This block was allocated by thread 0x37F8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+40AA03 [System.pas][System][@NewUnicodeString$qqri][24451]
+40BD9B [System.pas][System][@UStrSetLength$qqrr20System.UnicodeStringi][29748]
+437DD7 [System.SysUtils.pas][System.SysUtils][Sysutils.TEncoding.GetString$qqrx24System.%DynamicArray$uc%ii][30953]
+4C226B [System.Classes.pas][System.Classes][Classes.TReader.Read$qqr24System.%DynamicArray$uc%i][9504]
+4C453A [System.Classes.pas][System.Classes][Classes.TReader.ReadStr$qqrv][10519]
+4C4083 [System.Classes.pas][System.Classes][Classes.TReader.ReadRootComponent$qqrxp25System.Classes.TComponent][10404]
+4BF874 [System.Classes.pas][System.Classes][Classes.TFiler.$bctr$qqrp22System.Classes.TStreami][8837]
+4BE31B [System.Classes.pas][System.Classes][Classes.TStream.ReadComponent$qqrxp25System.Classes.TComponent][8082]
+4B5EF4 [System.Classes.pas][System.Classes][Classes.InternalReadComponentRes$qqrx20System.UnicodeStringuirp25System.Classes.TComponent][4061]
+4B7604 [System.Classes.pas][System.Classes][InitComponent][4120]
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 65911
+
+Current memory dump of 256 bytes starting at pointer address 7FC81A80:
+B0 04 02 00 01 00 00 00 0D 00 00 00 66 00 72 00 43 00 61 00 64 00 5F 00 75 00 73 00 75 00 61 00
+72 00 69 00 6F 00 00 00 51 BF 87 79 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 01 08 C8 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9D 13 01 00 5A 6F 40 00 03 AA 40 00 90 AE 40 00
+96 64 79 00 C7 40 7D 00 80 3B 7D 00 D8 10 80 00 C8 FD 7F 00 D3 3B 80 00 AC 26 80 00 02 9C 9F 00
+F8 37 00 00 F8 37 00 00 BD AA 40 00 65 C7 40 00 AD C6 40 00 5F 8C 40 00 5E 8A 40 00 9D 92 40 00
+36 28 79 00 E7 8B 40 00 BD DA 4C 00 96 0C 64 00 FB 89 42 00 26 00 00 00 B0 04 02 00 A2 60 D2 87
+98 12 A5 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 5D 9F 2D 78 80 80 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 41 0D C8 7F
+∞  .  .  .  .  .  .  .  .  .  .  .  f  .  r  .  C  .  a  .  d  .  _  .  u  .  s  .  u  .  a  .
+r  .  i  .  o  .  .  .  Q  ø  á  y  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  .  .  »  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ù  .  .  .  Z  o  @  .  .  ™  @  .  ê  Æ  @  .
+ñ  d  y  .  «  @  }  .  Ä  ;  }  .  ÿ  .  Ä  .  »  ˝    .  ”  ;  Ä  .  ¨  &  Ä  .  .  ú  ü  .
+¯  7  .  .  ¯  7  .  .  Ω  ™  @  .  e  «  @  .  ≠  ∆  @  .  _  å  @  .  ^  ä  @  .  ù  í  @  .
+6  (  y  .  Á  ã  @  .  Ω  ⁄  L  .  ñ  .  d  .  ˚  â  B  .  &  .  .  .  ∞  .  .  .  ¢  `  “  á
+ò  .  •  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  ]  ü  -  x  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  A  .  »  
+
+--------------------------------2022/6/11 0:58:45--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0x37F8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+408BB8 [System.pas][System][TObject.$bctr$qqrv][16242]
+9FCDE3 [uCad_contas.pas][uCad_contas][TfrCad_contas.pCriaObj$qqrv][53]
+7F1742 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][114]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+642DD3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction$qqrv][3642]
+4092C0 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][17542]
+642D84 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.$bctr$qqrp25System.Classes.TComponent][3632]
+9FD4F3 [uPrincipalAmauri.pas][uPrincipalAmauri][TfrAmauriPrincipal.Contas1Click$qqrp14System.TObject][43]
+
+The block is currently used for an object of class: TContasControler
+
+The allocation number is: 49512
+
+Current memory dump of 256 bytes starting at pointer address 7FC89600:
+3C C1 9F 00 E0 0D E1 7F 70 0A E1 7F 90 03 E1 7F 00 07 E1 7F 50 11 E1 7F 00 00 00 00 00 00 00 00
+00 00 00 00 F8 83 2C 78 00 00 00 00 41 6C C8 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+65 C1 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00 B8 8B 40 00 40 42 52 00 E8 8D 41 00 FD 8D 41 00
+76 6F 40 00 65 8A 40 00 9D 92 40 00 14 40 52 00 F8 37 00 00 F8 37 00 00 65 8A 40 00 9D 92 40 00
+D0 EE 4B 00 E7 8B 40 00 24 35 52 00 E7 8B 40 00 D1 34 52 00 F6 3F 52 00 E7 8B 40 00 7F 6E 7D 00
+E7 8B 40 00 18 00 00 00 40 B5 49 00 11 13 42 86 98 12 A5 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 EE EC BD 79 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 B1 90 C8 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 8A C0 00 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+<  ¡  ü  .  ‡  .  ·    p  .  ·    ê  .  ·    .  .  ·    P  .  ·    .  .  .  .  .  .  .  .
+.  .  .  .  ¯  É  ,  x  .  .  .  .  A  l  »    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+e  ¡  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .  ∏  ã  @  .  @  B  R  .  Ë  ç  A  .  ˝  ç  A  .
+v  o  @  .  e  ä  @  .  ù  í  @  .  .  @  R  .  ¯  7  .  .  ¯  7  .  .  e  ä  @  .  ù  í  @  .
+–  Ó  K  .  Á  ã  @  .  $  5  R  .  Á  ã  @  .  —  4  R  .  ˆ  ?  R  .  Á  ã  @  .    n  }  .
+Á  ã  @  .  .  .  .  .  @  µ  I  .  .  .  B  Ü  ò  .  •  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ó  Ï  Ω  y  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  ±  ê  »  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ä  ¿  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+
+--------------------------------2022/6/11 0:58:45--------------------------------
+A memory block has been leaked. The size is: 116
+
+This block was allocated by thread 0x37F8, and the stack trace (return addresses) at the time was:
+406F5A [System.pas][System][@GetMem$qqri][4596]
+408A47 [System.pas][System][TObject.NewInstance$qqrv][16178]
+409252 [System.pas][System][@ClassCreate$qqrpvzc][17493]
+80268A [uUsuario_controler.pas][uUsuario_controler][TUsuarioControler.$bctr$qqrp25System.Classes.TComponent]
+7F1F75 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.pCriaControlesTecla$qqrv][319]
+9F9C02 [uCad_usuario.pas][uCad_usuario][TfrCad_usuario.pCriaObj$qqrv][308]
+7F1742 [uCad_padrao.pas][uCad_padrao][TfrCad_padrao.FormCreate$qqrp14System.TObject][114]
+6431B3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.DoCreate$qqrv][3758]
+642DD3 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.AfterConstruction$qqrv][3642]
+4092C0 [System.pas][System][@AfterConstruction$qqrxp14System.TObject][17542]
+642D84 [Vcl.Forms.pas][Vcl.Forms][Forms.TCustomForm.$bctr$qqrp25System.Classes.TComponent][3632]
+
+The block is currently used for an object of class: TUsuarioControler
+
+The allocation number is: 70534
+
+Current memory dump of 256 bytes starting at pointer address 7FE0AFA0:
+8C 1D 80 00 D0 2C E1 7F 60 29 E1 7F B0 33 E1 7F B0 D9 DF 7F 20 37 E1 7F 40 30 E1 7F F0 25 E1 7F
+F0 D5 DF 7F 30 D2 DF 7F 00 00 00 00 C0 A4 E3 7F E0 C6 E3 7F A0 A9 E3 7F D0 B5 E3 7F 60 B3 E3 7F
+80 AE E3 7F 20 BD E3 7F A8 44 BA 7F E8 19 BA 7F 80 AA B5 7F F0 AF BD 7F 10 1F E1 7F 50 C9 E3 7F
+00 00 00 00 80 22 E1 7F 8C 1A C8 7F 00 00 00 00 25 2B B0 77 80 80 80 80 00 00 00 00 21 B2 E0 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 01 00 5A 6F 40 00 47 8A 40 00 52 92 40 00
+57 DD 51 00 8D C6 54 00 DA 89 54 00 F4 56 55 00 1B E9 5C 00 9C 2D 4C 00 C9 2F 4C 00 76 6F 40 00
+F8 37 00 00 F8 37 00 00 65 8A 40 00 9D 92 40 00 60 82 54 00 E7 8B 40 00 49 57 55 00 5D D4 54 00
+9D 92 40 00 7D 63 55 00 5D D4 54 00 9D 92 40 00 7D 63 55 00 6C 00 00 00 20 BE 53 00 B7 BE BE 86
+å  .  Ä  .  –  ,  ·    `  )  ·    ∞  3  ·    ∞  Ÿ  ﬂ       7  ·    @  0  ·      %  ·  
+  ’  ﬂ    0  “  ﬂ    .  .  .  .  ¿  §  „    ‡  ∆  „    †  ©  „    –  µ  „    `  ≥  „  
+Ä  Æ  „       Ω  „    ®  D  ∫    Ë  .  ∫    Ä  ™  µ      Ø  Ω    .  .  ·    P  …  „  
+.  .  .  .  Ä  "  ·    å  .  »    .  .  .  .  %  +  ∞  w  Ä  Ä  Ä  Ä  .  .  .  .  !  ≤  ‡  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .
+W  ›  Q  .  ç  ∆  T  .  ⁄  â  T  .  Ù  V  U  .  .  È  \  .  ú  -  L  .  …  /  L  .  v  o  @  .
+¯  7  .  .  ¯  7  .  .  e  ä  @  .  ù  í  @  .  `  Ç  T  .  Á  ã  @  .  I  W  U  .  ]  ‘  T  .
+ù  í  @  .  }  c  U  .  ]  ‘  T  .  ù  í  @  .  }  c  U  .  l  .  .  .     æ  S  .  ∑  æ  æ  Ü
+
+--------------------------------2022/6/11 0:58:45--------------------------------
+This application has leaked memory. The small block leaks are (excluding expected leaks registered by pointer):
+
+5 - 12 bytes: TUtilSQL x 1, TUtil x 1
+13 - 20 bytes: TUsuarioDAO x 1, TBDConnection x 3, TLOG x 2, TExecSQL x 3
+21 - 36 bytes: TContasControler x 1, TFormaPGTOControler x 1
+37 - 52 bytes: UnicodeString x 1
+101 - 116 bytes: TUsuarioControler x 1
+
+Note: Memory leak detail is logged to a text file in the same folder as this application. To disable this memory leak check, undefine "EnableMemoryLeakReporting".
+
+--------------------------------2022/6/11 1:00:45--------------------------------
+FastMM has detected an attempt to call a virtual method on a freed object. An access violation will now be raised in order to abort the current operation.
+
+Virtual method: Destroy
+
+The allocation number was: 83039
+
+The object was allocated by thread 0x17A0, and the stack trace (return addresses) at the time was:
+406FC9 [System.pas][System][@ReallocMem$qqrrpvi][4788]
+40D399 [System.pas][System][DynArraySetLength$qqrrpvpvipi][34393]
+44D56B [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalSetCapacity$qqri][3830]
+44C2D0 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalGrow$qqri][3091]
+44C2F5 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalGrowCheck$qqri][3097]
+44B04F [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalAdd4$qqrpxv][2463]
+67F0C0 [Data.DB.pas][Data.DB][Db.TCustomConnection.RegisterClient$qqrp14System.TObjectynpqqrp14System.TObjecto$v][3613]
+795C3E [Data.SqlExpr.pas][Data.SqlExpr][Sqlexpr.TSQLConnection.RegisterClient$qqrp14System.TObjectynpqqrp14System.TObjecto$v][3421]
+796C8D [Data.SqlExpr.pas][Data.SqlExpr][Sqlexpr.TCustomSQLDataSet.SetConnection$qqrxp27Data.Sqlexpr.TSQLConnection][3993]
+7D3BBB [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][37]
+7F3941 [uUtilAmauri.pas][uUtilAmauri][TUtilSQL.getCodTela$qqr20System.UnicodeString][279]
+
+The object was subsequently freed by thread 0x17A0, and the stack trace (return addresses) at the time was:
+406F76 [System.pas][System][@FreeMem$qqrpv][4644]
+40D62C [System.pas][System][@DynArrayClear$qqrrpvpv][34679]
+40D2F5 [System.pas][System][DynArraySetLength$qqrrpvpvipi][34344]
+40D4D2 [System.pas][System][@DynArraySetLength$qqrv][34490]
+4D438F [System.Generics.Collections.pas][System.Classes][Generics.Collections.%TList__1$p14System.TObject%.$bdtr$qqrv][4142]
+408BE7 [System.pas][System][TObject.Free$qqrv][16255]
+67EE77 [Data.DB.pas][Data.DB][Db.TCustomConnection.$bdtr$qqrv][3528]
+7927F1 [Data.SqlExpr.pas][Data.SqlExpr][Sqlexpr.TSQLConnection.$bdtr$qqrv][2274]
+408BE7 [System.pas][System][TObject.Free$qqrv][16255]
+7D4529 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bdtr$qqrv][98]
+408BE7 [System.pas][System][TObject.Free$qqrv][16255]
+
+The current thread ID is 0x17A0, and the stack trace (return addresses) leading to this error is:
+6FD533 [Data.DBXCommon.pas][Data.DBXCommon][Dbxcommon.TDBXProperties.$bdtr$qqrv][7401]
+408BE7 [System.pas][System][TObject.Free$qqrv][16255]
+7A1A89 [Data.SqlExpr.pas][Data.SqlExpr][Sqlexpr.TConnectionData.$bdtr$qqrv][8234]
+408BE7 [System.pas][System][TObject.Free$qqrv][16255]
+79282B [Data.SqlExpr.pas][Data.SqlExpr][Sqlexpr.TSQLConnection.$bdtr$qqrv][2276]
+408BE7 [System.pas][System][TObject.Free$qqrv][16255]
+7D4529 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bdtr$qqrv][98]
+408BE7 [System.pas][System][TObject.Free$qqrv][16255]
+7D3C4D [uControleSQL.pas][uControleSQL][TExecSQL.$bdtr$qqrv][46]
+408BE7 [System.pas][System][TObject.Free$qqrv][16255]
+7F39FD [uUtilAmauri.pas][uUtilAmauri][TUtilSQL.getCodTela$qqr20System.UnicodeString][288]
+
+Current memory dump of 256 bytes starting at pointer address 7FB2CDB0:
+98 12 A5 00 80 80 80 80 80 80 80 80 7E 11 F0 78 00 00 00 00 20 C7 B2 7F 00 00 00 00 00 00 00 00
+9C 8B 41 00 00 00 00 00 AF 2B 01 00 C9 6F 40 00 99 D3 40 00 B3 31 64 00 6B D5 44 00 D0 C2 44 00
+F5 C2 44 00 4F B0 44 00 F6 F0 67 00 3E 5C 79 00 8D 6C 79 00 BB 3B 7D 00 A0 17 00 00 A0 17 00 00
+76 6F 40 00 E8 14 6B 00 8F 7E 70 00 E7 8B 40 00 92 18 70 00 C1 18 70 00 94 10 70 00 DB 17 70 00
+B2 17 70 00 52 8A 7C 00 E7 8B 40 00 0C 00 00 00 22 00 00 00 12 41 10 88 01 00 00 00 01 00 00 00
+10 FF E2 7F ED BE EF 77 00 00 00 00 51 D4 B2 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+D1 42 01 00 5A 6F 40 00 47 8A 40 00 52 92 40 00 01 08 7C 00 3F 07 6B 00 9D 0F 6B 00 C9 F0 7A 00
+45 06 7C 00 F4 0E 7C 00 2C 20 7C 00 84 11 70 00 A0 17 00 00 A0 17 00 00 76 6F 40 00 65 8A 40 00
+ò  .  •  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  ~  .    x  .  .  .  .     «  ≤    .  .  .  .  .  .  .  .
+ú  ã  A  .  .  .  .  .  Ø  +  .  .  …  o  @  .  ô  ”  @  .  ≥  1  d  .  k  ’  D  .  –  ¬  D  .
+ı  ¬  D  .  O  ∞  D  .  ˆ    g  .  >  \  y  .  ç  l  y  .  ª  ;  }  .  †  .  .  .  †  .  .  .
+v  o  @  .  Ë  .  k  .  è  ~  p  .  Á  ã  @  .  í  .  p  .  ¡  .  p  .  î  .  p  .  €  .  p  .
+≤  .  p  .  R  ä  |  .  Á  ã  @  .  .  .  .  .  "  .  .  .  .  A  .  à  .  .  .  .  .  .  .  .
+.  ˇ  ‚    Ì  æ  Ô  w  .  .  .  .  Q  ‘  ≤    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+—  B  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .  .  .  |  .  ?  .  k  .  ù  .  k  .  …    z  .
+E  .  |  .  Ù  .  |  .  ,     |  .  Ñ  .  p  .  †  .  .  .  †  .  .  .  v  o  @  .  e  ä  @  .
+
+--------------------------------2022/6/11 1:01:11--------------------------------
+FastMM has detected an attempt to call a virtual method on a freed object. An access violation will now be raised in order to abort the current operation.
+
+Virtual method: Destroy
+
+The allocation number was: 83039
+
+The object was allocated by thread 0x3A40, and the stack trace (return addresses) at the time was:
+406FC9 [System.pas][System][@ReallocMem$qqrrpvi][4788]
+40D399 [System.pas][System][DynArraySetLength$qqrrpvpvipi][34393]
+44D56B [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalSetCapacity$qqri][3830]
+44C2D0 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalGrow$qqri][3091]
+44C2F5 [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalGrowCheck$qqri][3097]
+44B04F [System.Generics.Collections.pas][System.Generics.Collections][Generics.Collections.TListHelper.InternalAdd4$qqrpxv][2463]
+67F0C0 [Data.DB.pas][Data.DB][Db.TCustomConnection.RegisterClient$qqrp14System.TObjectynpqqrp14System.TObjecto$v][3613]
+795C3E [Data.SqlExpr.pas][Data.SqlExpr][Sqlexpr.TSQLConnection.RegisterClient$qqrp14System.TObjectynpqqrp14System.TObjecto$v][3421]
+796C8D [Data.SqlExpr.pas][Data.SqlExpr][Sqlexpr.TCustomSQLDataSet.SetConnection$qqrxp27Data.Sqlexpr.TSQLConnection][3993]
+7D3BBB [uControleSQL.pas][uControleSQL][TExecSQL.$bctr$qqrv][37]
+7F3929 [uUtilAmauri.pas][uUtilAmauri][TUtilSQL.getCodTela$qqr20System.UnicodeString][279]
+
+The object was subsequently freed by thread 0x3A40, and the stack trace (return addresses) at the time was:
+406F76 [System.pas][System][@FreeMem$qqrpv][4644]
+40D62C [System.pas][System][@DynArrayClear$qqrrpvpv][34679]
+40D2F5 [System.pas][System][DynArraySetLength$qqrrpvpvipi][34344]
+40D4D2 [System.pas][System][@DynArraySetLength$qqrv][34490]
+4D438F [System.Generics.Collections.pas][System.Classes][Generics.Collections.%TList__1$p14System.TObject%.$bdtr$qqrv][4142]
+408BE7 [System.pas][System][TObject.Free$qqrv][16255]
+67EE77 [Data.DB.pas][Data.DB][Db.TCustomConnection.$bdtr$qqrv][3528]
+7927F1 [Data.SqlExpr.pas][Data.SqlExpr][Sqlexpr.TSQLConnection.$bdtr$qqrv][2274]
+408BE7 [System.pas][System][TObject.Free$qqrv][16255]
+7D4514 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bdtr$qqrv][99]
+408BE7 [System.pas][System][TObject.Free$qqrv][16255]
+
+The current thread ID is 0x3A40, and the stack trace (return addresses) leading to this error is:
+6FD533 [Data.DBXCommon.pas][Data.DBXCommon][Dbxcommon.TDBXProperties.$bdtr$qqrv][7401]
+408BE7 [System.pas][System][TObject.Free$qqrv][16255]
+7A1A89 [Data.SqlExpr.pas][Data.SqlExpr][Sqlexpr.TConnectionData.$bdtr$qqrv][8234]
+408BE7 [System.pas][System][TObject.Free$qqrv][16255]
+79282B [Data.SqlExpr.pas][Data.SqlExpr][Sqlexpr.TSQLConnection.$bdtr$qqrv][2276]
+408BE7 [System.pas][System][TObject.Free$qqrv][16255]
+7D4514 [uConexaoBanco.pas][uConexaoBanco][TBDConnection.$bdtr$qqrv][99]
+408BE7 [System.pas][System][TObject.Free$qqrv][16255]
+7D3C4D [uControleSQL.pas][uControleSQL][TExecSQL.$bdtr$qqrv][46]
+408BE7 [System.pas][System][TObject.Free$qqrv][16255]
+7F39E5 [uUtilAmauri.pas][uUtilAmauri][TUtilSQL.getCodTela$qqr20System.UnicodeString][288]
+
+Current memory dump of 256 bytes starting at pointer address 7FB2CDB0:
+98 12 A5 00 80 80 80 80 80 80 80 80 6B CC EF 78 00 00 00 00 20 C7 B2 7F 00 00 00 00 00 00 00 00
+9C 8B 41 00 00 00 00 00 AF 2B 01 00 C9 6F 40 00 99 D3 40 00 B3 31 64 00 6B D5 44 00 D0 C2 44 00
+F5 C2 44 00 4F B0 44 00 F6 F0 67 00 3E 5C 79 00 8D 6C 79 00 BB 3B 7D 00 40 3A 00 00 40 3A 00 00
+76 6F 40 00 E8 14 6B 00 8F 7E 70 00 E7 8B 40 00 92 18 70 00 C1 18 70 00 94 10 70 00 DB 17 70 00
+B2 17 70 00 52 8A 7C 00 E7 8B 40 00 0C 00 00 00 22 00 00 00 52 86 10 88 01 00 00 00 01 00 00 00
+10 FF E2 7F AD 79 EF 77 00 00 00 00 51 D4 B2 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+D1 42 01 00 5A 6F 40 00 47 8A 40 00 52 92 40 00 01 08 7C 00 3F 07 6B 00 9D 0F 6B 00 C9 F0 7A 00
+45 06 7C 00 F4 0E 7C 00 2C 20 7C 00 84 11 70 00 40 3A 00 00 40 3A 00 00 76 6F 40 00 65 8A 40 00
+ò  .  •  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  k  Ã  Ô  x  .  .  .  .     «  ≤    .  .  .  .  .  .  .  .
+ú  ã  A  .  .  .  .  .  Ø  +  .  .  …  o  @  .  ô  ”  @  .  ≥  1  d  .  k  ’  D  .  –  ¬  D  .
+ı  ¬  D  .  O  ∞  D  .  ˆ    g  .  >  \  y  .  ç  l  y  .  ª  ;  }  .  @  :  .  .  @  :  .  .
+v  o  @  .  Ë  .  k  .  è  ~  p  .  Á  ã  @  .  í  .  p  .  ¡  .  p  .  î  .  p  .  €  .  p  .
+≤  .  p  .  R  ä  |  .  Á  ã  @  .  .  .  .  .  "  .  .  .  R  Ü  .  à  .  .  .  .  .  .  .  .
+.  ˇ  ‚    ≠  y  Ô  w  .  .  .  .  Q  ‘  ≤    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+—  B  .  .  Z  o  @  .  G  ä  @  .  R  í  @  .  .  .  |  .  ?  .  k  .  ù  .  k  .  …    z  .
+E  .  |  .  Ù  .  |  .  ,     |  .  Ñ  .  p  .  @  :  .  .  @  :  .  .  v  o  @  .  e  ä  @  .

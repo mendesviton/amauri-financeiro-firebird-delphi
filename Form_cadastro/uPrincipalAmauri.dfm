@@ -1174,6 +1174,9 @@ inherited frAmauriPrincipal: TfrAmauriPrincipal
         Caption = 'Contas'
         OnClick = Contas1Click
       end
+      object dasdasd1: TMenuItem
+        Caption = 'dasdasd'
+      end
     end
     inherited Relatrios1: TMenuItem
       inherited Dadoscadastrais1: TMenuItem

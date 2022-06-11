@@ -39,6 +39,16 @@ const
   C_SUCESSO_INSERCAO = 'Inserção realizada com sucesso';
   C_SUCESSO_EDICAO   = 'Edição realizada com sucesso';
 
+  {NOME FORMS}
+    //contas
+  C_FRCAD_CONTAS      = 'frCad_contas';
+    //forma de pagamento
+  C_FRCAD_FORMAPGTO   = 'frCad_formapgto';
+    //usuário
+  C_FRCAD_USUARIO     = 'frCad_usuario';
+  C_FRCON_USUARIO     = 'frCon_usuario';
+  C_FRREL_USUARIO     = 'frRel_usuario';
+
 implementation
 
 end.

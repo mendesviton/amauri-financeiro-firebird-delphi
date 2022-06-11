@@ -14,6 +14,7 @@ type
     Formasdepagamento1: TMenuItem;
     Formasdepagamento2: TMenuItem;
     Contas1: TMenuItem;
+    dasdasd1: TMenuItem;
     procedure Usuarios1Click(Sender: TObject);
     procedure Usurios2Click(Sender: TObject);
     procedure Usurios1Click(Sender: TObject);
