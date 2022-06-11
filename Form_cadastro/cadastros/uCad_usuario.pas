@@ -1,5 +1,6 @@
 { Solicitação           Data              Descrição
   w00002              16/04/2022          Criação da tela de cadastro de usuário.
+  w00020              11/06/2022          Adicionando GroupBox de usuario e senha.
 }
 unit uCad_usuario;
 
@@ -18,39 +19,34 @@ type
     OpenPictureDialog1: TOpenPictureDialog;
     PopupMenu2: TPopupMenu;
     qweqweqwewq1: TMenuItem;
-    lbCodigo: TLabel;
-    lbCPF: TLabel;
-    lbEmail: TLabel;
-    lbNome: TLabel;
-    lbLogradouro: TLabel;
-    lbNumero: TLabel;
-    lbCidade: TLabel;
-    lbUF: TLabel;
-    mkCPF: TMaskEdit;
-    edCodigo: TEdit;
-    edEmail: TEdit;
-    edNome: TEdit;
     Panel2: TPanel;
     Image1: TImage;
-    cbLogradouro: TComboBox;
-    cbUF: TComboBox;
-    edNumero: TEdit;
-    edRua: TEdit;
-    edCidade: TEdit;
-    ckSituação: TCheckBox;
-    Label4: TLabel;
-    Bevel1: TBevel;
-    Label5: TLabel;
-    Bevel3: TBevel;
-    Bevel2: TBevel;
-    Label6: TLabel;
     Label1: TLabel;
     Label2: TLabel;
     Edit1: TEdit;
     Edit2: TEdit;
     Label3: TLabel;
     Edit3: TEdit;
-    procedure cbLogradouroChange(Sender: TObject);
+    GroupBox1: TGroupBox;
+    GroupBox2: TGroupBox;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    cbLogradouro: TComboBox;
+    cbUF: TComboBox;
+    ckSituacao: TCheckBox;
+    edCidade: TEdit;
+    edCodigo: TEdit;
+    edEmail: TEdit;
+    edNome: TEdit;
+    edNumero: TEdit;
+    edRua: TEdit;
+    mkCPF: TMaskEdit;
     procedure Insiraasuafoto1Click(Sender: TObject);
     procedure edCodigoExit(Sender: TObject);
     procedure FormataAposCarregar;
@@ -61,7 +57,7 @@ type
     procedure edRuaExit(Sender: TObject);
     procedure edNumeroExit(Sender: TObject);
     procedure edCidadeExit(Sender: TObject);
-    procedure ckSituaçãoClick(Sender: TObject);
+    procedure ckSituacaoClick(Sender: TObject);
     procedure spLimpaCamposClick(Sender: TObject);
   private
     FValida:TUsuarioControler;
@@ -90,20 +86,13 @@ implementation
 
 {$R *.dfm}
 
-procedure TfrCad_usuario.cbLogradouroChange(Sender: TObject);
+procedure TfrCad_usuario.ckSituacaoClick(Sender: TObject);
 begin
   inherited;
-
-//  lbNomelogr.Caption := cbLogradouro.Text;
-end;
-
-procedure TfrCad_usuario.ckSituaçãoClick(Sender: TObject);
-begin
-  inherited;
-  if not(ckSituação.Checked) then
-     ckSituação.Caption:='Usuário inativo'
+  if not(ckSituacao.Checked) then
+     ckSituacao.Caption:='Usuário inativo'
      else
-     ckSituação.Caption:='Usuário ativo'
+     ckSituacao.Caption:='Usuário ativo'
 
 end;
 
@@ -183,7 +172,6 @@ end;
 procedure TfrCad_usuario.mkCPFExit(Sender: TObject);
 begin
   inherited;
-//  ShowMessage(mkCPF.Text);
   if not (FSubiu) then
      FValida.pValidaCPF;
 end;
@@ -312,7 +300,7 @@ inherited;
   FValida.lbEstado         := lbUFCarteira;}
   FValida.pnEdicao         := pnUsuario;
   FValida.ImageFoto        := Image1;
-  FValida.ckSituacao       := ckSituação;
+  FValida.ckSituacao       := ckSituacao;
 
   { vitor - algumas configurações de tela coloquei aqui porque o padrão executa esse método no  oncreate}
   cbLogradouro.ItemIndex := 0;

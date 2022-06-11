@@ -9,31 +9,27 @@ uses
 
 type
   TUtil = class
-    private
-
     public
-     class procedure cfDigitaTempoRealEditLabel(edDigitado:TComponent;lbEscrito:TLabel;Caption:string);
-     function IsNumeric(S : String) : Boolean;
-     function MessageDlg2(const prMensagem: String; prTipo: TMsgDlgType;
-  prBotoes: array of TMsgDlgBtn; prCaption: Array of String;
-  prBotaoDefault: integer; prHelp: LongInt): TModalResult;
-      function fTamLetraPadrao2(Font: TFont; const prCaption: String): integer;
-      function PadronizaTamanho(Imagem: TGraphic; W, H: Integer;
-  Tipo: TGraphicClass): TGraphic;
+      class procedure cfDigitaTempoRealEditLabel(edDigitado:TComponent;lbEscrito:TLabel;Caption:string);
+      function IsNumeric(S : String) : Boolean;
       class function FConverteDataAAAAMMDD(prdate:String):String;
       class function ApplicationpathFR3:string;
 
-    end;
-  TUtilValida = class
-    private
+       function PadronizaTamanho(Imagem: TGraphic; W, H: Integer;
+       Tipo: TGraphicClass): TGraphic;
 
+      class function GetDescriptografa(prSenha:String):String;
+      class function GetCriptografa(prSenha:String):String;
+
+    end;
+
+  TUtilValida = class
     public
     class function pCampoPreenchido(inputvalue:string):boolean;
     class function pValidaEmail(inputvalue:string):boolean;
 
   end;
   TUtilSQL = class
-    private
     public
       class function getCodTela(prNomeForm:string):string;
       class function pExiste_registro(prCampochave,prTabela,prValor:String):boolean;
@@ -86,140 +82,6 @@ begin
 end;
 end;
 
-class function TUtil.FConverteDataAAAAMMDD(prdate: String): String;
-var
-  wMes:string;
-  wDia:String;
-  wAno:String;
-begin
- //vitor - 03/05/2022 - retorna a data para o formato do firebird AAAA/MM/DD
- wDia := Copy(prdate,0,2);
- wMes := Copy(prdate,4,2);
- wAno := Copy(prdate,7,4);
-
- result:=(wAno+'/'+wMes+'/'+wDia)
-end;
-
-function TUtil.fTamLetraPadrao2(Font: TFont; const prCaption: String): integer;
-var
- wCalculaTamanho: TBitmap;
- I: integer;
-
-begin
-
-  wCalculaTamanho := TBitmap.Create;
-  wCalculaTamanho.Canvas.Font := Font;
-
-  Result := 0;
-
-  for I := 1 to Length(prCaption) do
-   Result := Result + wCalculaTamanho.Canvas.TextWidth(prCaption[I]);
-
-  wCalculaTamanho.FreeImage;
-  wCalculaTamanho.ReleaseHandle;
-
-end;
-
-function TUtil.MessageDlg2(const prMensagem: String; prTipo: TMsgDlgType;
-  prBotoes: array of TMsgDlgBtn; prCaption: Array of String;
-  prBotaoDefault: integer; prHelp: LongInt): TModalResult;
-var
- wConta, wBotao: integer; { Variável que indicará o botão atual }
- wButton: TButton;
- wTamTotBotoes: integer;
- wLeft: integer;
- wIBtn: integer;
- wCjtoBtn: TMsgDlgButtons;
- wEspaco: integer;
-
-const
- C_ESPACO = 5;
-
-begin
- wCjtoBtn := [];
- for wIBtn := 0 to Length(prBotoes) - 1 do
-  Include(wCjtoBtn, prBotoes[wIBtn]);
-
- wBotao := 0;
- wTamTotBotoes := 0;
-
- with CreateMessageDialog(prMensagem, prTipo, wCjtoBtn) do
-  try
-   // Ajusta o tamanho e posição dos botões
-   for wConta := 0 to ComponentCount - 1 do
-   begin
-    if Components[wConta] is TButton then
-    begin
-     { Altera o Caption dos Botões }
-     wButton := TButton(Components[wConta]);
-     wButton.Width := fTamLetraPadrao2(wButton.Font, '    ' + prCaption[wBotao]
-       + '    ');
-     wTamTotBotoes := wTamTotBotoes + wButton.Width;
-     Inc(wBotao);
-    end;
-   end;
-   if (wTamTotBotoes + (C_ESPACO * (wBotao + 1)) + C_ESPACO) > Width then
-   begin
-    Width := (wTamTotBotoes + (C_ESPACO * (wBotao + 1)) + C_ESPACO);
-    wEspaco := C_ESPACO;
-   end
-   else
-   begin
-    wEspaco := (Width - wTamTotBotoes) div (wBotao + 1);
-   end;
-   wBotao := 0;
-   wLeft := wEspaco;
-
-   for wIBtn := 0 to Length(prBotoes) - 1 do
-   begin
-    wConta := 0;
-
-    while wConta <= ComponentCount - 1 do
-    begin
-     if Components[wConta] is TButton then
-     begin
-      { Altera o Caption dos Botões }
-      wButton := TButton(Components[wConta]);
-
-      if wButton.Name = FButtonNames[prBotoes[wIBtn]] then
-      begin
-       wButton.Width := fTamLetraPadrao2(wButton.Font,
-         '    ' + prCaption[wBotao] + '    ');
-       wButton.Left := wLeft;
-       wLeft := wLeft + wButton.Width + wEspaco;
-       wButton.Caption := prCaption[wBotao];
-       wButton.TabOrder := wBotao;
-       Inc(wBotao);
-
-       { Faz o Botão ficar Default conforme o parâmetro }
-       if (wButton.Caption = prCaption[prBotaoDefault]) then
-        ActiveControl := (Components[wConta] as TWinControl);
-
-       Break;
-      end;
-     end;
-
-     Inc(wConta);
-    end;
-   end;
-
-   case prTipo of
-    mtWarning:
-     Caption := 'Atenção!';
-    mtError:
-     Caption := 'Erro!';
-    mtInformation:
-     Caption := 'Informação!';
-    mtConfirmation:
-     Caption := 'Confirmação!';
-   end;
-   Position := poScreenCenter;
-   Result := ShowModal;
-  finally
-   Free;
-  end;
-
-end;
 function TUtil.PadronizaTamanho(Imagem: TGraphic; W, H: Integer;
   Tipo: TGraphicClass): TGraphic;
 var
@@ -238,6 +100,82 @@ begin
   finally
   B.Free;
   end;
+end;
+
+
+class function TUtil.FConverteDataAAAAMMDD(prdate: String): String;
+var
+  wMes:string;
+  wDia:String;
+  wAno:String;
+begin
+ //vitor - 03/05/2022 - retorna a data para o formato do firebird AAAA/MM/DD
+ wDia := Copy(prdate,0,2);
+ wMes := Copy(prdate,4,2);
+ wAno := Copy(prdate,7,4);
+
+ result:=(wAno+'/'+wMes+'/'+wDia)
+end;
+
+
+
+Class function TUtil.GetCriptografa(prSenha:String): String;
+var
+  wTexto               : String;
+  wContador, wContaPos : LongInt;
+  wSinal               : Boolean;
+
+Begin
+   wTexto    := EmptyStr;
+   wSinal    := True;
+   wContaPos := Length(prSenha);
+
+   for wContador:= 1 to Length(prSenha) do
+     begin
+       if wSinal Then
+          wTexto := wTexto + Chr(Ord(prSenha[wContaPos])+1)
+       else
+          wTexto := wTexto + Chr(Ord(prSenha[wContaPos])-1);
+
+       wContaPos := (wContaPos-1);
+       wSinal:= Not wSinal;
+     end;
+
+   Result := wTexto;
+end;
+
+class function TUtil.GetDescriptografa(prSenha: string): String;
+var
+  wTexto               : String;
+  wContador, wContaPos : LongInt;
+  wSinal               : Boolean;
+  wInt                 : integer;
+
+  function GetParImpar(FValor:integer): Boolean;
+begin
+  Result := ((FValor Mod 2) = 0);
+end;
+
+Begin
+   wTexto    := EmptyStr;
+   wInt      := Length(prSenha);
+   wSinal    := GetParImpar(wInt);
+//   FreeAndNil(wInt);
+   wContaPos := Length(prSenha);
+
+   for wContador := Length(prSenha) DownTo 1 do
+   Begin
+     If wSinal then
+        wTexto:= wTexto + Chr(Ord(prSenha[wContaPos])+1)
+     else
+        wTexto:= wTexto + Chr(Ord(prSenha[wContaPos])-1);
+
+     wContaPos:= (wContaPos-1);
+     wSinal:= Not wSinal;
+   End;
+
+   Result := wTexto;
+
 end;
 
 { TUtilValida }

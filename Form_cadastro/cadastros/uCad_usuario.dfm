@@ -1,601 +1,30 @@
-﻿inherited frCad_usuario: TfrCad_usuario
+inherited frCad_usuario: TfrCad_usuario
   Top = 77
   Caption = 'Cadastro de usu'#225'rios'
-  ClientHeight = 616
-  ClientWidth = 543
+  ClientHeight = 448
+  ClientWidth = 531
   Color = 14737632
   Position = poDesigned
-  ExplicitWidth = 559
-  ExplicitHeight = 655
+  ExplicitWidth = 547
+  ExplicitHeight = 487
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnFundo: TPanel
-    Width = 543
-    Height = 599
-    ExplicitTop = 0
-    ExplicitWidth = 543
-    ExplicitHeight = 604
+    Width = 531
+    Height = 431
+    Color = clWhite
+    ExplicitLeft = -8
+    ExplicitTop = -6
+    ExplicitWidth = 531
+    ExplicitHeight = 530
     inherited pnComponentes: TPanel
-      Left = 7
-      Top = 7
       Width = 529
-      Height = 586
-      ExplicitLeft = 7
-      ExplicitTop = 7
+      Height = 429
       ExplicitWidth = 529
-      ExplicitHeight = 586
-      object lbCidade: TLabel [0]
-        Left = 64
-        Top = 336
-        Width = 49
-        Height = 14
-        Caption = 'Cidade:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbCodigo: TLabel [1]
-        Left = 59
-        Top = 113
-        Width = 49
-        Height = 14
-        Caption = 'C'#243'digo:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbCPF: TLabel [2]
-        Left = 80
-        Top = 193
-        Width = 28
-        Height = 14
-        Caption = 'CPF:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbEmail: TLabel [3]
-        Left = 67
-        Top = 166
-        Width = 42
-        Height = 14
-        Caption = 'Email:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbLogradouro: TLabel [4]
-        Left = 36
-        Top = 286
-        Width = 77
-        Height = 14
-        Caption = 'Logradouro:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbNome: TLabel [5]
-        Left = 74
-        Top = 139
-        Width = 35
-        Height = 14
-        Caption = 'Nome:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbNumero: TLabel [6]
-        Left = 64
-        Top = 311
-        Width = 49
-        Height = 14
-        Caption = 'Numero:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbUF: TLabel [7]
-        Left = 192
-        Top = 311
-        Width = 21
-        Height = 14
-        Caption = 'UF:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label4: TLabel [8]
-        Left = 10
-        Top = 243
-        Width = 56
-        Height = 14
-        Caption = 'Endere'#231'o'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Bevel1: TBevel [9]
-        Left = 128
-        Top = 73
-        Width = 381
-        Height = 14
-        Shape = bsTopLine
-      end
-      object Label5: TLabel [10]
-        Left = 10
-        Top = 64
-        Width = 112
-        Height = 14
-        Caption = 'Dados Cadastrais'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Bevel3: TBevel [11]
-        Left = 72
-        Top = 252
-        Width = 437
-        Height = 14
-        Shape = bsTopLine
-      end
-      object Bevel2: TBevel [12]
-        Left = 114
-        Top = 385
-        Width = 395
-        Height = 14
-        Shape = bsTopLine
-      end
-      object Label6: TLabel [13]
-        Left = 10
-        Top = 377
-        Width = 98
-        Height = 14
-        Caption = 'Senha e acesso'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label1: TLabel [14]
-        Left = 86
-        Top = 448
-        Width = 42
-        Height = 14
-        Caption = 'Login:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label2: TLabel [15]
-        Left = 86
-        Top = 474
-        Width = 42
-        Height = 14
-        Caption = 'Senha:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label3: TLabel [16]
-        Left = 23
-        Top = 501
-        Width = 112
-        Height = 14
-        Caption = 'Confirmar Senha:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object cbLogradouro: TComboBox [17]
-        Left = 113
-        Top = 283
-        Width = 100
-        Height = 22
-        Style = csDropDownList
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 4
-        OnChange = cbLogradouroChange
-        Items.Strings = (
-          'Rua'
-          'Acesso'
-          'Acampamento'
-          'Acesso Local'
-          'Adro'
-          #193'rea Especial'
-          'Aeroporto'
-          'Alameda'
-          'Avenida Marginal Direita'
-          'Avenida Marginal Esquerda'
-          'Anel Vi'#225'rio'
-          'Antiga Estrada'
-          'Art'#233'ria'
-          'Alto'
-          'Atalho'
-          'V'#9#193'rea Verde'
-          'Avenida'
-          'Avenida Contorno'
-          'Avenida Marginal'
-          'Avenida Velha'
-          'Balne'#225'rio'
-          'Beco'
-          'Buraco'
-          'Belvedere'
-          'Bloco'
-          'Bal'#227'o'
-          'Blocos'
-          'Bulevar'
-          'Bosque'
-          'Boulevard'
-          'Baixa'
-          'Cais'
-          'Cal'#231'ada'
-          'Caminho'
-          'Canal'
-          'Ch'#225'cara'
-          'Chapad'#227'o'
-          'Ciclovia'
-          'Circular'
-          'Conjunto'
-          'Conjunto Mutir'#227'o'
-          'Complexo Vi'#225'rio'
-          'Col'#244'nia'
-          'Comunidade'
-          'Condom'#237'nio'
-          'Corredor'
-          'Campo'
-          'C'#243'rrego'
-          'Contorno'
-          'Descida'
-          'Desvio'
-          'Distrito'
-          'Entre Bloco'
-          'Estrada Intermunicipal'
-          'Enseada'
-          'Entrada Particular'
-          'Entre Quadra'
-          'Escada'
-          'Escadaria'
-          'Estrada Estadual'
-          'Estrada Vicinal'
-          'Estrada de Liga'#231#227'o'
-          'Estrada Municipal'
-          'Esplanada'
-          'Estrada de Servid'#227'o'
-          'Estrada'
-          'Estrada Velha'
-          'Estrada Antiga'
-          'Esta'#231#227'o'
-          'Est'#225'dio'
-          'Est'#226'ncia'
-          'Estrada Particular'
-          'Estacionamento'
-          'Evang'#233'lica'
-          'Elevada'
-          'Eixo Industrial'
-          'Favela'
-          'Fazenda'
-          'Ferrovia'
-          'Fonte'
-          'Feira'
-          'Forte'
-          'Galeria'
-          'Granja'
-          'N'#250'cleo Habitacional'
-          'Ilha'
-          'Indeterminado'
-          'Ilhota'
-          'Jardim'
-          'Jardinete'
-          'Ladeira'
-          'Lagoa'
-          'Lago'
-          'Loteamento'
-          'Largo'
-          'Lote'
-          'Mercado'
-          'Marina'
-          'Modulo'
-          'Proje'#231#227'o'
-          'Morro'
-          'Monte'
-          'N'#250'cleo'
-          'N'#250'cleo Rural'
-          'Outeiro'
-          'Paralela'
-          'Passeio'
-          'P'#225'tio'
-          'Pra'#231'a'
-          'Pra'#231'a de Esportes'
-          'Parada'
-          'Paradouro'
-          'Ponta'
-          'Praia'
-          'Prolongamento'
-          'Parque Municipal'
-          'Parque'
-          'Parque Residencial'
-          'Passarela'
-          'Passagem'
-          'Passagem de Pedestre'
-          'Passagem Subterr'#226'nea'
-          'Ponte'
-          'Porto'
-          'Quadra'
-          'Quinta'
-          'Quintas'
-          'Ramal'
-          'Recreio'
-          'Recanto'
-          'Retiro'
-          'Residencial'
-          'Reta'
-          'Ruela'
-          'Rampa'
-          'Rodo Anel'
-          'Rodovia'
-          'Rotula'
-          'Rua de Pedestre'
-          'Margem'
-          'Retorno'
-          'Rotat'#243'ria'
-          'Segunda Avenida'
-          'Sitio'
-          'Servid'#227'o'
-          'Setor'
-          'Subida'
-          'Trincheira'
-          'Terminal'
-          'Trecho'
-          'Trevo'
-          'T'#250'nel'
-          'Travessa'
-          'Travessa Particular'
-          'Travessa Velha'
-          'Unidade'
-          'Via'
-          'Via de Acesso'
-          'Vala'
-          'Via Costeira'
-          'Viaduto'
-          'Vereda'
-          'Via Elevado'
-          'Vila'
-          'Viela'
-          'Vale'
-          'Via Litor'#226'nea'
-          'Via de Pedestre'
-          'Variante'
-          'Zague')
-      end
-      object cbUF: TComboBox [18]
-        Left = 219
-        Top = 308
-        Width = 145
-        Height = 22
-        Style = csDropDownList
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 5
-      end
-      object ckSituação: TCheckBox [19]
-        Left = 369
-        Top = 93
-        Width = 122
-        Height = 17
-        Caption = 'Usu'#225'rio ativo'
-        Checked = True
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-        State = cbChecked
-        TabOrder = 9
-        OnClick = ckSituaçãoClick
-      end
-      object edCidade: TEdit [20]
-        Left = 113
-        Top = 333
-        Width = 252
-        Height = 22
-        BevelEdges = [beTop]
-        BevelInner = bvNone
-        BevelOuter = bvNone
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 8
-        OnExit = edCidadeExit
-      end
-      object edCodigo: TEdit [21]
-        Left = 109
-        Top = 110
-        Width = 31
-        Height = 22
-        BevelEdges = [beTop]
-        BevelInner = bvNone
-        BevelOuter = bvNone
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        OnExit = edCodigoExit
-      end
-      object edEmail: TEdit [22]
-        Left = 110
-        Top = 164
-        Width = 377
-        Height = 22
-        BevelEdges = [beTop]
-        BevelInner = bvNone
-        BevelOuter = bvNone
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 2
-        OnExit = edEmailExit
-      end
-      object edNome: TEdit [23]
-        Left = 110
-        Top = 136
-        Width = 377
-        Height = 22
-        BevelEdges = [beTop]
-        BevelInner = bvNone
-        BevelOuter = bvNone
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 1
-        OnExit = edNomeExit
-      end
-      object edNumero: TEdit [24]
-        Left = 113
-        Top = 308
-        Width = 49
-        Height = 22
-        BevelEdges = [beTop]
-        BevelInner = bvNone
-        BevelOuter = bvNone
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 7
-        OnExit = edNumeroExit
-      end
-      object edRua: TEdit [25]
-        Left = 219
-        Top = 283
-        Width = 272
-        Height = 22
-        BevelEdges = [beTop]
-        BevelInner = bvNone
-        BevelOuter = bvNone
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 6
-        OnExit = edRuaExit
-      end
-      object mkCPF: TMaskEdit [26]
-        Left = 110
-        Top = 190
-        Width = 115
-        Height = 22
-        BevelEdges = [beTop]
-        BevelInner = bvNone
-        BevelOuter = bvNone
-        BevelKind = bkFlat
-        EditMask = '000\.000\.000\-00;1;_'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        MaxLength = 14
-        ParentFont = False
-        TabOrder = 3
-        Text = '   .   .   -  '
-        OnExit = mkCPFExit
-        OnKeyPress = mkCPFKeyPress
-      end
-      object Panel2: TPanel [27]
-        Left = 347
-        Top = 414
-        Width = 161
-        Height = 150
-        BevelKind = bkFlat
-        Caption = 'Foto usu'#225'rio'
-        Color = clWhite
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentBackground = False
-        ParentFont = False
-        TabOrder = 10
-        object Image1: TImage
-          Left = -2
-          Top = -3
-          Width = 162
-          Height = 153
-          PopupMenu = PopupMenu1
-        end
-      end
+      ExplicitHeight = 429
       inherited pnBarra: TPanel
         Width = 525
         Height = 39
-        TabOrder = 11
         ExplicitWidth = 525
         ExplicitHeight = 39
         inherited sbConsulta: TSpeedButton
@@ -617,83 +46,628 @@
           ExplicitHeight = 37
         end
       end
-      object Edit1: TEdit
-        Left = 135
-        Top = 445
-        Width = 165
-        Height = 22
-        Margins.Left = 0
-        Margins.Top = 0
-        Margins.Right = 0
-        Margins.Bottom = 0
-        BevelEdges = [beLeft, beTop]
-        BevelInner = bvNone
-        BevelOuter = bvNone
+      object GroupBox1: TGroupBox
+        Left = 15
+        Top = 216
+        Width = 502
+        Height = 193
+        Caption = 'Login e senha '
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Courier New'
         Font.Style = []
         ParentFont = False
-        TabOrder = 12
+        TabOrder = 1
+        object Label1: TLabel
+          Left = 267
+          Top = 74
+          Width = 35
+          Height = 14
+          Caption = 'Login'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label2: TLabel
+          Left = 267
+          Top = 99
+          Width = 35
+          Height = 14
+          Caption = 'Senha'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label3: TLabel
+          Left = 197
+          Top = 125
+          Width = 105
+          Height = 14
+          Caption = 'Confirmar Senha'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Panel2: TPanel
+          Left = 18
+          Top = 30
+          Width = 159
+          Height = 147
+          BevelKind = bkFlat
+          Caption = 'Foto usu'#225'rio'
+          Color = clWhite
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentBackground = False
+          ParentFont = False
+          TabOrder = 0
+          object Image1: TImage
+            Left = -2
+            Top = -3
+            Width = 162
+            Height = 153
+            PopupMenu = PopupMenu1
+          end
+        end
+        object Edit1: TEdit
+          Left = 308
+          Top = 122
+          Width = 165
+          Height = 22
+          Hint = 'Confirmar senha '
+          Margins.Left = 0
+          Margins.Top = 0
+          Margins.Right = 0
+          Margins.Bottom = 0
+          BevelEdges = [beLeft, beTop]
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 1
+        end
+        object Edit2: TEdit
+          Left = 308
+          Top = 71
+          Width = 166
+          Height = 22
+          Hint = 'Login de acesso ao sistema'
+          BevelEdges = [beLeft, beTop]
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+          ParentShowHint = False
+          PasswordChar = '*'
+          ShowHint = True
+          TabOrder = 2
+        end
+        object Edit3: TEdit
+          Left = 308
+          Top = 96
+          Width = 165
+          Height = 22
+          Hint = 'Senha de acesso ao sistema'
+          BevelEdges = [beLeft, beTop]
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+          ParentShowHint = False
+          PasswordChar = '*'
+          ShowHint = True
+          TabOrder = 3
+        end
       end
-      object Edit2: TEdit
-        Left = 134
-        Top = 470
-        Width = 166
-        Height = 22
-        BevelEdges = [beLeft, beTop]
-        BevelInner = bvNone
-        BevelOuter = bvNone
+      object GroupBox2: TGroupBox
+        Left = 15
+        Top = 49
+        Width = 502
+        Height = 161
+        Caption = 'Dados Cadastrais'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Courier New'
         Font.Style = []
         ParentFont = False
-        PasswordChar = '*'
-        TabOrder = 13
-      end
-      object Edit3: TEdit
-        Left = 135
-        Top = 498
-        Width = 165
-        Height = 22
-        BevelEdges = [beLeft, beTop]
-        BevelInner = bvNone
-        BevelOuter = bvNone
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-        PasswordChar = '*'
-        TabOrder = 14
+        TabOrder = 2
+        object Label4: TLabel
+          Left = 139
+          Top = 116
+          Width = 49
+          Height = 14
+          Caption = 'Cidade:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label5: TLabel
+          Left = 35
+          Top = 41
+          Width = 49
+          Height = 14
+          Caption = 'C'#243'digo:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label6: TLabel
+          Left = 321
+          Top = 66
+          Width = 28
+          Height = 14
+          Caption = 'CPF:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label7: TLabel
+          Left = 42
+          Top = 66
+          Width = 42
+          Height = 14
+          Caption = 'Email:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label8: TLabel
+          Left = 9
+          Top = 91
+          Width = 77
+          Height = 14
+          Caption = 'Logradouro:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label9: TLabel
+          Left = 122
+          Top = 41
+          Width = 35
+          Height = 14
+          Caption = 'Nome:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label10: TLabel
+          Left = 37
+          Top = 116
+          Width = 49
+          Height = 14
+          Caption = 'Numero:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label11: TLabel
+          Left = 321
+          Top = 116
+          Width = 21
+          Height = 14
+          Caption = 'UF:'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+        end
+        object cbLogradouro: TComboBox
+          Left = 86
+          Top = 88
+          Width = 99
+          Height = 22
+          Style = csDropDownList
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          Items.Strings = (
+            'Rua'
+            'Acesso'
+            'Acampamento'
+            'Acesso Local'
+            'Adro'
+            #193'rea Especial'
+            'Aeroporto'
+            'Alameda'
+            'Avenida Marginal Direita'
+            'Avenida Marginal Esquerda'
+            'Anel Vi'#225'rio'
+            'Antiga Estrada'
+            'Art'#233'ria'
+            'Alto'
+            'Atalho'
+            'V'#9#193'rea Verde'
+            'Avenida'
+            'Avenida Contorno'
+            'Avenida Marginal'
+            'Avenida Velha'
+            'Balne'#225'rio'
+            'Beco'
+            'Buraco'
+            'Belvedere'
+            'Bloco'
+            'Bal'#227'o'
+            'Blocos'
+            'Bulevar'
+            'Bosque'
+            'Boulevard'
+            'Baixa'
+            'Cais'
+            'Cal'#231'ada'
+            'Caminho'
+            'Canal'
+            'Ch'#225'cara'
+            'Chapad'#227'o'
+            'Ciclovia'
+            'Circular'
+            'Conjunto'
+            'Conjunto Mutir'#227'o'
+            'Complexo Vi'#225'rio'
+            'Col'#244'nia'
+            'Comunidade'
+            'Condom'#237'nio'
+            'Corredor'
+            'Campo'
+            'C'#243'rrego'
+            'Contorno'
+            'Descida'
+            'Desvio'
+            'Distrito'
+            'Entre Bloco'
+            'Estrada Intermunicipal'
+            'Enseada'
+            'Entrada Particular'
+            'Entre Quadra'
+            'Escada'
+            'Escadaria'
+            'Estrada Estadual'
+            'Estrada Vicinal'
+            'Estrada de Liga'#231#227'o'
+            'Estrada Municipal'
+            'Esplanada'
+            'Estrada de Servid'#227'o'
+            'Estrada'
+            'Estrada Velha'
+            'Estrada Antiga'
+            'Esta'#231#227'o'
+            'Est'#225'dio'
+            'Est'#226'ncia'
+            'Estrada Particular'
+            'Estacionamento'
+            'Evang'#233'lica'
+            'Elevada'
+            'Eixo Industrial'
+            'Favela'
+            'Fazenda'
+            'Ferrovia'
+            'Fonte'
+            'Feira'
+            'Forte'
+            'Galeria'
+            'Granja'
+            'N'#250'cleo Habitacional'
+            'Ilha'
+            'Indeterminado'
+            'Ilhota'
+            'Jardim'
+            'Jardinete'
+            'Ladeira'
+            'Lagoa'
+            'Lago'
+            'Loteamento'
+            'Largo'
+            'Lote'
+            'Mercado'
+            'Marina'
+            'Modulo'
+            'Proje'#231#227'o'
+            'Morro'
+            'Monte'
+            'N'#250'cleo'
+            'N'#250'cleo Rural'
+            'Outeiro'
+            'Paralela'
+            'Passeio'
+            'P'#225'tio'
+            'Pra'#231'a'
+            'Pra'#231'a de Esportes'
+            'Parada'
+            'Paradouro'
+            'Ponta'
+            'Praia'
+            'Prolongamento'
+            'Parque Municipal'
+            'Parque'
+            'Parque Residencial'
+            'Passarela'
+            'Passagem'
+            'Passagem de Pedestre'
+            'Passagem Subterr'#226'nea'
+            'Ponte'
+            'Porto'
+            'Quadra'
+            'Quinta'
+            'Quintas'
+            'Ramal'
+            'Recreio'
+            'Recanto'
+            'Retiro'
+            'Residencial'
+            'Reta'
+            'Ruela'
+            'Rampa'
+            'Rodo Anel'
+            'Rodovia'
+            'Rotula'
+            'Rua de Pedestre'
+            'Margem'
+            'Retorno'
+            'Rotat'#243'ria'
+            'Segunda Avenida'
+            'Sitio'
+            'Servid'#227'o'
+            'Setor'
+            'Subida'
+            'Trincheira'
+            'Terminal'
+            'Trecho'
+            'Trevo'
+            'T'#250'nel'
+            'Travessa'
+            'Travessa Particular'
+            'Travessa Velha'
+            'Unidade'
+            'Via'
+            'Via de Acesso'
+            'Vala'
+            'Via Costeira'
+            'Viaduto'
+            'Vereda'
+            'Via Elevado'
+            'Vila'
+            'Viela'
+            'Vale'
+            'Via Litor'#226'nea'
+            'Via de Pedestre'
+            'Variante'
+            'Zague')
+        end
+        object cbUF: TComboBox
+          Left = 347
+          Top = 113
+          Width = 138
+          Height = 22
+          Style = csDropDownList
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 1
+        end
+        object ckSituacao: TCheckBox
+          Left = 339
+          Top = 15
+          Width = 121
+          Height = 17
+          Caption = 'Usu'#225'rio ativo'
+          Checked = True
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+          State = cbChecked
+          TabOrder = 2
+          OnClick = ckSituacaoClick
+        end
+        object edCidade: TEdit
+          Left = 193
+          Top = 113
+          Width = 121
+          Height = 22
+          BevelEdges = [beTop]
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 3
+          OnExit = edCidadeExit
+        end
+        object edCodigo: TEdit
+          Left = 85
+          Top = 38
+          Width = 30
+          Height = 22
+          BevelEdges = [beTop]
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 4
+          OnExit = edCodigoExit
+        end
+        object edEmail: TEdit
+          Left = 86
+          Top = 63
+          Width = 225
+          Height = 22
+          BevelEdges = [beTop]
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 5
+          OnExit = edEmailExit
+        end
+        object edNome: TEdit
+          Left = 164
+          Top = 38
+          Width = 321
+          Height = 22
+          BevelEdges = [beTop]
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 6
+          OnExit = edNomeExit
+        end
+        object edNumero: TEdit
+          Left = 86
+          Top = 113
+          Width = 40
+          Height = 22
+          BevelEdges = [beTop]
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 7
+          OnExit = edNumeroExit
+        end
+        object edRua: TEdit
+          Left = 193
+          Top = 88
+          Width = 292
+          Height = 22
+          BevelEdges = [beTop]
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 8
+          OnExit = edRuaExit
+        end
+        object mkCPF: TMaskEdit
+          Left = 348
+          Top = 63
+          Width = 137
+          Height = 22
+          BevelEdges = [beTop]
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          BevelKind = bkFlat
+          EditMask = '000\.000\.000\-00;1;_'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          MaxLength = 14
+          ParentFont = False
+          TabOrder = 9
+          Text = '   .   .   -  '
+          OnExit = mkCPFExit
+          OnKeyPress = mkCPFKeyPress
+        end
       end
     end
   end
   inherited pnUsuario: TPanel
-    Top = 599
-    Width = 543
-    ExplicitTop = 604
-    ExplicitWidth = 543
+    Top = 431
+    Width = 531
+    ExplicitLeft = -1
+    ExplicitTop = 593
+    ExplicitWidth = 526
   end
   object PopupMenu1: TPopupMenu
-    Left = 328
-    Top = 56
+    Left = 336
+    Top = 232
     object Insiraasuafoto1: TMenuItem
       Caption = 'Insira a sua foto '
       OnClick = Insiraasuafoto1Click
     end
   end
   object OpenPictureDialog1: TOpenPictureDialog
-    Left = 368
-    Top = 56
+    Left = 384
+    Top = 232
   end
   object PopupMenu2: TPopupMenu
-    Left = 416
-    Top = 54
+    Left = 432
+    Top = 230
     object qweqweqwewq1: TMenuItem
       Caption = 'qweqweqwewq'
     end

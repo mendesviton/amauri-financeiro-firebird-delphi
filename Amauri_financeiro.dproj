@@ -102,50 +102,68 @@
         <DCCReference Include="model\uControleSQL.pas"/>
         <DCCReference Include="util\uUtilAmauri.pas"/>
         <DCCReference Include="util\uConsts.pas"/>
-        <DCCReference Include="Form_cadastro\uInicioProcessos.pas">
-            <Form>frInicioProcessos</Form>
-        </DCCReference>
-        <DCCReference Include="Form_cadastro\uPrincipalAmauri.pas">
-            <Form>frAmauriPrincipal</Form>
-        </DCCReference>
-        <DCCReference Include="Form_cadastro\relatorio\uRel_Padrao.pas">
-            <Form>fr_RelPadrao1</Form>
-        </DCCReference>
-        <DCCReference Include="Form_cadastro\relatorio\uRel_usuarios.pas">
-            <Form>frRel_usuario</Form>
-        </DCCReference>
-        <DCCReference Include="Form_cadastro\consultas\uCon_padrao.pas">
-            <Form>frCon_padrao</Form>
-        </DCCReference>
-        <DCCReference Include="Form_cadastro\consultas\uCon_usuario.pas">
-            <Form>frCon_usuario</Form>
-        </DCCReference>
-        <DCCReference Include="Form_cadastro\cadastros\uCad_usuario.pas">
-            <Form>frCad_usuario</Form>
-        </DCCReference>
-        <DCCReference Include="Form_cadastro\cadastros\uCad_formapgto.pas">
-            <Form>frCad_formapgto</Form>
-        </DCCReference>
         <DCCReference Include="Classes_controler\Classes_Controler\uUsuario_controler.pas"/>
         <DCCReference Include="Classes_controler\Classes_DAO\uUsuario_DAO.pas"/>
         <DCCReference Include="Classes_controler\Classes_DAO\uFormapgto_DAO.pas"/>
         <DCCReference Include="Classes_controler\Classes_Controler\uFormapgto_controler.pas"/>
         <DCCReference Include="Classes_controler\Classes_Controler\uContas_controler.pas"/>
         <DCCReference Include="Classes_controler\Classes_DAO\uContasDAO.pas"/>
-        <DCCReference Include="Form_cadastro\cadastros\uCad_contas.pas">
-            <Form>frCad_contas</Form>
-        </DCCReference>
         <DCCReference Include="util\uLog.pas"/>
-        <DCCReference Include="Form_cadastro\cadastros\uCad_padrao.pas">
-            <Form>frCad_padrao</Form>
-        </DCCReference>
         <DCCReference Include="Form_geral\uLoginPage.pas">
             <Form>Form1</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Form_geral\uInicioProcessos.pas">
+            <Form>frInicioProcessos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Form_geral\uPrincipalAmauri.pas">
+            <Form>frAmauriPrincipal</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Form_modulos\cadastros\uCad_padrao.pas">
+            <Form>frCad_padrao</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Form_modulos\cadastros\uCad_usuario.pas">
+            <Form>frCad_usuario</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Form_modulos\cadastros\uCad_contas.pas">
+            <Form>frCad_contas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Form_modulos\cadastros\uCad_formapgto.pas">
+            <Form>frCad_formapgto</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Form_modulos\consultas\uCon_padrao.pas">
+            <Form>frCon_padrao</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Form_modulos\consultas\uCon_usuario.pas">
+            <Form>frCon_usuario</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Form_modulos\relatorio\uRel_Padrao.pas">
+            <Form>fr_RelPadrao1</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Form_modulos\relatorio\uRel_usuarios.pas">
+            <Form>frRel_usuario</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <RcItem Include="Amauri_financeiro_Icon2.ico">
             <ResourceType>ICON</ResourceType>
             <ResourceId>Icon_1</ResourceId>
+        </RcItem>
+        <RcItem Include="Amauri_financeiro_Icon8.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>Icon_2</ResourceId>
+        </RcItem>
+        <RcItem Include="Amauri_financeiro_Icon9.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>Icon_3</ResourceId>
         </RcItem>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
@@ -173,6 +191,12 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="2">
+                <DeployFile LocalName="Amauri_financeiro_Icon9.ico" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="Win32\Debug\Amauri_financeiro.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Amauri_financeiro.exe</RemoteName>
@@ -185,12 +209,33 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployClass Name="ProjectiOSDeviceResourceRules">
+                <DeployFile LocalName="Amauri_financeiro_Icon8.ico" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectOSXResource">
@@ -544,27 +589,12 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="DependencyModule">
-                    <Platform Name="Win32">
-                        <Operation>0</Operation>
-                        <Extensions>.dll;.bpl</Extensions>
-                    </Platform>
+                <DeployClass Name="ProjectiOSDeviceResourceRules">
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="OSX32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
