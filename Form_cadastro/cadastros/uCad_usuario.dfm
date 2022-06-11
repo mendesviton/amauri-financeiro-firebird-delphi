@@ -1,114 +1,71 @@
 ﻿inherited frCad_usuario: TfrCad_usuario
   Top = 77
   Caption = 'Cadastro de usu'#225'rios'
-  ClientHeight = 499
-  ClientWidth = 515
+  ClientHeight = 616
+  ClientWidth = 543
   Color = 14737632
   Position = poDesigned
-  ExplicitWidth = 531
-  ExplicitHeight = 538
+  ExplicitWidth = 559
+  ExplicitHeight = 655
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnFundo: TPanel
-    Width = 515
-    Height = 482
-    ExplicitWidth = 515
-    ExplicitHeight = 482
+    Width = 543
+    Height = 599
+    ExplicitTop = 0
+    ExplicitWidth = 543
+    ExplicitHeight = 604
     inherited pnComponentes: TPanel
-      Left = 9
-      Top = 8
-      Height = 464
-      ExplicitLeft = 9
-      ExplicitTop = 8
-      ExplicitHeight = 464
-      object Bevel2: TBevel [0]
-        Left = 12
-        Top = 227
-        Width = 468
-        Height = 11
-        Shape = bsTopLine
-      end
-      object lbCidade: TLabel [1]
-        Left = 261
-        Top = 418
-        Width = 49
-        Height = 14
-        Caption = 'Cidade:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbCidadeCarteira: TLabel [2]
-        Left = 180
-        Top = 170
-        Width = 49
-        Height = 14
-        Caption = 'Cidade:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbCodigo: TLabel [3]
-        Left = 57
-        Top = 271
-        Width = 49
-        Height = 14
-        Caption = 'C'#243'digo:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbCodigoCarteira: TLabel [4]
-        Left = 180
-        Top = 54
-        Width = 49
-        Height = 14
-        Caption = 'C'#243'digo:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbCPF: TLabel [5]
-        Left = 78
-        Top = 328
-        Width = 28
-        Height = 14
-        Caption = 'CPF:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbCPFCarteira: TLabel [6]
-        Left = 180
-        Top = 124
-        Width = 28
-        Height = 14
-        Caption = 'CPF:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbEmail: TLabel [7]
+      Left = 7
+      Top = 7
+      Width = 529
+      Height = 586
+      ExplicitLeft = 7
+      ExplicitTop = 7
+      ExplicitWidth = 529
+      ExplicitHeight = 586
+      object lbCidade: TLabel [0]
         Left = 64
-        Top = 299
+        Top = 336
+        Width = 49
+        Height = 14
+        Caption = 'Cidade:'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lbCodigo: TLabel [1]
+        Left = 59
+        Top = 113
+        Width = 49
+        Height = 14
+        Caption = 'C'#243'digo:'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lbCPF: TLabel [2]
+        Left = 80
+        Top = 193
+        Width = 28
+        Height = 14
+        Caption = 'CPF:'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lbEmail: TLabel [3]
+        Left = 67
+        Top = 166
         Width = 42
         Height = 14
         Caption = 'Email:'
@@ -119,35 +76,9 @@
         Font.Style = []
         ParentFont = False
       end
-      object lbEmailCarteira: TLabel [8]
-        Left = 180
-        Top = 100
-        Width = 42
-        Height = 14
-        Caption = 'Email:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbEnderecoCarteira: TLabel [9]
-        Left = 180
-        Top = 147
-        Width = 63
-        Height = 14
-        Caption = 'Endere'#231'o:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbLogradouro: TLabel [10]
-        Left = 29
-        Top = 357
+      object lbLogradouro: TLabel [4]
+        Left = 36
+        Top = 286
         Width = 77
         Height = 14
         Caption = 'Logradouro:'
@@ -158,9 +89,9 @@
         Font.Style = []
         ParentFont = False
       end
-      object lbNome: TLabel [11]
-        Left = 151
-        Top = 272
+      object lbNome: TLabel [5]
+        Left = 74
+        Top = 139
         Width = 35
         Height = 14
         Caption = 'Nome:'
@@ -171,35 +102,9 @@
         Font.Style = []
         ParentFont = False
       end
-      object lbNomeCarteira: TLabel [12]
-        Left = 180
-        Top = 76
-        Width = 35
-        Height = 14
-        Caption = 'Nome:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbNomelogr: TLabel [13]
-        Left = 29
-        Top = 388
-        Width = 77
-        Height = 14
-        Caption = 'Nome local:'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Courier New'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbNumero: TLabel [14]
-        Left = 57
-        Top = 418
+      object lbNumero: TLabel [6]
+        Left = 64
+        Top = 311
         Width = 49
         Height = 14
         Caption = 'Numero:'
@@ -210,9 +115,9 @@
         Font.Style = []
         ParentFont = False
       end
-      object lbUF: TLabel [15]
-        Left = 289
-        Top = 357
+      object lbUF: TLabel [7]
+        Left = 192
+        Top = 311
         Width = 21
         Height = 14
         Caption = 'UF:'
@@ -223,12 +128,98 @@
         Font.Style = []
         ParentFont = False
       end
-      object lbUFCarteira: TLabel [16]
-        Left = 180
-        Top = 191
-        Width = 49
+      object Label4: TLabel [8]
+        Left = 10
+        Top = 243
+        Width = 56
         Height = 14
-        Caption = 'Estado:'
+        Caption = 'Endere'#231'o'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Bevel1: TBevel [9]
+        Left = 128
+        Top = 73
+        Width = 381
+        Height = 14
+        Shape = bsTopLine
+      end
+      object Label5: TLabel [10]
+        Left = 10
+        Top = 64
+        Width = 112
+        Height = 14
+        Caption = 'Dados Cadastrais'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Bevel3: TBevel [11]
+        Left = 72
+        Top = 252
+        Width = 437
+        Height = 14
+        Shape = bsTopLine
+      end
+      object Bevel2: TBevel [12]
+        Left = 114
+        Top = 385
+        Width = 395
+        Height = 14
+        Shape = bsTopLine
+      end
+      object Label6: TLabel [13]
+        Left = 10
+        Top = 377
+        Width = 98
+        Height = 14
+        Caption = 'Senha e acesso'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label1: TLabel [14]
+        Left = 86
+        Top = 448
+        Width = 42
+        Height = 14
+        Caption = 'Login:'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label2: TLabel [15]
+        Left = 86
+        Top = 474
+        Width = 42
+        Height = 14
+        Caption = 'Senha:'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label3: TLabel [16]
+        Left = 23
+        Top = 501
+        Width = 112
+        Height = 14
+        Caption = 'Confirmar Senha:'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -237,9 +228,9 @@
         ParentFont = False
       end
       object cbLogradouro: TComboBox [17]
-        Left = 107
-        Top = 354
-        Width = 137
+        Left = 113
+        Top = 283
+        Width = 100
         Height = 22
         Style = csDropDownList
         Font.Charset = ANSI_CHARSET
@@ -423,8 +414,8 @@
           'Zague')
       end
       object cbUF: TComboBox [18]
-        Left = 316
-        Top = 354
+        Left = 219
+        Top = 308
         Width = 145
         Height = 22
         Style = csDropDownList
@@ -435,11 +426,10 @@
         Font.Style = []
         ParentFont = False
         TabOrder = 5
-        OnChange = cbUFChange
       end
       object ckSituação: TCheckBox [19]
-        Left = 336
-        Top = 244
+        Left = 369
+        Top = 93
         Width = 122
         Height = 17
         Caption = 'Usu'#225'rio ativo'
@@ -455,14 +445,13 @@
         OnClick = ckSituaçãoClick
       end
       object edCidade: TEdit [20]
-        Left = 316
-        Top = 415
-        Width = 145
+        Left = 113
+        Top = 333
+        Width = 252
         Height = 22
         BevelEdges = [beTop]
-        BevelInner = bvSpace
-        BevelKind = bkFlat
-        BevelOuter = bvRaised
+        BevelInner = bvNone
+        BevelOuter = bvNone
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -470,18 +459,16 @@
         Font.Style = []
         ParentFont = False
         TabOrder = 8
-        OnChange = edCidadeChange
         OnExit = edCidadeExit
       end
       object edCodigo: TEdit [21]
-        Left = 107
-        Top = 268
+        Left = 109
+        Top = 110
         Width = 31
         Height = 22
         BevelEdges = [beTop]
-        BevelInner = bvSpace
-        BevelKind = bkFlat
-        BevelOuter = bvRaised
+        BevelInner = bvNone
+        BevelOuter = bvNone
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -489,18 +476,16 @@
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        OnChange = edCodigoChange
         OnExit = edCodigoExit
       end
       object edEmail: TEdit [22]
-        Left = 106
-        Top = 296
-        Width = 351
+        Left = 110
+        Top = 164
+        Width = 377
         Height = 22
         BevelEdges = [beTop]
-        BevelInner = bvSpace
-        BevelKind = bkFlat
-        BevelOuter = bvRaised
+        BevelInner = bvNone
+        BevelOuter = bvNone
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -508,18 +493,16 @@
         Font.Style = []
         ParentFont = False
         TabOrder = 2
-        OnChange = edEmailChange
         OnExit = edEmailExit
       end
       object edNome: TEdit [23]
-        Left = 185
-        Top = 268
-        Width = 273
+        Left = 110
+        Top = 136
+        Width = 377
         Height = 22
         BevelEdges = [beTop]
-        BevelInner = bvSpace
-        BevelKind = bkFlat
-        BevelOuter = bvRaised
+        BevelInner = bvNone
+        BevelOuter = bvNone
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -527,18 +510,16 @@
         Font.Style = []
         ParentFont = False
         TabOrder = 1
-        OnChange = edNomeChange
         OnExit = edNomeExit
       end
       object edNumero: TEdit [24]
-        Left = 106
-        Top = 415
-        Width = 138
+        Left = 113
+        Top = 308
+        Width = 49
         Height = 22
         BevelEdges = [beTop]
-        BevelInner = bvSpace
-        BevelKind = bkFlat
-        BevelOuter = bvRaised
+        BevelInner = bvNone
+        BevelOuter = bvNone
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -546,18 +527,16 @@
         Font.Style = []
         ParentFont = False
         TabOrder = 7
-        OnChange = edNumeroChange
         OnExit = edNumeroExit
       end
       object edRua: TEdit [25]
-        Left = 107
-        Top = 385
-        Width = 354
+        Left = 219
+        Top = 283
+        Width = 272
         Height = 22
         BevelEdges = [beTop]
-        BevelInner = bvSpace
-        BevelKind = bkFlat
-        BevelOuter = bvRaised
+        BevelInner = bvNone
+        BevelOuter = bvNone
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -565,17 +544,16 @@
         Font.Style = []
         ParentFont = False
         TabOrder = 6
-        OnChange = edRuaChange
         OnExit = edRuaExit
       end
       object mkCPF: TMaskEdit [26]
-        Left = 107
-        Top = 325
-        Width = 138
+        Left = 110
+        Top = 190
+        Width = 115
         Height = 22
         BevelEdges = [beTop]
-        BevelInner = bvSpace
-        BevelOuter = bvRaised
+        BevelInner = bvNone
+        BevelOuter = bvNone
         BevelKind = bkFlat
         EditMask = '000\.000\.000\-00;1;_'
         Font.Charset = ANSI_CHARSET
@@ -587,13 +565,12 @@
         ParentFont = False
         TabOrder = 3
         Text = '   .   .   -  '
-        OnChange = mkCPFChange
         OnExit = mkCPFExit
         OnKeyPress = mkCPFKeyPress
       end
       object Panel2: TPanel [27]
-        Left = 12
-        Top = 54
+        Left = 347
+        Top = 414
         Width = 161
         Height = 150
         BevelKind = bkFlat
@@ -616,8 +593,10 @@
         end
       end
       inherited pnBarra: TPanel
+        Width = 525
         Height = 39
         TabOrder = 11
+        ExplicitWidth = 525
         ExplicitHeight = 39
         inherited sbConsulta: TSpeedButton
           Height = 37
@@ -632,32 +611,89 @@
           ExplicitHeight = 37
         end
         inherited spLimpaCampos: TSpeedButton
+          Left = 475
           Height = 37
+          ExplicitLeft = 475
           ExplicitHeight = 37
         end
+      end
+      object Edit1: TEdit
+        Left = 135
+        Top = 445
+        Width = 165
+        Height = 22
+        Margins.Left = 0
+        Margins.Top = 0
+        Margins.Right = 0
+        Margins.Bottom = 0
+        BevelEdges = [beLeft, beTop]
+        BevelInner = bvNone
+        BevelOuter = bvNone
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 12
+      end
+      object Edit2: TEdit
+        Left = 134
+        Top = 470
+        Width = 166
+        Height = 22
+        BevelEdges = [beLeft, beTop]
+        BevelInner = bvNone
+        BevelOuter = bvNone
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+        PasswordChar = '*'
+        TabOrder = 13
+      end
+      object Edit3: TEdit
+        Left = 135
+        Top = 498
+        Width = 165
+        Height = 22
+        BevelEdges = [beLeft, beTop]
+        BevelInner = bvNone
+        BevelOuter = bvNone
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Courier New'
+        Font.Style = []
+        ParentFont = False
+        PasswordChar = '*'
+        TabOrder = 14
       end
     end
   end
   inherited pnUsuario: TPanel
-    Top = 482
-    Width = 515
-    ExplicitTop = 482
-    ExplicitWidth = 515
+    Top = 599
+    Width = 543
+    ExplicitTop = 604
+    ExplicitWidth = 543
   end
   object PopupMenu1: TPopupMenu
-    Left = 312
-    Top = 128
+    Left = 328
+    Top = 56
     object Insiraasuafoto1: TMenuItem
       Caption = 'Insira a sua foto '
       OnClick = Insiraasuafoto1Click
     end
   end
   object OpenPictureDialog1: TOpenPictureDialog
-    Left = 376
+    Left = 368
+    Top = 56
   end
   object PopupMenu2: TPopupMenu
-    Left = 424
-    Top = 142
+    Left = 416
+    Top = 54
     object qweqweqwewq1: TMenuItem
       Caption = 'qweqweqwewq'
     end

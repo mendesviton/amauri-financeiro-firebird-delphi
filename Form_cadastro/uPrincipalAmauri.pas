@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uInicioProcessos, Vcl.StdCtrls,
   Vcl.Menus, Vcl.ToolWin, Vcl.ComCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls,uCad_usuario,uCon_usuario,
-  uRel_usuarios,uUtilAmauri,uCad_formapgto,uCad_contas;
+  uRel_usuarios,uUtilAmauri,uCad_formapgto,uCad_contas,uLoginPage;
 
 type
   TfrAmauriPrincipal = class(TfrInicioProcessos)
@@ -23,6 +23,7 @@ type
     procedure Contas1Click(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure FormShortCut(var Msg: TWMKey; var Handled: Boolean);
+    procedure FormShow(Sender: TObject);
   private
 
 
@@ -62,6 +63,13 @@ begin
 //  if Msg.CharCode = VK_ESCAPE then
 //      if MessageDlg('Deseja realmente sair do sistema? ',mtConfirmation,[mbYes,mbNo],1) = mrYes then
 //         Application.Terminate;
+end;
+
+procedure TfrAmauriPrincipal.FormShow(Sender: TObject);
+begin
+  inherited;
+//  sleep(10);
+
 end;
 
 procedure TfrAmauriPrincipal.sadsadasd1Click(Sender: TObject);

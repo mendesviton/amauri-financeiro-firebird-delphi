@@ -25,13 +25,18 @@ uses
   uContasDAO in 'Classes_controler\Classes_DAO\uContasDAO.pas',
   uCad_contas in 'Form_cadastro\cadastros\uCad_contas.pas' {frCad_contas},
   uLog in 'util\uLog.pas',
-  uCad_padrao in 'Form_cadastro\cadastros\uCad_padrao.pas' {frCad_padrao};
+  uCad_padrao in 'Form_cadastro\cadastros\uCad_padrao.pas' {frCad_padrao},
+  uLoginPage in 'Form_geral\uLoginPage.pas' {Form1};
 
 {$R *.res}
 
 begin
+
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrAmauriPrincipal, frAmauriPrincipal);
+
+
+
   Application.Run;
 end.

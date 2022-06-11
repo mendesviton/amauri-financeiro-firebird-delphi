@@ -9,8 +9,6 @@ inherited frCad_formapgto: TfrCad_formapgto
   inherited pnFundo: TPanel
     Width = 444
     Height = 267
-    ExplicitLeft = 0
-    ExplicitTop = 0
     ExplicitWidth = 444
     ExplicitHeight = 267
     inherited pnComponentes: TPanel
@@ -54,9 +52,8 @@ inherited frCad_formapgto: TfrCad_formapgto
         Width = 290
         Height = 22
         BevelEdges = [beTop]
-        BevelInner = bvSpace
-        BevelKind = bkFlat
-        BevelOuter = bvRaised
+        BevelInner = bvNone
+        BevelOuter = bvNone
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -440,9 +437,8 @@ inherited frCad_formapgto: TfrCad_formapgto
         Width = 31
         Height = 22
         BevelEdges = [beTop]
-        BevelInner = bvSpace
-        BevelKind = bkFlat
-        BevelOuter = bvRaised
+        BevelInner = bvNone
+        BevelOuter = bvNone
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11

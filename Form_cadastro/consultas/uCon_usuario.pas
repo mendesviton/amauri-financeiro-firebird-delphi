@@ -127,6 +127,7 @@ begin
   DBGrid1.Columns[0].Width := 40;
 
   stl:=TStringList.Create;
+  stl.Add('asdas');
 
 
      DSPRO1.DataSet:= globalSQL.CommandText;

@@ -76,7 +76,7 @@ inherited frCad_contas: TfrCad_contas
         TabOrder = 0
       end
       object edCodigo: TEdit [4]
-        Left = 110
+        Left = 108
         Top = 57
         Width = 31
         Height = 22
@@ -85,9 +85,8 @@ inherited frCad_contas: TfrCad_contas
         Margins.Right = 0
         Margins.Bottom = 0
         BevelEdges = [beLeft, beTop]
-        BevelInner = bvSpace
-        BevelKind = bkTile
-        BevelOuter = bvRaised
+        BevelInner = bvNone
+        BevelOuter = bvNone
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -103,9 +102,8 @@ inherited frCad_contas: TfrCad_contas
         Width = 273
         Height = 22
         BevelEdges = [beLeft, beTop]
-        BevelInner = bvSpace
-        BevelKind = bkTile
-        BevelOuter = bvRaised
+        BevelInner = bvNone
+        BevelOuter = bvNone
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -120,9 +118,8 @@ inherited frCad_contas: TfrCad_contas
         Width = 273
         Height = 22
         BevelEdges = [beLeft, beTop]
-        BevelInner = bvSpace
-        BevelKind = bkTile
-        BevelOuter = bvRaised
+        BevelInner = bvNone
+        BevelOuter = bvNone
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11

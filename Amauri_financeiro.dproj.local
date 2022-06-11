@@ -34,6 +34,9 @@
     <File Path="Form_cadastro\uInicioProcessos.dfm"/>
     <File Path="Form_cadastro\uPrincipalAmauri.pas"/>
     <File Path="Form_cadastro\uPrincipalAmauri.dfm"/>
+    <File Path="Form_geral"/>
+    <File Path="Form_geral\uLoginPage.pas"/>
+    <File Path="Form_geral\uLoginPage.dfm"/>
     <File Path="model"/>
     <File Path="model\uConexaoBanco.pas"/>
     <File Path="model\uControleSQL.pas"/>
@@ -48,5 +51,8 @@
     <Transaction>2022/06/05 14:30:05.000.011,=D:\Dev\Amauri_financeiro DELPHI\Form_cadastro\cadastros\uCad_padrao.pas</Transaction>
     <Transaction>2022/06/05 21:23:11.000.334,=C:\Dev\Amauri_Financeiro\Unit1.pas</Transaction>
     <Transaction>2022/06/10 20:49:36.082,=C:\Dev\Amauri_Financeiro\Unit1.pas</Transaction>
+    <Transaction>2022/06/11 01:19:51.599,=C:\Dev\Amauri_Financeiro\Unit1.pas</Transaction>
+    <Transaction>2022/06/11 02:21:29.445,C:\Dev\Amauri_Financeiro\Form_geral\uLoginPage.dfm=C:\Dev\Amauri_Financeiro\Unit1.dfm</Transaction>
+    <Transaction>2022/06/11 02:21:29.445,C:\Dev\Amauri_Financeiro\Form_geral\uLoginPage.pas=C:\Dev\Amauri_Financeiro\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

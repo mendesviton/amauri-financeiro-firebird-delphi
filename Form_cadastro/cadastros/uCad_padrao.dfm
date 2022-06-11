@@ -3,8 +3,8 @@ object frCad_padrao: TfrCad_padrao
   Top = 0
   BorderStyle = bsNone
   Caption = 'frCad_padrao'
-  ClientHeight = 557
-  ClientWidth = 516
+  ClientHeight = 546
+  ClientWidth = 498
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,13 +24,18 @@ object frCad_padrao: TfrCad_padrao
   object pnFundo: TPanel
     Left = 0
     Top = 0
-    Width = 516
-    Height = 540
+    Width = 498
+    Height = 529
     Align = alClient
+    Color = 16776434
+    ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 9
+    ExplicitWidth = 516
+    ExplicitHeight = 540
     object pnComponentes: TPanel
-      Left = 8
-      Top = 9
+      Left = 0
+      Top = 0
       Width = 498
       Height = 520
       BevelInner = bvLowered
@@ -332,8 +337,8 @@ object frCad_padrao: TfrCad_padrao
   end
   object pnUsuario: TPanel
     Left = 0
-    Top = 540
-    Width = 516
+    Top = 529
+    Width = 498
     Height = 17
     Align = alBottom
     Color = clWhite
@@ -345,5 +350,7 @@ object frCad_padrao: TfrCad_padrao
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitTop = 540
+    ExplicitWidth = 516
   end
 end

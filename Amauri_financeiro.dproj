@@ -139,6 +139,10 @@
         <DCCReference Include="Form_cadastro\cadastros\uCad_padrao.pas">
             <Form>frCad_padrao</Form>
         </DCCReference>
+        <DCCReference Include="Form_geral\uLoginPage.pas">
+            <Form>Form1</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <RcItem Include="Amauri_financeiro_Icon2.ico">
             <ResourceType>ICON</ResourceType>
             <ResourceId>Icon_1</ResourceId>

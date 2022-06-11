@@ -9,7 +9,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, IniFiles,uConexaoBanco,uControleSQL,
   Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Menus, Vcl.ToolWin,
-  Vcl.ComCtrls;
+  Vcl.ComCtrls,uLoginPage;
 
 type
   TfrInicioProcessos = class(TForm)
@@ -22,10 +22,12 @@ type
     Dadoscadastrais1: TMenuItem;
     Usurios1: TMenuItem;
     Usurios2: TMenuItem;
+    tmVerificaAcesso: TTimer;
     procedure FormResize(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure asdasd1Click(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
+    procedure tmVerificaAcessoTimer(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     FSQL:TExecSQL;
   public
@@ -49,15 +51,22 @@ begin
 // showmessage('teste de herança')
 end;
 
-procedure TfrInicioProcessos.FormCreate(Sender: TObject);
+procedure TfrInicioProcessos.FormActivate(Sender: TObject);
 begin
-  ShowMessage('fodase?');
+  Image1.Width := Screen.Width;
+  Image1.Height := Screen.Height;
+  tform1.Create(self).ShowModal;
 end;
 
 procedure TfrInicioProcessos.FormResize(Sender: TObject);
 begin
   Image1.Width := Screen.Width;
   Image1.Height := Screen.Height
+end;
+
+procedure TfrInicioProcessos.tmVerificaAcessoTimer(Sender: TObject);
+begin
+//  ShowMessage('fuck');
 end;
 
 end.

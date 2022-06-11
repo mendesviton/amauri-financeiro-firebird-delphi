@@ -18,21 +18,12 @@ type
     OpenPictureDialog1: TOpenPictureDialog;
     PopupMenu2: TPopupMenu;
     qweqweqwewq1: TMenuItem;
-    lbCidadeCarteira: TLabel;
     lbCodigo: TLabel;
-    lbCodigoCarteira: TLabel;
     lbCPF: TLabel;
-    lbCPFCarteira: TLabel;
     lbEmail: TLabel;
-    lbEmailCarteira: TLabel;
-    lbEnderecoCarteira: TLabel;
     lbNome: TLabel;
-    lbNomeCarteira: TLabel;
-    lbUFCarteira: TLabel;
-    Bevel2: TBevel;
     lbLogradouro: TLabel;
     lbNumero: TLabel;
-    lbNomelogr: TLabel;
     lbCidade: TLabel;
     lbUF: TLabel;
     mkCPF: TMaskEdit;
@@ -47,16 +38,19 @@ type
     edRua: TEdit;
     edCidade: TEdit;
     ckSituação: TCheckBox;
-    procedure edNomeChange(Sender: TObject);
-    procedure edEmailChange(Sender: TObject);
-    procedure edNumeroChange(Sender: TObject);
+    Label4: TLabel;
+    Bevel1: TBevel;
+    Label5: TLabel;
+    Bevel3: TBevel;
+    Bevel2: TBevel;
+    Label6: TLabel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Label3: TLabel;
+    Edit3: TEdit;
     procedure cbLogradouroChange(Sender: TObject);
-    procedure edRuaChange(Sender: TObject);
-    procedure cbUFChange(Sender: TObject);
-    procedure cbCidadeChange(Sender: TObject);
-    procedure edCodigoChange(Sender: TObject);
-    procedure mkCPFChange(Sender: TObject);
-    procedure edCidadeChange(Sender: TObject);
     procedure Insiraasuafoto1Click(Sender: TObject);
     procedure edCodigoExit(Sender: TObject);
     procedure FormataAposCarregar;
@@ -96,23 +90,11 @@ implementation
 
 {$R *.dfm}
 
-procedure TfrCad_usuario.cbCidadeChange(Sender: TObject);
-begin
-  inherited;
-  TUtil.cfDigitaTempoRealEditLabel(edCidade,lbCidadeCarteira,'Cidade: ');
-end;
-
 procedure TfrCad_usuario.cbLogradouroChange(Sender: TObject);
 begin
   inherited;
-  TUtil.cfDigitaTempoRealEditLabel(cbLogradouro,lbEnderecoCarteira,'Endereço: ');
-//  lbNomelogr.Caption := cbLogradouro.Text;
-end;
 
-procedure TfrCad_usuario.cbUFChange(Sender: TObject);
-begin
-  inherited;
-  TUtil.cfDigitaTempoRealEditLabel(cbUF,lbUFCarteira,'Estado: ');
+//  lbNomelogr.Caption := cbLogradouro.Text;
 end;
 
 procedure TfrCad_usuario.ckSituaçãoClick(Sender: TObject);
@@ -125,24 +107,12 @@ begin
 
 end;
 
-procedure TfrCad_usuario.edCidadeChange(Sender: TObject);
-begin
-  inherited;
-  TUtil.cfDigitaTempoRealEditLabel(edCidade,lbCidadeCarteira,'Cidade: ');
-end;
-
 procedure TfrCad_usuario.edCidadeExit(Sender: TObject);
 begin
   inherited;
   if not FSubiu then
      if FValida.pValidaCidade then
         pGravarRegistro;
-end;
-
-procedure TfrCad_usuario.edCodigoChange(Sender: TObject);
-begin
-  inherited;
-  TUtil.cfDigitaTempoRealEditLabel(edCodigo,lbCodigoCarteira,'Código: ');
 end;
 
 procedure TfrCad_usuario.edCodigoExit(Sender: TObject);
@@ -153,23 +123,11 @@ begin
 
 end;
 
-procedure TfrCad_usuario.edEmailChange(Sender: TObject);
-begin
-  inherited;
-   TUtil.cfDigitaTempoRealEditLabel(edEmail,lbEmailCarteira,'Email: ');
-end;
-
 procedure TfrCad_usuario.edEmailExit(Sender: TObject);
 begin
   inherited;
   if not (FSubiu) then
      FValida.pValidaEmail
-end;
-
-procedure TfrCad_usuario.edNomeChange(Sender: TObject);
-begin
-  inherited;
-  TUtil.cfDigitaTempoRealEditLabel(edNome,lbNomeCarteira,'Nome: ');
 end;
 
 procedure TfrCad_usuario.edNomeExit(Sender: TObject);
@@ -179,23 +137,11 @@ begin
      FValida.pValidaNome;
 end;
 
-procedure TfrCad_usuario.edNumeroChange(Sender: TObject);
-begin
-  inherited;
-   TUtil.cfDigitaTempoRealEditLabel(edNumero,lbEnderecoCarteira,'Endereço: '+ cbLogradouro.Text +' '+ edRua.Text + ' ');
-end;
-
 procedure TfrCad_usuario.edNumeroExit(Sender: TObject);
 begin
   inherited;
   if not FSubiu then
      FValida.pValidaNumero;
-end;
-
-procedure TfrCad_usuario.edRuaChange(Sender: TObject);
-begin
-  inherited;
-  TUtil.cfDigitaTempoRealEditLabel(edRua,lbEnderecoCarteira,'Endereço: '+ cbLogradouro.Text + ' ');
 end;
 
 procedure TfrCad_usuario.edRuaExit(Sender: TObject);
@@ -232,12 +178,6 @@ begin
 
      end;
 
-end;
-
-procedure TfrCad_usuario.mkCPFChange(Sender: TObject);
-begin
-  inherited;
-  TUtil.cfDigitaTempoRealEditLabel(mkCPF,lbCPFCarteira,'CPF: ');
 end;
 
 procedure TfrCad_usuario.mkCPFExit(Sender: TObject);
@@ -363,13 +303,13 @@ inherited;
   FValida.cbLogr           :=cbLogradouro;
   FValida.cbuf             :=cbUF;
   FValida.mkCPF            :=mkCPF;
-  FValida.lbCodigoCarteira := lbCodigoCarteira;
+  {Valida.lbCodigoCarteira := lbCodigoCarteira;
   FValida.lbNomeCarteira   := lbNomeCarteira;
   FValida.lbEmail          := lbEmailCarteira;
   FValida.lbCPF            := lbCPFCarteira;
   FValida.lbEndereço       := lbEnderecoCarteira;
   FValida.lbCidade         := lbCidadeCarteira;
-  FValida.lbEstado         := lbUFCarteira;
+  FValida.lbEstado         := lbUFCarteira;}
   FValida.pnEdicao         := pnUsuario;
   FValida.ImageFoto        := Image1;
   FValida.ckSituacao       := ckSituação;
@@ -377,8 +317,6 @@ inherited;
   { vitor - algumas configurações de tela coloquei aqui porque o padrão executa esse método no  oncreate}
   cbLogradouro.ItemIndex := 0;
   pCarregaComboUF;
-  TUtil.cfDigitaTempoRealEditLabel(cbLogradouro,lbEnderecoCarteira,'Endereço: ');
-  TUtil.cfDigitaTempoRealEditLabel(cbUF,lbUFCarteira,'Estado: ');
 
 
 end;
