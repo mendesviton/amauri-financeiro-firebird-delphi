@@ -1,7 +1,6 @@
 inherited frAmauriPrincipal: TfrAmauriPrincipal
   ClientHeight = 823
   ClientWidth = 1346
-  Color = 4670529
   OnKeyPress = FormKeyPress
   OnShortCut = FormShortCut
   OnShow = FormShow
@@ -1200,7 +1199,7 @@ inherited frAmauriPrincipal: TfrAmauriPrincipal
     end
   end
   inherited tmVerificaAcesso: TTimer
-    Left = 112
-    Top = 40
+    Left = 40
+    Top = 112
   end
 end

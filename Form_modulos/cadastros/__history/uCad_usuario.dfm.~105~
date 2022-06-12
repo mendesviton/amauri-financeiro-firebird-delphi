@@ -1,18 +1,18 @@
 inherited frCad_usuario: TfrCad_usuario
   Top = 77
   Caption = 'Cadastro de usu'#225'rios'
-  ClientHeight = 446
-  ClientWidth = 529
-  Color = 4670529
+  ClientHeight = 448
+  ClientWidth = 531
+  Color = 14737632
   Position = poDesigned
-  ExplicitWidth = 545
-  ExplicitHeight = 485
+  ExplicitWidth = 547
+  ExplicitHeight = 487
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnFundo: TPanel
-    Width = 529
-    Height = 429
-    Color = 4670529
+    Width = 531
+    Height = 431
+    Color = clWhite
     ExplicitTop = 0
     ExplicitWidth = 531
     ExplicitHeight = 431
@@ -648,8 +648,8 @@ inherited frCad_usuario: TfrCad_usuario
     end
   end
   inherited pnUsuario: TPanel
-    Top = 429
-    Width = 529
+    Top = 431
+    Width = 531
     ExplicitTop = 431
     ExplicitWidth = 531
   end
@@ -662,6 +662,14 @@ inherited frCad_usuario: TfrCad_usuario
     end
   end
   object OpenPictureDialog1: TOpenPictureDialog
+    Filter = 
+      'All (*.gif;*.png;*.jpg;*.jpeg;*.bmp;*.tif;*.tiff;*.ico;*.emf;*.w' +
+      'mf)|*.gif;*.png;*.jpg;*.jpeg;*.bmp;*.tif;*.tiff;*.ico;*.emf;*.wm' +
+      'f|GIF Image (*.gif)|*.gif|Portable Network Graphics (*.png)|*.pn' +
+      'g|JPEG Image File (*.jpg)|*.jpg|JPEG Image File (*.jpeg)|*.jpeg|' +
+      'Bitmaps (*.bmp)|*.bmp|TIFF Images (*.tif)|*.tif|TIFF Images (*.t' +
+      'iff)|*.tiff|Icons (*.ico)|*.ico|Enhanced Metafiles (*.emf)|*.emf' +
+      '|Metafiles (*.wmf)|*.wmf'
     Left = 256
     Top = 208
   end

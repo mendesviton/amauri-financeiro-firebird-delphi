@@ -2,8 +2,8 @@ object frLogin: TfrLogin
   Left = 0
   Top = 0
   Caption = 'Login'
-  ClientHeight = 155
-  ClientWidth = 320
+  ClientHeight = 158
+  ClientWidth = 300
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,14 +22,11 @@ object frLogin: TfrLogin
   object Panel1: TPanel
     Left = 0
     Top = 39
-    Width = 320
-    Height = 116
+    Width = 300
+    Height = 119
     Align = alClient
-    Color = clSilver
-    ParentBackground = False
+    BevelKind = bkFlat
     TabOrder = 0
-    ExplicitWidth = 300
-    ExplicitHeight = 119
     object lbLogin: TLabel
       Left = 53
       Top = 37
@@ -98,15 +95,14 @@ object frLogin: TfrLogin
   object pnBarra: TPanel
     Left = 0
     Top = 0
-    Width = 320
+    Width = 300
     Height = 39
     Align = alTop
     Color = clWhite
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 300
     object sbLogar: TSpeedButton
-      Left = 270
+      Left = 250
       Top = 1
       Width = 49
       Height = 37
