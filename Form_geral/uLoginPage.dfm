@@ -1,4 +1,4 @@
-object Form1: TForm1
+object frLogin: TfrLogin
   Left = 0
   Top = 0
   Caption = 'Login'
@@ -15,6 +15,7 @@ object Form1: TForm1
   Position = poScreenCenter
   OnCanResize = FormCanResize
   OnClose = FormClose
+  OnCreate = FormCreate
   OnKeyDown = FormKeyDown
   PixelsPerInch = 96
   TextHeight = 13
@@ -26,9 +27,7 @@ object Form1: TForm1
     Align = alClient
     BevelKind = bkFlat
     TabOrder = 0
-    ExplicitTop = 44
-    ExplicitHeight = 113
-    object lbCodigo: TLabel
+    object lbLogin: TLabel
       Left = 53
       Top = 37
       Width = 42
@@ -41,7 +40,7 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
     end
-    object lbNome: TLabel
+    object lbSenha: TLabel
       Left = 53
       Top = 62
       Width = 42
@@ -54,7 +53,7 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
     end
-    object edCodigo: TEdit
+    object edLogin: TEdit
       Left = 97
       Top = 34
       Width = 141
@@ -74,7 +73,7 @@ object Form1: TForm1
       ParentFont = False
       TabOrder = 0
     end
-    object edNome: TEdit
+    object edSenha: TEdit
       Left = 97
       Top = 59
       Width = 141
@@ -90,6 +89,7 @@ object Form1: TForm1
       ParentFont = False
       PasswordChar = '*'
       TabOrder = 1
+      OnExit = edSenhaExit
     end
   end
   object pnBarra: TPanel
@@ -101,10 +101,7 @@ object Form1: TForm1
     Color = clWhite
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 1
-    ExplicitTop = 1
-    ExplicitWidth = 294
-    object sbGravarRegistro: TSpeedButton
+    object sbLogar: TSpeedButton
       Left = 250
       Top = 1
       Width = 49
@@ -171,7 +168,7 @@ object Form1: TForm1
         D3A7D2E8DCF0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0}
       ParentShowHint = False
       ShowHint = True
-      OnClick = sbGravarRegistroClick
+      OnClick = sbLogarClick
       ExplicitLeft = 251
       ExplicitTop = -4
     end

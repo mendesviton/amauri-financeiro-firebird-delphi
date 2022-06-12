@@ -28,10 +28,12 @@ const
   {MENSAGENS DE ERRO}
   C_MSG_SQL_EXCEPTION = 'Houve uma exceção ao executar o comando sql mensagem de erro: ';
 
-  {TIPO-AÇÃO LOG}
+  {LOG}
   C_INSERCAO = '1';
   C_EDICAO   = '2';
   C_EXCLUSAO = '3';
+  C_PROCESSO = '4';
+  C_NENHUM_USUARIO = '0';
 
   {MENSAGENS}
   C_ERRO_EXCLUSAO    = 'Não foi possível realizar a exclusão';
@@ -40,15 +42,19 @@ const
   C_SUCESSO_EDICAO   = 'Edição realizada com sucesso';
 
   {NOME FORMS}
-    //contas
+    //Contas
   C_FRCAD_CONTAS      = 'frCad_contas';
-    //forma de pagamento
+
+    //Forma de pagamento
   C_FRCAD_FORMAPGTO   = 'frCad_formapgto';
-    //usuário
+
+    //Usuário
   C_FRCAD_USUARIO     = 'frCad_usuario';
   C_FRCON_USUARIO     = 'frCon_usuario';
   C_FRREL_USUARIO     = 'frRel_usuario';
 
+   //Login
+  C_FRLOGIN = 'frLogin';
 implementation
 
 end.

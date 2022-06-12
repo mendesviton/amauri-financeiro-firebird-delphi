@@ -6,6 +6,7 @@
     <File Path="Classes_controler\Classes_Controler\uContas_controler.pas"/>
     <File Path="Classes_controler\Classes_Controler\uFormapgto_controler.pas"/>
     <File Path="Classes_controler\Classes_Controler\uUsuario_controler.pas"/>
+    <File Path="Classes_controler\Classes_Controler\uLogin_controler.pas"/>
     <File Path="Classes_controler\Classes_DAO"/>
     <File Path="Classes_controler\Classes_DAO\uContasDAO.pas"/>
     <File Path="Classes_controler\Classes_DAO\uFormapgto_DAO.pas"/>
@@ -54,8 +55,8 @@
     <Transaction>2022/06/05 21:23:11.000.334,=C:\Dev\Amauri_Financeiro\Unit1.pas</Transaction>
     <Transaction>2022/06/10 20:49:36.000.082,=C:\Dev\Amauri_Financeiro\Unit1.pas</Transaction>
     <Transaction>2022/06/11 01:19:51.000.599,=C:\Dev\Amauri_Financeiro\Unit1.pas</Transaction>
-    <Transaction>2022/06/11 02:21:29.000.445,C:\Dev\Amauri_Financeiro\Unit1.dfm=C:\Dev\Amauri_Financeiro\Form_geral\uLoginPage.dfm</Transaction>
     <Transaction>2022/06/11 02:21:29.000.445,C:\Dev\Amauri_Financeiro\Unit1.pas=C:\Dev\Amauri_Financeiro\Form_geral\uLoginPage.pas</Transaction>
+    <Transaction>2022/06/11 02:21:29.000.445,C:\Dev\Amauri_Financeiro\Unit1.dfm=C:\Dev\Amauri_Financeiro\Form_geral\uLoginPage.dfm</Transaction>
     <Transaction>2022/06/11 16:09:02.501,=C:\Dev\Amauri_Financeiro\Amauri_financeiro_Icon8.ico</Transaction>
     <Transaction>2022/06/11 16:09:02.533,=C:\Dev\Amauri_Financeiro\Amauri_financeiro_Icon9.ico</Transaction>
     <Transaction>2022/06/11 17:28:25.960,C:\Dev\Amauri_Financeiro\Form_cadastro\uPrincipalAmauri.pas=</Transaction>
@@ -72,5 +73,7 @@
     <Transaction>2022/06/11 17:33:42.153,=C:\Dev\Amauri_Financeiro\Form_modulos\consultas\uCon_usuario.pas</Transaction>
     <Transaction>2022/06/11 17:33:53.162,=C:\Dev\Amauri_Financeiro\Form_modulos\relatorio\uRel_Padrao.pas</Transaction>
     <Transaction>2022/06/11 17:33:53.302,=C:\Dev\Amauri_Financeiro\Form_modulos\relatorio\uRel_usuarios.pas</Transaction>
+    <Transaction>2022/06/11 18:20:27.234,=C:\Dev\Amauri_Financeiro\Unit1.pas</Transaction>
+    <Transaction>2022/06/11 19:47:08.962,C:\Dev\Amauri_Financeiro\Classes_controler\Classes_Controler\uLogin_controler.pas=C:\Dev\Amauri_Financeiro\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

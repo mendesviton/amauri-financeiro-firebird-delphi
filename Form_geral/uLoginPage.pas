@@ -4,76 +4,122 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,uLogin_controler;
 
 type
-  TForm1 = class(TForm)
+  TfrLogin = class(TForm)
     Panel1: TPanel;
     pnBarra: TPanel;
-    sbGravarRegistro: TSpeedButton;
-    lbCodigo: TLabel;
-    lbNome: TLabel;
-    edCodigo: TEdit;
-    edNome: TEdit;
+    sbLogar: TSpeedButton;
+    lbLogin: TLabel;
+    lbSenha: TLabel;
+    edLogin: TEdit;
+    edSenha: TEdit;
     procedure Button1Click(Sender: TObject);
-    procedure sbGravarRegistroClick(Sender: TObject);
+    procedure sbLogarClick(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer;
       var Resize: Boolean);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+    procedure edSenhaExit(Sender: TObject);
   private
+
+    FLoginControler:TControleLogin;
     FAutenticado:boolean;
     FLoginValidado: boolean;
-    function GetTrue: boolean;
+    procedure Logar;
+    procedure pSetLoginSenha;
+    procedure pCriaObj;
+    procedure pDestroiObj;
     procedure SetLoginValidado(const Value: boolean);
   public
     property LoginValidado:boolean read FLoginValidado write SetLoginValidado;
   end;
 
 var
-  Form1: TForm1;
+  frLogin: TfrLogin;
 
 implementation
+ uses
+ uControleSQL,uUtilAmauri;
 
 {$R *.dfm}
 
 { TForm1 }
 
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TfrLogin.Button1Click(Sender: TObject);
 begin
   FAutenticado:=true;
 end;
 
-procedure TForm1.FormCanResize(Sender: TObject; var NewWidth,
+procedure TfrLogin.edSenhaExit(Sender: TObject);
+begin
+  Logar;
+end;
+
+procedure TfrLogin.FormCanResize(Sender: TObject; var NewWidth,
   NewHeight: Integer; var Resize: Boolean);
 begin
   resize:=false;
 end;
 
-procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TfrLogin.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
+     //ta jaguara isso aqui
+  pDestroiObj;
   if not LoginValidado then
      Application.Terminate;
 end;
 
-procedure TForm1.FormKeyDown(Sender: TObject; var Key: Word;
+procedure TfrLogin.FormCreate(Sender: TObject);
+begin
+  pCriaObj;
+end;
+
+procedure TfrLogin.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   if key = VK_ESCAPE then
      Application.Terminate;
 end;
 
-function TForm1.GetTrue: boolean;
+procedure TfrLogin.Logar;
 begin
-//
+ pSetLoginSenha;
+  if FLoginControler.pValidaLogin then
+     begin
+       LoginValidado:=true;
+       ShowMessage('Voce logou no sistema');
+       self.Close;
+     end;
+
 end;
 
-procedure TForm1.sbGravarRegistroClick(Sender: TObject);
+procedure TfrLogin.pCriaObj;
 begin
-  LoginValidado:=true;
+  if not Assigned(FLoginControler) then
+         FLoginControler:=TControleLogin.Create(self);
 end;
 
-procedure TForm1.SetLoginValidado(const Value: boolean);
+procedure TfrLogin.pDestroiObj;
+begin
+    if Assigned(FLoginControler) then
+       FreeAndNil(FLoginControler);
+end;
+
+procedure TfrLogin.pSetLoginSenha;
+begin
+  FLoginControler.LoginUsuario:=trim(edLogin.Text);
+  FLoginControler.SenhaUsuario:=trim(edSenha.Text);
+end;
+
+procedure TfrLogin.sbLogarClick(Sender: TObject);
+begin
+ Logar;
+end;
+
+procedure TfrLogin.SetLoginValidado(const Value: boolean);
 begin
   FLoginValidado := Value;
 end;

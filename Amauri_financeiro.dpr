@@ -16,7 +16,7 @@ uses
   uContas_controler in 'Classes_controler\Classes_Controler\uContas_controler.pas',
   uContasDAO in 'Classes_controler\Classes_DAO\uContasDAO.pas',
   uLog in 'util\uLog.pas',
-  uLoginPage in 'Form_geral\uLoginPage.pas' {Form1},
+  uLoginPage in 'Form_geral\uLoginPage.pas' {frLogin},
   uInicioProcessos in 'Form_geral\uInicioProcessos.pas' {frInicioProcessos},
   uPrincipalAmauri in 'Form_geral\uPrincipalAmauri.pas' {frAmauriPrincipal},
   uCad_padrao in 'Form_modulos\cadastros\uCad_padrao.pas' {frCad_padrao},
@@ -26,7 +26,8 @@ uses
   uCon_padrao in 'Form_modulos\consultas\uCon_padrao.pas' {frCon_padrao},
   uCon_usuario in 'Form_modulos\consultas\uCon_usuario.pas' {frCon_usuario},
   uRel_Padrao in 'Form_modulos\relatorio\uRel_Padrao.pas' {fr_RelPadrao1},
-  uRel_usuarios in 'Form_modulos\relatorio\uRel_usuarios.pas' {frRel_usuario};
+  uRel_usuarios in 'Form_modulos\relatorio\uRel_usuarios.pas' {frRel_usuario},
+  uLogin_controler in 'Classes_controler\Classes_Controler\uLogin_controler.pas';
 
 {$R *.res}
 

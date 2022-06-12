@@ -24,6 +24,7 @@ inherited frCad_usuario: TfrCad_usuario
       inherited pnBarra: TPanel
         Width = 525
         Height = 39
+        TabOrder = 1
         ExplicitWidth = 525
         ExplicitHeight = 39
         inherited sbConsulta: TSpeedButton
@@ -57,10 +58,10 @@ inherited frCad_usuario: TfrCad_usuario
         Font.Name = 'Courier New'
         Font.Style = []
         ParentFont = False
-        TabOrder = 1
+        TabOrder = 2
         object Label1: TLabel
-          Left = 267
-          Top = 74
+          Left = 314
+          Top = 30
           Width = 35
           Height = 14
           Caption = 'Login'
@@ -72,8 +73,8 @@ inherited frCad_usuario: TfrCad_usuario
           ParentFont = False
         end
         object Label2: TLabel
-          Left = 267
-          Top = 99
+          Left = 314
+          Top = 73
           Width = 35
           Height = 14
           Caption = 'Senha'
@@ -85,8 +86,8 @@ inherited frCad_usuario: TfrCad_usuario
           ParentFont = False
         end
         object Label3: TLabel
-          Left = 197
-          Top = 125
+          Left = 282
+          Top = 119
           Width = 105
           Height = 14
           Caption = 'Confirmar Senha'
@@ -112,7 +113,7 @@ inherited frCad_usuario: TfrCad_usuario
           Font.Style = []
           ParentBackground = False
           ParentFont = False
-          TabOrder = 0
+          TabOrder = 3
           object Image1: TImage
             Left = -2
             Top = -3
@@ -122,9 +123,9 @@ inherited frCad_usuario: TfrCad_usuario
           end
         end
         object Edit1: TEdit
-          Left = 308
-          Top = 122
-          Width = 165
+          Left = 211
+          Top = 137
+          Width = 254
           Height = 22
           Hint = 'Confirmar senha '
           Margins.Left = 0
@@ -142,12 +143,12 @@ inherited frCad_usuario: TfrCad_usuario
           ParentFont = False
           ParentShowHint = False
           ShowHint = True
-          TabOrder = 1
+          TabOrder = 2
         end
         object Edit2: TEdit
-          Left = 308
-          Top = 71
-          Width = 166
+          Left = 211
+          Top = 46
+          Width = 254
           Height = 22
           Hint = 'Login de acesso ao sistema'
           BevelEdges = [beLeft, beTop]
@@ -162,12 +163,12 @@ inherited frCad_usuario: TfrCad_usuario
           ParentShowHint = False
           PasswordChar = '*'
           ShowHint = True
-          TabOrder = 2
+          TabOrder = 0
         end
         object Edit3: TEdit
-          Left = 308
-          Top = 96
-          Width = 165
+          Left = 211
+          Top = 92
+          Width = 254
           Height = 22
           Hint = 'Senha de acesso ao sistema'
           BevelEdges = [beLeft, beTop]
@@ -182,7 +183,7 @@ inherited frCad_usuario: TfrCad_usuario
           ParentShowHint = False
           PasswordChar = '*'
           ShowHint = True
-          TabOrder = 3
+          TabOrder = 1
         end
       end
       object GroupBox2: TGroupBox
@@ -197,9 +198,9 @@ inherited frCad_usuario: TfrCad_usuario
         Font.Name = 'Courier New'
         Font.Style = []
         ParentFont = False
-        TabOrder = 2
+        TabOrder = 0
         object Label4: TLabel
-          Left = 139
+          Left = 258
           Top = 116
           Width = 49
           Height = 14
@@ -264,7 +265,7 @@ inherited frCad_usuario: TfrCad_usuario
           ParentFont = False
         end
         object Label9: TLabel
-          Left = 122
+          Left = 127
           Top = 41
           Width = 35
           Height = 14
@@ -277,8 +278,8 @@ inherited frCad_usuario: TfrCad_usuario
           ParentFont = False
         end
         object Label10: TLabel
-          Left = 37
-          Top = 116
+          Left = 396
+          Top = 91
           Width = 49
           Height = 14
           Caption = 'Numero:'
@@ -290,7 +291,7 @@ inherited frCad_usuario: TfrCad_usuario
           ParentFont = False
         end
         object Label11: TLabel
-          Left = 321
+          Left = 66
           Top = 116
           Width = 21
           Height = 14
@@ -314,7 +315,7 @@ inherited frCad_usuario: TfrCad_usuario
           Font.Name = 'Courier New'
           Font.Style = []
           ParentFont = False
-          TabOrder = 0
+          TabOrder = 4
           OnChange = cbLogradouroChange
           Items.Strings = (
             'Rua'
@@ -489,9 +490,9 @@ inherited frCad_usuario: TfrCad_usuario
             'Zague')
         end
         object cbUF: TComboBox
-          Left = 347
+          Left = 86
           Top = 113
-          Width = 138
+          Width = 163
           Height = 22
           Style = csDropDownList
           Font.Charset = ANSI_CHARSET
@@ -500,10 +501,10 @@ inherited frCad_usuario: TfrCad_usuario
           Font.Name = 'Courier New'
           Font.Style = []
           ParentFont = False
-          TabOrder = 1
+          TabOrder = 8
         end
         object ckSituacao: TCheckBox
-          Left = 339
+          Left = 364
           Top = 15
           Width = 121
           Height = 17
@@ -516,13 +517,13 @@ inherited frCad_usuario: TfrCad_usuario
           Font.Style = []
           ParentFont = False
           State = cbChecked
-          TabOrder = 2
+          TabOrder = 9
           OnClick = ckSituacaoClick
         end
         object edCidade: TEdit
-          Left = 193
+          Left = 308
           Top = 113
-          Width = 121
+          Width = 177
           Height = 22
           BevelEdges = [beTop]
           BevelInner = bvNone
@@ -533,11 +534,11 @@ inherited frCad_usuario: TfrCad_usuario
           Font.Name = 'Courier New'
           Font.Style = []
           ParentFont = False
-          TabOrder = 3
+          TabOrder = 7
           OnExit = edCidadeExit
         end
         object edCodigo: TEdit
-          Left = 85
+          Left = 86
           Top = 38
           Width = 30
           Height = 22
@@ -550,7 +551,7 @@ inherited frCad_usuario: TfrCad_usuario
           Font.Name = 'Courier New'
           Font.Style = []
           ParentFont = False
-          TabOrder = 4
+          TabOrder = 0
           OnExit = edCodigoExit
         end
         object edEmail: TEdit
@@ -567,7 +568,7 @@ inherited frCad_usuario: TfrCad_usuario
           Font.Name = 'Courier New'
           Font.Style = []
           ParentFont = False
-          TabOrder = 5
+          TabOrder = 2
           OnExit = edEmailExit
         end
         object edNome: TEdit
@@ -584,12 +585,12 @@ inherited frCad_usuario: TfrCad_usuario
           Font.Name = 'Courier New'
           Font.Style = []
           ParentFont = False
-          TabOrder = 6
+          TabOrder = 1
           OnExit = edNomeExit
         end
         object edNumero: TEdit
-          Left = 86
-          Top = 113
+          Left = 445
+          Top = 88
           Width = 40
           Height = 22
           BevelEdges = [beTop]
@@ -601,13 +602,13 @@ inherited frCad_usuario: TfrCad_usuario
           Font.Name = 'Courier New'
           Font.Style = []
           ParentFont = False
-          TabOrder = 7
+          TabOrder = 6
           OnExit = edNumeroExit
         end
         object edRua: TEdit
-          Left = 193
+          Left = 191
           Top = 88
-          Width = 292
+          Width = 202
           Height = 22
           BevelEdges = [beTop]
           BevelInner = bvNone
@@ -618,7 +619,7 @@ inherited frCad_usuario: TfrCad_usuario
           Font.Name = 'Courier New'
           Font.Style = []
           ParentFont = False
-          TabOrder = 8
+          TabOrder = 5
           OnExit = edRuaExit
         end
         object mkCPF: TMaskEdit
@@ -638,7 +639,7 @@ inherited frCad_usuario: TfrCad_usuario
           Font.Style = []
           MaxLength = 14
           ParentFont = False
-          TabOrder = 9
+          TabOrder = 3
           Text = '   .   .   -  '
           OnExit = mkCPFExit
           OnKeyPress = mkCPFKeyPress
@@ -653,8 +654,8 @@ inherited frCad_usuario: TfrCad_usuario
     ExplicitWidth = 531
   end
   object PopupMenu1: TPopupMenu
-    Left = 336
-    Top = 232
+    Left = 208
+    Top = 208
     object Insiraasuafoto1: TMenuItem
       Caption = 'Insira a sua foto '
       OnClick = Insiraasuafoto1Click
@@ -669,12 +670,12 @@ inherited frCad_usuario: TfrCad_usuario
       'Bitmaps (*.bmp)|*.bmp|TIFF Images (*.tif)|*.tif|TIFF Images (*.t' +
       'iff)|*.tiff|Icons (*.ico)|*.ico|Enhanced Metafiles (*.emf)|*.emf' +
       '|Metafiles (*.wmf)|*.wmf'
-    Left = 384
-    Top = 232
+    Left = 256
+    Top = 208
   end
   object PopupMenu2: TPopupMenu
-    Left = 432
-    Top = 230
+    Left = 296
+    Top = 206
     object qweqweqwewq1: TMenuItem
       Caption = 'qweqweqwewq'
     end

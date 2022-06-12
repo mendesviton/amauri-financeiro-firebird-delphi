@@ -55,7 +55,7 @@ procedure TfrInicioProcessos.FormActivate(Sender: TObject);
 begin
   Image1.Width := Screen.Width;
   Image1.Height := Screen.Height;
-  tform1.Create(self).ShowModal;
+  TfrLogin.Create(self).ShowModal;
 end;
 
 procedure TfrInicioProcessos.FormResize(Sender: TObject);

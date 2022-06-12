@@ -41,7 +41,11 @@ begin
   pCriaObj;
      {executa a stored procedure que monta o sql de insert da tabela de tlog}
      SQLGlobal.CommandText.SQL.Clear;
-     wSQL:='EXECUTE PROCEDURE '+C_SP_INSERIR_LOG+'('+prCodUsu+','+prCodTela+','+prTipoAcao+','+QuotedStr(prDescricao)+','+QuotedStr(DataAtual)+')';
+     if not (prCodUsu = EmptyStr) then
+     wSQL:='EXECUTE PROCEDURE '+C_SP_INSERIR_LOG+'('+prCodUsu+','+prCodTela+','+prTipoAcao+','+QuotedStr(prDescricao)+','+QuotedStr(DataAtual)+')'
+     else
+     wSQL:='EXECUTE PROCEDURE '+C_SP_INSERIR_LOG+'('+C_NENHUM_USUARIO+','+prCodTela+','+prTipoAcao+','+QuotedStr(prDescricao)+','+QuotedStr(DataAtual)+')';
+
      SQLGlobal.CommandText.CommandText:=wSQL;
      SQLGlobal.CommandText.ExecSQL;
 end;

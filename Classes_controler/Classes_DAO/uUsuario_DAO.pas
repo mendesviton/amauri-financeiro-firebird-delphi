@@ -15,10 +15,8 @@ type
     private
       SQLGlobal:TExecSQL;
       LogControl:TLOG;
-      procedure pCriaObj;
-      procedure pDestroiObj;
     public
-      constructor Create;
+      constructor Create;virtual;
       class function pSelectAllConsulta(prCodUsu:String = ''):string;
       procedure  pExcluiUsuario(BDCODUSU:string);
       procedure  pInsereUsuario(BDCODUSU,BDNOME,BDCPF,BDLOGR,BDRUA,BDNUMERO,BDCIDADE,BDEMAIL,BDUF:String;BDFOTOUSER:TFileStream;BDSITUACAO:boolean);
@@ -35,10 +33,23 @@ type
       function   getFotoUsuario(BDCODUSU:string):TJPEGImage;
       function   getSituacaoUsuario(BDCODUSU:string):boolean;
       destructor Destroy; override;
+    protected
+      procedure pCriaObj;virtual;
+      procedure pDestroiObj;virtual;
+    end;
+type
+  TUsuarioLoginDAO = class(TUsuarioDAO)
+    public
+      constructor Create;override;
+      function  VerificaLogin(prLogin,prSenha:string):boolean;
+    protected
+      procedure pCriaObj;override;
+      procedure pDestroiObj;override;
+    end;
 
 
 
-  end;
+
 
 implementation
 
@@ -236,8 +247,7 @@ begin
          SQLGlobal:=TExecSQL.Create;
 
   if not Assigned(LogControl) then
-     LogControl:=TLOG.Create;
-
+         LogControl:=TLOG.Create;
 end;
 
 procedure TUsuarioDAO.pDestroiObj;
@@ -335,6 +345,68 @@ begin
  if not (prCodUsu = EmptyStr) then
     wSQL := wSQL + ' where vw.bdcodusu ='+ Trim(prCodUsu);
  result:=wSQL;
+end;
+
+{
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ | #2 class                   TControleUsuario  extends TUsuarioDAO                                           |
+ |                                                                                                    |
+ |            this class has the function of communicating with access to loginuser data,                  |
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+}
+
+constructor TUsuarioLoginDAO.Create;
+begin
+  inherited;
+
+end;
+
+procedure TUsuarioLoginDAO.pCriaObj;
+begin
+  inherited;
+//  if not Assigned(SQLGlobal) then
+//         SQLGlobal:=TExecSQL.Create;
+//
+//  if not Assigned(LogControl) then
+//         LogControl:=TLOG.Create;
+end;
+
+procedure TUsuarioLoginDAO.pDestroiObj;
+begin
+  inherited;
+//   if Assigned(LogControl) then
+//      FreeAndNil(LogControl);
+//
+//   if Assigned(SQLGlobal) then
+//      FreeAndNil(SQLGlobal);
+end;
+
+function TUsuarioLoginDAO.VerificaLogin(prLogin,prSenha:string): boolean;
+var
+  wSQL:String;
+begin
+  wSQL := EmptyStr;
+     result:=true;
+
+       wSQL := 'SELECT * FROM TSIS_LOGIN WHERE UPPER(BDLOGINUSU) = ' + QuotedStr(UpperCase(prLogin));
+       SQLGlobal.CommandText.SQL.Clear;
+       SQLGlobal.CommandText.SQL.Add(wSQL);
+       SQLGlobal.CommandText.Open;
+
+       if SQLGlobal.CommandText.IsEmpty then
+           begin
+             ShowMessage('Login incorreto, tente novamente');
+             result := false; // não existe login ou foi digitado errado
+             exit
+           end;
+
+       if not ((UpperCase(SQLGlobal.CommandText.FieldByName('BDSENHAUSU').AsString)) = (UpperCase(prSenha))) then
+           begin
+             ShowMessage('Senha incorreta,tente novamente');
+             result := false; // senha digitada incorretamente
+             exit
+           end;
+
 end;
 
 end.

@@ -110,7 +110,7 @@
         <DCCReference Include="Classes_controler\Classes_DAO\uContasDAO.pas"/>
         <DCCReference Include="util\uLog.pas"/>
         <DCCReference Include="Form_geral\uLoginPage.pas">
-            <Form>Form1</Form>
+            <Form>frLogin</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Form_geral\uInicioProcessos.pas">
@@ -153,6 +153,7 @@
             <Form>frRel_usuario</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Classes_controler\Classes_Controler\uLogin_controler.pas"/>
         <RcItem Include="Amauri_financeiro_Icon2.ico">
             <ResourceType>ICON</ResourceType>
             <ResourceId>Icon_1</ResourceId>
